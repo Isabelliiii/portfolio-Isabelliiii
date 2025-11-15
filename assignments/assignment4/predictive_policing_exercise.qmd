@@ -1,5 +1,5 @@
 ---
-title: "Predictive Policing - Technical Implementation"
+title: "Spatial Prediction of Burglaries with 311 Graffiti Removal Requests"
 subtitle: "MUSA 5080 - Fall 2025"
 author: "Isabelle Li"
 date: today
