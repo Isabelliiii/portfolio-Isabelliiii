@@ -880,7 +880,7 @@ model_summary %>%
 
 Overall, the analysis shows that graffiti-related spatial features provide limited predictive power for burglary counts. Although the Negative Binomial model identifies some statistically significant relationships such as closer proximity to graffiti clusters being associated with slightly higher burglary counts, the effect sizes are small, and the model struggles to capture sharp crime hotspots.
 
-The KDE baseline clearly outperforms the regression model in both MAE and RMSE, reinforcing that burglary exhibits strong spatial clustering that is better captured through spatial density patterns than through indirect disorder indicators.
+The **KDE baseline** clearly outperforms the regression model in both MAE and RMSE, reinforcing that burglary exhibits strong spatial clustering that is better captured through spatial density patterns than through indirect disorder indicators.
 
 Error maps also show that the model consistently underpredicts major hotspot areas and performs best in low-crime neighborhoods, suggesting that graffiti reflects general urban conditions but does not directly track burglary risk.
 
