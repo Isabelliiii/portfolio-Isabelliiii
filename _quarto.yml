@@ -47,7 +47,7 @@ website:
             text: "assignment2"
           - href: assignments/midterm/Li_Isabelle_Appendix.qmd
             text: "midterm"
-          - href: assignments/assignment4/predictive_policing_exercise.qmd
+          - href: assignments/assignment4/assignment4-Isabelle-Li.qmd
             text: "assignment4"
 format:
   html:

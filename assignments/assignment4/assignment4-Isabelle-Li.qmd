@@ -592,9 +592,11 @@ kable(
 
 **All three predictors are statistically significant (p \< 0.001).**
 
-1.   **Graffiti_removal** has a *positive* association with burglary counts.
+1.  **Graffiti_removal** has a *positive* association with burglary counts.
 
-    More graffiti complaints → slightly more burglaries.
+```         
+More graffiti complaints → slightly more burglaries.
+```
 
 2.  **Graffiti_clean.nn** has a *strong negative* association.
 
