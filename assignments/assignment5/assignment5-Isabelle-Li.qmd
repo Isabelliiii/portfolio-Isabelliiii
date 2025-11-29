@@ -16,7 +16,6 @@ editor: visual
 execute:
   warning: false
   message: false
-  echo: false
 ---
 
 # Part 1: Data Import & Preparation
@@ -59,7 +58,7 @@ options(scipen = 999)
 
 ### Define theme
 
-```{r themes,echo=FALSE}
+```{r themes}
 plotTheme <- theme(
   plot.title = element_text(size = 14, face = "bold"),
   plot.subtitle = element_text(size = 10),
