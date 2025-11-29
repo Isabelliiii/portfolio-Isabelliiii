@@ -49,6 +49,8 @@ website:
             text: "midterm"
           - href: assignments/assignment4/assignment4-Isabelle-Li.qmd
             text: "assignment4"
+          - href: assignments/assignment5/assignment5-Isabelle-Li.qmd
+            text: "assignment5"
 format:
   html:
     theme: cosmo
