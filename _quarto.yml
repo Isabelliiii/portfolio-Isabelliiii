@@ -51,6 +51,14 @@ website:
             text: "assignment4"
           - href: assignments/assignment5/assignment5-Isabelle-Li.qmd
             text: "assignment5"
+
+      - text: "Final"
+        menu:
+          - href: Final/
+            text: "All finals"
+          - href: Final/Final_Presentation/presentation/Final_Presentation.qmd
+            text: "Final Presentation"            
+        
 format:
   html:
     theme: cosmo

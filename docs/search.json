@@ -301,88 +301,39 @@
     "text": "Questions Before We Begin?\nReady for hands-on practice?\nRemember: Today’s skills build directly on Week 1-2 foundations:\n\nSame dplyr functions, now with visualization\nSame census data concepts, now with multiple tables\n\nLet’s create some beautiful graphs"
   },
   {
-    "objectID": "instructions_week1.html",
-    "href": "instructions_week1.html",
-    "title": "Portfolio Setup Instructions",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "MUSA 5080 Portfolio",
     "section": "",
-    "text": "Welcome to MUSA 5080! This guide will help you set up your personal portfolio repository for the semester.\n\n\nBy the end of this setup, you’ll have: - Your own portfolio repository on GitHub - live website showcasing your work - A place to document your learning journey\n\n\n\n\nThis is what you are building: Dr. Delmelle’s sample portfolio\n\n\n\n\nBefore starting, make sure you have: - [ ] A GitHub account (create one here if needed) - [ ] Quarto installed on your computer (download here) - [ ] R and RStudio installed\n\n\n\n\n\nYou should already be in your personal repository (created when you accepted the GitHub Classroom assignment). Now let’s personalize it!\n\n\n\nClick on the _quarto.yml file\nClick the pencil icon (✏️) to edit\nChange \"Your Name - MUSA 5080 Portfolio\" to include your actual name\nExample: \"Jane Smith - MUSA 5080 Portfolio\"\nClick “Commit changes” at the bottom\n\n\n\n\n\nClick on the index.qmd file\nClick the pencil icon (✏️) to edit\nUpdate the “About Me” section with your information:\n\nYour name and background\nYour email address\nYour GitHub username\nWhy you’re taking this course\n\nClick “Commit changes”\n\n\n\n\n\nNavigate to the weekly-notes folder\nClick on week-01-notes.qmd\nClick the pencil icon (✏️) to edit\nFill in your notes from the first class\nClick “Commit changes”\n\n\n\n\n\nThis step makes your portfolio visible as a live website!\n\nGo to Settings: Click the “Settings” tab at the top of your repository\nFind Pages: Scroll down and click “Pages” in the left sidebar\nConfigure Source:\n\nSource: Select “Deploy from a branch”\nBranch: Select “main”\nFolder: Select “/ docs”\n\nSave: Click “Save”\nWait: GitHub will show a message that your site is being built (this takes 1-5 minutes)\n\n\n\n\n\nFind Your URL: After a few minutes, GitHub will show your website URL at the top of the Pages settings\n\nIt will look like: https://yourusername.github.io/repository-name\n\nVisit Your Site: Click the link to see your live portfolio!\nBookmark It: Save this URL - you’ll submit it to Canvas\n\n\n\n\n\nCopy your live website URL\nGo to the Canvas assignment\nSubmit your URL\n\n\n\n\n\nIf you want to work on your computer and see changes before publishing:\n\n\n# Replace [your-repo-url] with your actual repository URL\ngit clone [your-repo-url]\ncd [your-repository-name]\n\n\n\n# Edit your files using RStudio\n# Preview your changes:\nquarto render\nquarto preview\n\n# When ready, save your changes:\ngit add .\ngit commit -m \"Update portfolio\"\ngit push\nYour live website will automatically update when you push changes!\n\n\n\n\nEach week you’ll: 1. Create a new file: weekly-notes/week-XX-notes.qmd 2. Copy the template from week-01-notes.qmd 3. Fill in your reflections and key concepts 4. Commit and push your changes\n\n\n\n\n\n\nWait longer: GitHub Pages can take up to 10 minutes to build\nCheck Actions tab: Look for any red X marks indicating build failures\nVerify Pages settings: Make sure you selected “main” branch and “/docs” folder\n\n\n\n\n\nCheck permissions: Make sure you’re in YOUR repository, not the template\nSign in: Ensure you’re signed into GitHub\n\n\n\n\n\nCheck YAML syntax: Make sure your _quarto.yml file has proper formatting\nVerify file names: Files should end in .qmd not .md\nLook at error messages: The Actions tab will show specific error details\n\n\n\n\n\nDon’t panic! Every change is tracked in Git\nSee history: Click the “History” button on any file to see previous versions\nRevert changes: You can always go back to a previous version\n\n\n\n\n\n\nCommit often: Save your work frequently with descriptive commit messages\nUse branches: For major changes, create a new branch and merge when ready\nPreview locally: Use quarto preview to see changes before publishing\nKeep it professional: This portfolio can be shared with future employers!\nDocument everything: Good documentation is as important as good analysis\n\n\n\n\n\nQuarto Documentation\nGitHub Docs\nMarkdown Guide\nGit Tutorial\n\n\n\n\nDuring Class: - Raise your hand for immediate help - Work with classmates - collaboration is encouraged for setup!\nOutside Class: - Office Hours: Mondays 1:30-3:00 PM - Email: delmelle@design.upenn.edu - GitHub Issues: Create an issue in your repository for technical problems - Canvas Discussion: Post questions others might have too\n\n\n\nBefore submitting, make sure you’ve: - [ ] Customized _quarto.yml with your name - [ ] Updated index.qmd with your information - [ ] Completed Week 1 notes - [ ] Enabled GitHub Pages - [ ] Verified your website loads correctly - [ ] Submitted your URL to Canvas\n\nNeed help? Don’t struggle alone - reach out during office hours (mine + TAs) or in class!"
+    "text": "This portfolio documents my learning journey in Public Policy Analytics (MUSA 5080).\n\n\nAdvanced spatial analysis and data science for urban planning and public policy.\n\n\n\n\nWeekly Notes: My learning reflections and key concepts\nLabs: Completed assignments and analyses\nFinal Project: Capstone modeling challenge\n\n\n\n\nI recently graduated from the University of Toronto with an Honours Bachelor of Science Mathematics and Economics. I am currently pursuing a Master Urban Spatial Analytics at the University of Pennsylvania.\n\n\n\n\nEmail: [isabli@upenn.edu]\nGitHub: [@Isabelliiii]"
   },
   {
-    "objectID": "instructions_week1.html#what-youre-building",
-    "href": "instructions_week1.html#what-youre-building",
-    "title": "Portfolio Setup Instructions",
+    "objectID": "index.html#about-this-course",
+    "href": "index.html#about-this-course",
+    "title": "MUSA 5080 Portfolio",
     "section": "",
-    "text": "By the end of this setup, you’ll have: - Your own portfolio repository on GitHub - live website showcasing your work - A place to document your learning journey"
+    "text": "Advanced spatial analysis and data science for urban planning and public policy."
   },
   {
-    "objectID": "instructions_week1.html#example",
-    "href": "instructions_week1.html#example",
-    "title": "Portfolio Setup Instructions",
+    "objectID": "index.html#portfolio-structure",
+    "href": "index.html#portfolio-structure",
+    "title": "MUSA 5080 Portfolio",
     "section": "",
-    "text": "This is what you are building: Dr. Delmelle’s sample portfolio"
+    "text": "Weekly Notes: My learning reflections and key concepts\nLabs: Completed assignments and analyses\nFinal Project: Capstone modeling challenge"
   },
   {
-    "objectID": "instructions_week1.html#prerequisites",
-    "href": "instructions_week1.html#prerequisites",
-    "title": "Portfolio Setup Instructions",
+    "objectID": "index.html#about-me",
+    "href": "index.html#about-me",
+    "title": "MUSA 5080 Portfolio",
     "section": "",
-    "text": "Before starting, make sure you have: - [ ] A GitHub account (create one here if needed) - [ ] Quarto installed on your computer (download here) - [ ] R and RStudio installed"
+    "text": "I recently graduated from the University of Toronto with an Honours Bachelor of Science Mathematics and Economics. I am currently pursuing a Master Urban Spatial Analytics at the University of Pennsylvania."
   },
   {
-    "objectID": "instructions_week1.html#step-by-step-setup",
-    "href": "instructions_week1.html#step-by-step-setup",
-    "title": "Portfolio Setup Instructions",
+    "objectID": "index.html#contact",
+    "href": "index.html#contact",
+    "title": "MUSA 5080 Portfolio",
     "section": "",
-    "text": "You should already be in your personal repository (created when you accepted the GitHub Classroom assignment). Now let’s personalize it!\n\n\n\nClick on the _quarto.yml file\nClick the pencil icon (✏️) to edit\nChange \"Your Name - MUSA 5080 Portfolio\" to include your actual name\nExample: \"Jane Smith - MUSA 5080 Portfolio\"\nClick “Commit changes” at the bottom\n\n\n\n\n\nClick on the index.qmd file\nClick the pencil icon (✏️) to edit\nUpdate the “About Me” section with your information:\n\nYour name and background\nYour email address\nYour GitHub username\nWhy you’re taking this course\n\nClick “Commit changes”\n\n\n\n\n\nNavigate to the weekly-notes folder\nClick on week-01-notes.qmd\nClick the pencil icon (✏️) to edit\nFill in your notes from the first class\nClick “Commit changes”\n\n\n\n\n\nThis step makes your portfolio visible as a live website!\n\nGo to Settings: Click the “Settings” tab at the top of your repository\nFind Pages: Scroll down and click “Pages” in the left sidebar\nConfigure Source:\n\nSource: Select “Deploy from a branch”\nBranch: Select “main”\nFolder: Select “/ docs”\n\nSave: Click “Save”\nWait: GitHub will show a message that your site is being built (this takes 1-5 minutes)\n\n\n\n\n\nFind Your URL: After a few minutes, GitHub will show your website URL at the top of the Pages settings\n\nIt will look like: https://yourusername.github.io/repository-name\n\nVisit Your Site: Click the link to see your live portfolio!\nBookmark It: Save this URL - you’ll submit it to Canvas\n\n\n\n\n\nCopy your live website URL\nGo to the Canvas assignment\nSubmit your URL"
-  },
-  {
-    "objectID": "instructions_week1.html#working-on-your-portfolio-locally-optional-but-recommended",
-    "href": "instructions_week1.html#working-on-your-portfolio-locally-optional-but-recommended",
-    "title": "Portfolio Setup Instructions",
-    "section": "",
-    "text": "If you want to work on your computer and see changes before publishing:\n\n\n# Replace [your-repo-url] with your actual repository URL\ngit clone [your-repo-url]\ncd [your-repository-name]\n\n\n\n# Edit your files using RStudio\n# Preview your changes:\nquarto render\nquarto preview\n\n# When ready, save your changes:\ngit add .\ngit commit -m \"Update portfolio\"\ngit push\nYour live website will automatically update when you push changes!"
-  },
-  {
-    "objectID": "instructions_week1.html#weekly-workflow",
-    "href": "instructions_week1.html#weekly-workflow",
-    "title": "Portfolio Setup Instructions",
-    "section": "",
-    "text": "Each week you’ll: 1. Create a new file: weekly-notes/week-XX-notes.qmd 2. Copy the template from week-01-notes.qmd 3. Fill in your reflections and key concepts 4. Commit and push your changes"
-  },
-  {
-    "objectID": "instructions_week1.html#troubleshooting",
-    "href": "instructions_week1.html#troubleshooting",
-    "title": "Portfolio Setup Instructions",
-    "section": "",
-    "text": "Wait longer: GitHub Pages can take up to 10 minutes to build\nCheck Actions tab: Look for any red X marks indicating build failures\nVerify Pages settings: Make sure you selected “main” branch and “/docs” folder\n\n\n\n\n\nCheck permissions: Make sure you’re in YOUR repository, not the template\nSign in: Ensure you’re signed into GitHub\n\n\n\n\n\nCheck YAML syntax: Make sure your _quarto.yml file has proper formatting\nVerify file names: Files should end in .qmd not .md\nLook at error messages: The Actions tab will show specific error details\n\n\n\n\n\nDon’t panic! Every change is tracked in Git\nSee history: Click the “History” button on any file to see previous versions\nRevert changes: You can always go back to a previous version"
-  },
-  {
-    "objectID": "instructions_week1.html#pro-tips",
-    "href": "instructions_week1.html#pro-tips",
-    "title": "Portfolio Setup Instructions",
-    "section": "",
-    "text": "Commit often: Save your work frequently with descriptive commit messages\nUse branches: For major changes, create a new branch and merge when ready\nPreview locally: Use quarto preview to see changes before publishing\nKeep it professional: This portfolio can be shared with future employers!\nDocument everything: Good documentation is as important as good analysis"
-  },
-  {
-    "objectID": "instructions_week1.html#additional-resources",
-    "href": "instructions_week1.html#additional-resources",
-    "title": "Portfolio Setup Instructions",
-    "section": "",
-    "text": "Quarto Documentation\nGitHub Docs\nMarkdown Guide\nGit Tutorial"
-  },
-  {
-    "objectID": "instructions_week1.html#getting-help",
-    "href": "instructions_week1.html#getting-help",
-    "title": "Portfolio Setup Instructions",
-    "section": "",
-    "text": "During Class: - Raise your hand for immediate help - Work with classmates - collaboration is encouraged for setup!\nOutside Class: - Office Hours: Mondays 1:30-3:00 PM - Email: delmelle@design.upenn.edu - GitHub Issues: Create an issue in your repository for technical problems - Canvas Discussion: Post questions others might have too"
-  },
-  {
-    "objectID": "instructions_week1.html#checklist",
-    "href": "instructions_week1.html#checklist",
-    "title": "Portfolio Setup Instructions",
-    "section": "",
-    "text": "Before submitting, make sure you’ve: - [ ] Customized _quarto.yml with your name - [ ] Updated index.qmd with your information - [ ] Completed Week 1 notes - [ ] Enabled GitHub Pages - [ ] Verified your website loads correctly - [ ] Submitted your URL to Canvas\n\nNeed help? Don’t struggle alone - reach out during office hours (mine + TAs) or in class!"
+    "text": "Email: [isabli@upenn.edu]\nGitHub: [@Isabelliiii]"
   },
   {
     "objectID": "assignments/midterm/Li_Isabelle_Slides.html#data-sources",
@@ -502,6 +453,13 @@
     "title": "Space-Time Prediction of Bike Share Demand: Philadelphia Indego",
     "section": "3.2 Implementation",
     "text": "3.2 Implementation\n\nAdd Features to The Best Model\n\n\nCode\nmodel6 &lt;- lm(\n  Trip_Count ~ as.factor(hour) + dotw_simple +\n    Temperature + Precipitation +\n    lag1Hour + lag3Hours + lag1day +\n    perfect_weather + weekend_nice +\n    dist_to_center_city + holiday,\n  data = train\n)\n\n\n# Tidy model and keep key variables\ncoef_table6 &lt;- tidy(model6) %&gt;%\n  filter(term %in% c(\n    \"Temperature\",\n    \"Precipitation\",\n    \"lag1Hour\",\n    \"lag3Hours\",\n    \"lag1day\",\n    \"perfect_weather\",\n    \"weekend_nice\",\n    \"dist_to_center_city\",\n    \"holiday\"\n  )) %&gt;%\n  mutate(\n    term = recode(term,\n      \"Temperature\"          = \"Temperature (°F)\",\n      \"Precipitation\"        = \"Precipitation (in)\",\n      \"lag1Hour\"             = \"Trips 1 hour ago\",\n      \"lag3Hours\"            = \"Trips 3 hours ago\",\n      \"lag1day\"              = \"Trips 24 hours ago\",\n      \"perfect_weather\"      = \"Perfect weather (60–75°F, dry)\",\n      \"weekend_nice\"         = \"Weekend × perfect weather\",\n      \"dist_to_center_city\"  = \"Distance to Center City (km)\",\n      \"holiday\"              = \"Holiday indicator\"\n    )\n  )\n\nkable(\n  coef_table6 %&gt;%\n    select(term, estimate, std.error, statistic, p.value),\n  digits = 3,\n  col.names = c(\"Term\", \"Estimate\", \"Std. Error\", \"t value\", \"p value\"),\n  caption = \"Key coefficients in Model 6 (with new engineered features)\"\n) %&gt;%\n  kable_styling(bootstrap_options = c(\"striped\", \"hover\"))\n\n\n\nKey coefficients in Model 6 (with new engineered features)\n\n\nTerm\nEstimate\nStd. Error\nt value\np value\n\n\n\n\nTemperature (°F)\n0.004\n0.000\n25.555\n0.000\n\n\nPrecipitation (in)\n-0.066\n0.020\n-3.307\n0.001\n\n\nTrips 1 hour ago\n0.399\n0.001\n283.079\n0.000\n\n\nTrips 3 hours ago\n0.102\n0.001\n73.467\n0.000\n\n\nTrips 24 hours ago\n0.119\n0.001\n91.684\n0.000\n\n\nPerfect weather (60–75°F, dry)\n-0.003\n0.004\n-0.722\n0.470\n\n\nWeekend × perfect weather\n0.028\n0.007\n4.191\n0.000\n\n\nDistance to Center City (km)\n-0.063\n0.001\n-74.449\n0.000\n\n\nHoliday indicator\n-0.013\n0.007\n-1.932\n0.053\n\n\n\n\n\n\n\nCode\n# Compare MAE before and after adding engineered features\n# --- Recalculate pred6 safely ---\ntest &lt;- test %&gt;% \n  mutate(\n    pred6 = predict(model6, newdata = test)\n  )\n\n# --- Compute baseline (model2) and new model (model6) MAE ---\nmae_before &lt;- mean(abs(test$Trip_Count - test$pred2), na.rm = TRUE)\nmae_after  &lt;- mean(abs(test$Trip_Count - test$pred6), na.rm = TRUE)\n\nmae_compare &lt;- data.frame(\n  Model = c(\"Baseline Model 2 (Lags Only)\", \n            \"New Model 6 (+ Weather + Distance + Holiday)\"),\n  MAE = c(mae_before, mae_after)\n)\n\nkable(mae_compare, digits = 3,\n      caption = \"MAE Before vs. After New Features (Q2 Test Set)\")\n\n\n\nMAE Before vs. After New Features (Q2 Test Set)\n\n\nModel\nMAE\n\n\n\n\nBaseline Model 2 (Lags Only)\n0.611\n\n\nNew Model 6 (+ Weather + Distance + Holiday)\n0.613\n\n\n\n\n\n\n\nCode\nmae2 &lt;- mean(abs(test$Trip_Count - test$pred2), na.rm = TRUE)\nmae6 &lt;- mean(abs(test$Trip_Count - test$pred6), na.rm = TRUE)\n\nmae2\n\n\n[1] 0.6106225\n\n\nCode\nmae6\n\n\n[1] 0.613463\n\n\nCode\nmae6 - mae2\n\n\n[1] 0.002840553\n\n\nTo test whether additional behavioral, spatial, and contextual signals could improve prediction accuracy, I introduced three new feature groups: (1) perfect-weather conditions and a weekend × nice-weather interaction, capturing the intuition that leisure-driven demand spikes under ideal conditions; (2) distance to Center City, representing the strong spatial gradient in bike-share usage; and (3) holiday indicators for major Q2 events such as Easter, Memorial Day, and Juneteenth, which may alter mobility patterns.\nComparing performance before and after adding these features shows that the enhanced model (Model 6) performs almost identically to the strongest baseline model (Model 2). Model 2 achieves an MAE of 0.6106, while Model 6 yields 0.6135, a negligible increase of approximately 0.003 trips. Although the engineered variables add meaningful behavioral interpretation, they do not improve out-of-sample predictive accuracy.\nThis result reflects the nature of Q2 bike-share demand: spring and early-summer ridership is already strongly explained by temporal autocorrelation (lag features) and hourly/weekly seasonality, with relatively consistent warm weather and limited extremes. Because these patterns dominate usage, additional features offer little incremental predictive power and instead introduce slight overfitting."
+  },
+  {
+    "objectID": "assignments/assignment5/assignment5-Isabelle-Li.html#poisson-model",
+    "href": "assignments/assignment5/assignment5-Isabelle-Li.html#poisson-model",
+    "title": "Space-Time Prediction of Bike Share Demand: Philadelphia Indego",
+    "section": "3.3 Poisson Model",
+    "text": "3.3 Poisson Model\n\n\nCode\nmodel6_pois &lt;- glm(\n  Trip_Count ~ as.factor(hour) + dotw_simple +\n    Temperature + Precipitation +\n    lag1Hour + lag3Hours + lag1day +\n    perfect_weather + weekend_nice +\n    dist_to_center_city + holiday,\n  data = train,\n  family = poisson(link = \"log\")\n)\n\npoisson_summary &lt;- data.frame(\n  Metric = c(\n    \"Null deviance\",\n    \"Residual deviance\",\n    \"AIC\"\n  ),\n  Value = c(\n    round(model6_pois$null.deviance, 2),\n    round(model6_pois$deviance, 2),\n    round(model6_pois$aic, 2)\n  )\n)\n\nkable(poisson_summary,\n      caption = \"Poisson Regression Model Summary (Key Metrics)\",\n      col.names = c(\"Metric\", \"Value\")) %&gt;%\n  kable_styling(bootstrap_options = c(\"striped\", \"hover\"))\n\n\n\nPoisson Regression Model Summary (Key Metrics)\n\n\nMetric\nValue\n\n\n\n\nNull deviance\n701096.0\n\n\nResidual deviance\n441087.1\n\n\nAIC\n774319.7\n\n\n\n\n\n\n\nCode\ntest &lt;- test %&gt;% \n  mutate(\n    pred6_pois = predict(model6_pois, newdata = test, type = \"response\")\n  )\n\nmae_pois &lt;- mean(abs(test$Trip_Count - test$pred6_pois), na.rm = TRUE)\nmae_pois\n\n\n[1] 0.639133\n\n\n\n\nCode\nmae_lin &lt;- mean(abs(test$Trip_Count - test$pred6), na.rm = TRUE)\n\ndata.frame(\n  Model = c(\"Linear Model 6\", \"Poisson Model 6\"),\n  MAE = c(mae_lin, mae_pois)\n)\n\n\n            Model      MAE\n1  Linear Model 6 0.613463\n2 Poisson Model 6 0.639133\n\n\nAlthough trip counts are discrete and non-negative, making Poisson regression a natural candidate, the Poisson specification did not outperform the linear model in this case. The Poisson model substantially reduced the null deviance (from about 701,096 to 441,087), which indicates that it captures important structure in the data. However, when evaluated out-of-sample on the Q2 test set, its MAE is 0.639, which is noticeably worse than the MAE of the linear Model 6 (0.613)."
   },
   {
     "objectID": "assignments/assignment5/assignment5-Isabelle-Li.html#operational-implications",
@@ -840,39 +798,46 @@
     "text": "Phase 7: Conclusions & Recommendations\nThis project predicts housing sale prices in Philadelphia and shows that structural inequality in the city is spatially organized, with high-value neighborhoods concentrated in the central, northeast, and northwestern parts, and lower-value areas clustered in the north and west.\nThe model shows that actual sale prices in high-value neighborhoods are consistently higher than predicted, while those in lower-income and high-unemployment areas tend to be slightly lower than predicted. This residual pattern indicates a potential bias in the city’s property assessment system, where wealthier neighborhoods may be undertaxed and disadvantaged ones overtaxed.\nIn neighborhoods with high unemployment and crime, the model shows that housing markets no longer respond to safety improvements. Simply adding policing or security programs does not raise property values because the underlying economic conditions remain weak. For safety investments to be effective, policies should focus on rebuilding the local economic base by expanding job opportunities, supporting small businesses, and improving public infrastructure to make these neighborhoods worth to invest.\nThe model primarily captures spatial variation but performs less accurately for properties with sale prices above one million dollars. Some public datasets contain missing or inconsistent records, which may introduce minor systematic bias. Future research should integrate temporal dynamics and machine learning methods to better predict properties at both the lower and upper ends of the sale price distribution.\nTo promote spatial equity, policy should expand affordable and mixed-income housing in high-value districts through inclusionary zoning and other incentives, while improving transit, recreational spaces, and essential urban amenities—such as schools, healthcare facilities, and public services—in underserved neighborhoods, so that opportunity and growth are not confined to a few areas."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "MUSA 5080 Portfolio",
-    "section": "",
-    "text": "This portfolio documents my learning journey in Public Policy Analytics (MUSA 5080).\n\n\nAdvanced spatial analysis and data science for urban planning and public policy.\n\n\n\n\nWeekly Notes: My learning reflections and key concepts\nLabs: Completed assignments and analyses\nFinal Project: Capstone modeling challenge\n\n\n\n\nI recently graduated from the University of Toronto with an Honours Bachelor of Science Mathematics and Economics. I am currently pursuing a Master Urban Spatial Analytics at the University of Pennsylvania.\n\n\n\n\nEmail: [isabli@upenn.edu]\nGitHub: [@Isabelliiii]"
+    "objectID": "Final/Final_Presentation/presentation/Final_Presentation.html#data-sources",
+    "href": "Final/Final_Presentation/presentation/Final_Presentation.html#data-sources",
+    "title": "Fire Alarm Prediction",
+    "section": "Data Sources",
+    "text": "Data Sources\n\n\n\n\n\n\n\n\nSource\nDescription\nKey Variables / Features\n\n\n\n\nFire Incidents (NFIRS-coded)\nIncident points (2024–2025)\nLabel: 1 = 7xx false alarm; 0 = 1xx/2xx; time + geometry\n\n\nL&I Building Certifications (OpenDataPhilly)\nBuilding inspection/cert records (incl. fire alarm systems)\nfire_alarm_status (Active/Expired/Deficient); tract-level active/expired rates\n\n\nFire Stations (OpenDataPhilly)\nStation locations\ndistance / near_station_200m\n\n\nACS (tidycensus)\nTract socioeconomic context\nmedian_income, ba_rate, unemployment_rate, black_share, total_pop\n\n\nWeather (METAR via riem, PHL)\nHourly conditions (2024–2025)\ntemp/wind/precip + timestamp join"
   },
   {
-    "objectID": "index.html#about-this-course",
-    "href": "index.html#about-this-course",
-    "title": "MUSA 5080 Portfolio",
-    "section": "",
-    "text": "Advanced spatial analysis and data science for urban planning and public policy."
+    "objectID": "Final/Final_Presentation/presentation/Final_Presentation.html#false-alarm-scale-space",
+    "href": "Final/Final_Presentation/presentation/Final_Presentation.html#false-alarm-scale-space",
+    "title": "Fire Alarm Prediction",
+    "section": "False Alarm: Scale + Space",
+    "text": "False Alarm: Scale + Space"
   },
   {
-    "objectID": "index.html#portfolio-structure",
-    "href": "index.html#portfolio-structure",
-    "title": "MUSA 5080 Portfolio",
-    "section": "",
-    "text": "Weekly Notes: My learning reflections and key concepts\nLabs: Completed assignments and analyses\nFinal Project: Capstone modeling challenge"
+    "objectID": "Final/Final_Presentation/presentation/Final_Presentation.html#time-possible-mechanism",
+    "href": "Final/Final_Presentation/presentation/Final_Presentation.html#time-possible-mechanism",
+    "title": "Fire Alarm Prediction",
+    "section": "Time + Possible mechanism",
+    "text": "Time + Possible mechanism"
   },
   {
-    "objectID": "index.html#about-me",
-    "href": "index.html#about-me",
-    "title": "MUSA 5080 Portfolio",
-    "section": "",
-    "text": "I recently graduated from the University of Toronto with an Honours Bachelor of Science Mathematics and Economics. I am currently pursuing a Master Urban Spatial Analytics at the University of Pennsylvania."
+    "objectID": "Final/Final_Presentation/presentation/Final_Presentation.html#methods-overview",
+    "href": "Final/Final_Presentation/presentation/Final_Presentation.html#methods-overview",
+    "title": "Fire Alarm Prediction",
+    "section": "Methods Overview",
+    "text": "Methods Overview\n\nTechnique: Logistic regression (logit)\nWhy appropriate: interpretable, outputs probabilities, easy to operationalize\nValidation: k-fold cross-validation, ROC/AUC\nThreshold choice: balances false positives vs false negatives"
   },
   {
-    "objectID": "index.html#contact",
-    "href": "index.html#contact",
-    "title": "MUSA 5080 Portfolio",
-    "section": "",
-    "text": "Email: [isabli@upenn.edu]\nGitHub: [@Isabelliiii]"
+    "objectID": "Final/Final_Presentation/presentation/Final_Presentation.html#results-performance",
+    "href": "Final/Final_Presentation/presentation/Final_Presentation.html#results-performance",
+    "title": "Fire Alarm Prediction",
+    "section": "Results & Performance",
+    "text": "Results & Performance\n\n\n\n\n\n\n\n\n\n\nModel\nFeature set (summary)\nAUC\n\n\n\n\nLogit Model 1\nBaseline (operational / weather)\n0.554\n\n\nLogit Model 2\n+ Neighborhood context (ACS tract)\n0.670\n\n\nLogit Model 3\nFull model (+ built env / certificates / proximity)\n0.672"
+  },
+  {
+    "objectID": "Final/Final_Presentation/presentation/Final_Presentation.html#operating-threshold-risk-tiers",
+    "href": "Final/Final_Presentation/presentation/Final_Presentation.html#operating-threshold-risk-tiers",
+    "title": "Fire Alarm Prediction",
+    "section": "Operating Threshold & Risk Tiers",
+    "text": "Operating Threshold & Risk Tiers\nModel 3 (predicting 1 = false alarm):\n\nConservative threshold = 0.9:\nSensitivity = 0.08, Specificity = 0.96 (FP = 493, FN = 42,024)\n\nAggressive threshold = 0.4:\nSensitivity = 1.00, Specificity = 0.00 (FP = 13,571, FN = 23)\n\nImportant: The model is for prevention and planning — not to delay or deny emergency response."
   },
   {
     "objectID": "labs/lab_0/scripts/lab0_template.html",
@@ -1139,12 +1104,5 @@
     "title": "Week 6 Notes - Spatial Machine Learning & Advanced Regression",
     "section": "Cross-Validation(with Categorical Variables)",
     "text": "Cross-Validation(with Categorical Variables)\nThree common validation approaches 1. Train/Test Split 2. k-Fold Cross-Validation 3. LOOCV\nThe Problem: Sparse Categories\nWhen CV Fails with Categorical Variables - Don’t have enough data so the model is not well trained - Model can’t predict for a category it never learned\nSolution\n\nGroup Small Neighborhoods\nAlternative: Drop Spare Categories"
-  },
-  {
-    "objectID": "assignments/assignment5/assignment5-Isabelle-Li.html#poisson-model",
-    "href": "assignments/assignment5/assignment5-Isabelle-Li.html#poisson-model",
-    "title": "Space-Time Prediction of Bike Share Demand: Philadelphia Indego",
-    "section": "3.3 Poisson Model",
-    "text": "3.3 Poisson Model\n\n\nCode\nmodel6_pois &lt;- glm(\n  Trip_Count ~ as.factor(hour) + dotw_simple +\n    Temperature + Precipitation +\n    lag1Hour + lag3Hours + lag1day +\n    perfect_weather + weekend_nice +\n    dist_to_center_city + holiday,\n  data = train,\n  family = poisson(link = \"log\")\n)\n\npoisson_summary &lt;- data.frame(\n  Metric = c(\n    \"Null deviance\",\n    \"Residual deviance\",\n    \"AIC\"\n  ),\n  Value = c(\n    round(model6_pois$null.deviance, 2),\n    round(model6_pois$deviance, 2),\n    round(model6_pois$aic, 2)\n  )\n)\n\nkable(poisson_summary,\n      caption = \"Poisson Regression Model Summary (Key Metrics)\",\n      col.names = c(\"Metric\", \"Value\")) %&gt;%\n  kable_styling(bootstrap_options = c(\"striped\", \"hover\"))\n\n\n\nPoisson Regression Model Summary (Key Metrics)\n\n\nMetric\nValue\n\n\n\n\nNull deviance\n701096.0\n\n\nResidual deviance\n441087.1\n\n\nAIC\n774319.7\n\n\n\n\n\n\n\nCode\ntest &lt;- test %&gt;% \n  mutate(\n    pred6_pois = predict(model6_pois, newdata = test, type = \"response\")\n  )\n\nmae_pois &lt;- mean(abs(test$Trip_Count - test$pred6_pois), na.rm = TRUE)\nmae_pois\n\n\n[1] 0.639133\n\n\n\n\nCode\nmae_lin &lt;- mean(abs(test$Trip_Count - test$pred6), na.rm = TRUE)\n\ndata.frame(\n  Model = c(\"Linear Model 6\", \"Poisson Model 6\"),\n  MAE = c(mae_lin, mae_pois)\n)\n\n\n            Model      MAE\n1  Linear Model 6 0.613463\n2 Poisson Model 6 0.639133\n\n\nAlthough trip counts are discrete and non-negative, making Poisson regression a natural candidate, the Poisson specification did not outperform the linear model in this case. The Poisson model substantially reduced the null deviance (from about 701,096 to 441,087), which indicates that it captures important structure in the data. However, when evaluated out-of-sample on the Q2 test set, its MAE is 0.639, which is noticeably worse than the MAE of the linear Model 6 (0.613)."
   }
 ]
