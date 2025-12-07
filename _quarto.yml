@@ -59,7 +59,7 @@ website:
           - href: Final/Final_Presentation/presentation/Final_Presentation.qmd
             text: "Final Presentation"            
           - href: Final/Final_Appendix/Final_Appendix.qmd
-            text: "Final Presentation"           
+            text: "Final Appendix"           
 format:
   html:
     theme: cosmo
