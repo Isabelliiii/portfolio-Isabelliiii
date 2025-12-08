@@ -780,28 +780,21 @@ To assess the stability of the full logistic regression model, we conduct 5-fold
 ### Odds Ratios for Model 3
 
 ```{r}
-or_table <- tidy(logit_model3) %>%
+or_table_simple <- tidy(logit_model3) %>%
   mutate(
-    odds_ratio = exp(estimate),
-    estimate   = round(estimate, 4),
-    odds_ratio = round(odds_ratio, 3),
-    std.error  = round(std.error, 4),
-    statistic  = round(statistic, 2),
-    p_value    = signif(p.value, 3)
+    odds_ratio = round(exp(estimate), 3)
   ) %>%
-  dplyr::select(term, odds_ratio, estimate, std.error, statistic, p_value) %>%
-  dplyr::rename(
-    Variable   = term,
-    Odds_Ratio = odds_ratio,
-    Std_Error  = std.error,
-    z_value    = statistic
+  dplyr::select(
+    Variable = term,
+    Odds_Ratio = odds_ratio
   )
 
 kable(
-  or_table,
+  or_table_simple,
   caption = "Odds Ratios for Logit Model 3",
-  align   = "lrrrrr"
+  align = "lr"
 )
+
 ```
 
 The odds‐ratio table summarizes how each predictor influences the likelihood that an incident is classified as a false alarm after controlling for all other variables. Weather variables, particularly temperature and precipitation, remain strong predictors, with higher temperatures and any measurable precipitation increasing the likelihood of a false alarm. Building compliance also matters: tracts with higher active certification rates show significantly greater odds of false alarms, consistent with patterns observed in the earlier models. Socioeconomic context continues to contribute meaningful signal, higher educational attainment, a larger Black population share, and higher unemployment are all associated with elevated false-alarm odds, even after controlling for weather and temporal factors. Temporal features add smaller but still interpretable effects: false alarms are slightly less likely on weekends and in Q4, and marginally more likely in Q3. Finally, spatial accessibility plays a role: incidents occurring near a fire station (\<200m) or farther from Center City show modestly reduced odds of being false alarms. Together, these results suggest that false-alarm activity reflects an interaction of environmental conditions, neighborhood characteristics, and system operations.
@@ -870,8 +863,6 @@ Beyond operational adjustments, we also recommend a set of longer-term policy st
 First, the City should strengthen **mandatory fire-alarm inspection and compliance enforcement**. For buildings with repeated false alarms or expired certificates, a tiered penalty structure or more frequent re-inspections may create stronger incentives for timely system maintenance.
 
 Second, the City should expand **public and community education** efforts. The Fire Department could host workshops, property-manager trainings, or community sessions on alarm maintenance, common malfunction causes, and mitigation strategies. Targeted outreach may be especially effective in neighborhoods or buildings with historically high false-alarm rates.
-
-Taken together, the 0.4 threshold provides a practical balance: it maximizes the identification of false alarms while still ensuring a safe response. It also creates opportunities for more flexible deployment, stronger compliance mechanisms, and education-driven prevention—ultimately reducing the long-term frequency of false alarms across the city.
 
 # Limitations&Next Steps
 
