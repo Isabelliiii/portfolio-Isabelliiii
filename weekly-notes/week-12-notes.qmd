@@ -1,0 +1,39 @@
+---
+title: "Week 12 Notes – Neighborhood Trajectories & Sequence Analysis"
+date: "2025-11-24"
+---
+
+## Key Concepts Learned
+- **Dynamics vs. snapshots**: single-year classifications miss long-term neighborhood change.
+- **Neighborhood sequences**: each neighborhood is represented as a sequence of states across multiple years.
+- **K-means clustering** is used to classify neighborhoods into states for each year.
+- **Sequence similarity metrics** (e.g., OMstrans) allow comparison of entire trajectories, not just endpoints.
+- **Hierarchical clustering (Ward’s method)** groups similar trajectories together.
+- Mapping trajectory clusters reveals **spatial patterns** of stability, decline, or transformation.
+
+## Coding Techniques
+- **Z-score normalization** to make multi-year variables comparable.
+- Using `kmeans()` to classify neighborhoods each year.
+- Reshaping data to wide format and creating sequences with `TraMineR::seqdef()`.
+- Computing sequence distances with **OMstrans**, which accounts for transitions.
+- Using hierarchical clustering (`hclust(method = "ward.D2")`) to identify trajectory groups.
+- Plotting trajectory clusters on maps to visualize spatial patterns.
+
+## Questions & Challenges
+- Choosing the **right number of clusters (K)**: statistical fit vs. interpretability.
+- Understanding how OMstrans parameters influence the distance matrix.
+- Translating trajectory groups into **actionable policy recommendations** rather than descriptive categories.
+
+## Connections to Policy
+- Different trajectory patterns imply **different policy needs** (e.g., stable neighborhoods vs. rapidly transitioning ones).
+- Sequence analysis highlights **historical processes**, enabling more forward-looking planning.
+- Clusters can help identify **priority areas** for intervention or monitoring.
+- Understanding long-term pathways supports more equitable and place-specific policy design.
+
+## Reflection
+- Most interesting insight: neighborhoods change through **paths**, not isolated snapshots.
+- Sequence analysis provides a richer understanding of urban dynamics by revealing patterns of stability, volatility, or sustained growth.
+- I can apply this framework to future projects by:
+  - Comparing long-term neighborhood change,
+  - Identifying stagnation vs. transformation,
+  - And grounding policy recommendations in multi-year trends rather than single-year metrics.

@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-10-13">
+<meta name="dcterms.date" content="2025-11-10">
 
-<title>Week 6 Notes - Spatial Machine Learning &amp; Advanced Regression – Isabelle Li - MUSA 5080 Portfolio</title>
+<title>Week 10 Notes – Logistic Regression for Binary Outcomes – Isabelle Li - MUSA 5080 Portfolio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -236,12 +236,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#converting-to-spatial-data" id="toc-converting-to-spatial-data" class="nav-link active" data-scroll-target="#converting-to-spatial-data">Converting to Spatial Data</a></li>
-  <li><a href="#expanding-your-regression-toolkit" id="toc-expanding-your-regression-toolkit" class="nav-link" data-scroll-target="#expanding-your-regression-toolkit">Expanding Your Regression Toolkit</a></li>
-  <li><a href="#polynomial-terms-non-linear-relationships" id="toc-polynomial-terms-non-linear-relationships" class="nav-link" data-scroll-target="#polynomial-terms-non-linear-relationships">Polynomial Terms: Non-Linear Relationships</a></li>
-  <li><a href="#creating-spatial-feartures" id="toc-creating-spatial-feartures" class="nav-link" data-scroll-target="#creating-spatial-feartures">Creating Spatial Feartures</a></li>
-  <li><a href="#fixed-effects" id="toc-fixed-effects" class="nav-link" data-scroll-target="#fixed-effects">Fixed Effects</a></li>
-  <li><a href="#cross-validationwith-categorical-variables" id="toc-cross-validationwith-categorical-variables" class="nav-link" data-scroll-target="#cross-validationwith-categorical-variables">Cross-Validation(with Categorical Variables)</a></li>
+  <li><a href="#key-concepts-learned" id="toc-key-concepts-learned" class="nav-link active" data-scroll-target="#key-concepts-learned">Key Concepts Learned</a></li>
+  <li><a href="#coding-techniques" id="toc-coding-techniques" class="nav-link" data-scroll-target="#coding-techniques">Coding Techniques</a></li>
+  <li><a href="#questions-challenges" id="toc-questions-challenges" class="nav-link" data-scroll-target="#questions-challenges">Questions &amp; Challenges</a></li>
+  <li><a href="#connections-to-policy" id="toc-connections-to-policy" class="nav-link" data-scroll-target="#connections-to-policy">Connections to Policy</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection">Reflection</a></li>
   </ul>
 </nav>
     </div>
@@ -250,7 +249,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Week 6 Notes - Spatial Machine Learning &amp; Advanced Regression</h1>
+<h1 class="title">Week 10 Notes – Logistic Regression for Binary Outcomes</h1>
 </div>
 
 
@@ -261,7 +260,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 13, 2025</p>
+      <p class="date">November 10, 2025</p>
     </div>
   </div>
   
@@ -273,128 +272,53 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="converting-to-spatial-data" class="level2">
-<h2 class="anchored" data-anchor-id="converting-to-spatial-data">Converting to Spatial Data</h2>
-<p>step 1: Make your data spatial</p>
-<p>st_as_sf st_transform</p>
-<p>step 2: Spatial Join with Neighborhoods</p>
-</section>
-<section id="expanding-your-regression-toolkit" class="level2">
-<h2 class="anchored" data-anchor-id="expanding-your-regression-toolkit">Expanding Your Regression Toolkit</h2>
-<p>Continuous Variables</p>
+<section id="key-concepts-learned" class="level2">
+<h2 class="anchored" data-anchor-id="key-concepts-learned">Key Concepts Learned</h2>
 <ul>
-<li>Square footage</li>
-<li>Age of house</li>
-<li>Income levels</li>
-<li>Distance to downtown</li>
-</ul>
-<p>Categorical Variables</p>
-<ul>
-<li>Neighborhood</li>
-<li>School district</li>
-<li>Building type</li>
-<li>Has garage? (Yes/No)</li>
-</ul>
-<p>Add Dummy(Categorical) Variables to the Model</p>
-<p>Interpreting Neighborhood Dummy Variables</p>
-<p><strong>Interaction Effect: When Relationships Depend</strong></p>
-<p>Does the effect of one variable depend on the level of another variable?</p>
-<p>Example Scenarios</p>
-<ul>
-<li>Housing: Does square footage matter more in wealthy neighborhoods?</li>
-<li>Education: Do tutoring effects vary by initial skill level?</li>
-<li>Public Health: Do pollution effects differ by age?</li>
-</ul>
-<p><strong>Create an Hypothesis</strong></p>
-<p><strong>Create the Categories</strong></p>
-<ul>
-<li>Model 1: No Interaction (Parallel Slopes)</li>
-<li>Model 2: With Interaction (Different Slopes)</li>
-</ul>
-<p><strong>Interpreting the Interaction Coefficients</strong></p>
-<ul>
-<li>Breaking Down the Coefficient (Explain)</li>
-<li>Visualizing the Interaction Effect</li>
-<li>Compare Model Performance</li>
-<li>Policy Implications</li>
-</ul>
-<p><strong>When NOT to Use Interaction</strong></p>
-<ul>
-<li>Small samples: Need suffient data in each group</li>
-<li>Overfitting: Too many interactions make models unstable</li>
+<li>Logistic regression is used when the outcome is <strong>binary (yes/no)</strong> rather than continuous. :contentReference<span data-index="1">oaicite:1</span></li>
+<li>Linear regression is <strong>not suitable</strong> for binary outcomes because it can produce predictions outside 0–1 and violates key assumptions. :contentReference<span data-index="2">oaicite:2</span></li>
+<li>Logistic regression models <strong>probabilities</strong> via the logistic function, which constrains predictions between 0 and 1. :contentReference<span data-index="3">oaicite:3</span></li>
+<li>We work with <strong>log-odds (logit)</strong> to create a linear relationship with predictors; exponentiated coefficients become <strong>odds ratios</strong>. :contentReference<span data-index="4">oaicite:4</span></li>
+<li>Choosing a <strong>probability threshold</strong> (e.g., 0.5) converts probabilities to binary decisions. :contentReference<span data-index="5">oaicite:5</span></li>
+<li><strong>Confusion matrices</strong> and associated metrics help evaluate classification performance at different thresholds. :contentReference<span data-index="6">oaicite:6</span></li>
+<li><strong>ROC curves and AUC</strong> visualize overall model discrimination across thresholds. :contentReference<span data-index="7">oaicite:7</span></li>
+<li>Equity matters: a model can have good overall accuracy but perform very differently across demographic groups. :contentReference<span data-index="8">oaicite:8</span></li>
 </ul>
 </section>
-<section id="polynomial-terms-non-linear-relationships" class="level2">
-<h2 class="anchored" data-anchor-id="polynomial-terms-non-linear-relationships">Polynomial Terms: Non-Linear Relationships</h2>
-<p><strong>Signs of Non-Linearity:</strong></p>
+<section id="coding-techniques" class="level2">
+<h2 class="anchored" data-anchor-id="coding-techniques">Coding Techniques</h2>
 <ul>
-<li>Curved residual plots</li>
-<li>Diminishing returns</li>
-<li>Accelerating effects</li>
-<li>U-shaped or inverted-U patterns</li>
-<li>Theoretical reasons</li>
-</ul>
-<p><strong>Examples:</strong></p>
-<ul>
-<li>House age: depreciation then vintage premium</li>
-<li>Test scores: plateau after studying</li>
-<li>Advertising: diminishing returns</li>
-<li>Crime prevention: early gains, then plateaus</li>
-</ul>
-<p><strong>The U-Shaped Age Effect</strong></p>
-<ul>
-<li>Create Age Variable</li>
-<li>First: Linear Model (Baseline)</li>
-<li>Visualize</li>
-<li>Add Polynomial Term: Age Squared</li>
-<li>Interpreting Polynomial Coefficients</li>
-<li>Compare Model Performance</li>
-<li>Check Residual Plot</li>
+<li>Use <code>glm(..., family="binomial")</code> to fit logistic regression in R. :contentReference<span data-index="9">oaicite:9</span></li>
+<li>Predict probabilities with <code>predict(model, type="response")</code>. :contentReference<span data-index="10">oaicite:10</span></li>
+<li>Create confusion matrices (e.g., with <code>caret::confusionMatrix</code>) to compute sensitivity, specificity, precision. :contentReference<span data-index="11">oaicite:11</span></li>
+<li>Loop over different thresholds to compare metrics. :contentReference<span data-index="12">oaicite:12</span></li>
+<li>Use <code>pROC::roc()</code> and <code>ggroc()</code> to generate ROC curves and compute AUC. :contentReference<span data-index="13">oaicite:13</span></li>
 </ul>
 </section>
-<section id="creating-spatial-feartures" class="level2">
-<h2 class="anchored" data-anchor-id="creating-spatial-feartures">Creating Spatial Feartures</h2>
-<p><strong>Three Approaches to Spatial Features</strong></p>
-<ol type="1">
-<li>Buffer Aggregation</li>
-</ol>
+<section id="questions-challenges" class="level2">
+<h2 class="anchored" data-anchor-id="questions-challenges">Questions &amp; Challenges</h2>
 <ul>
-<li>count or sum events within a defined distance</li>
-<li>Ex: Number od crimes within 500 feet</li>
-</ul>
-<ol start="2" type="1">
-<li>k-Nearest Neighbors (kNN)</li>
-</ol>
-<ul>
-<li>Average distance to k closest events</li>
-<li>Ex: Average distance to 3 nearest violent crimes</li>
-</ul>
-<ol start="3" type="1">
-<li>Distance to Specific Points</li>
-</ol>
-<ul>
-<li>Straight-line distance to important locations</li>
-<li>Ex: Distance to downtown, nearest T station</li>
+<li>How to <strong>choose the optimal threshold</strong> in real policy problems? :contentReference<span data-index="14">oaicite:14</span></li>
+<li>Understanding how threshold tradeoffs affect <strong>different error types</strong> and consequences. :contentReference<span data-index="15">oaicite:15</span></li>
+<li>Interpreting odds ratios appropriately, especially when predictors are scaled differently. :contentReference<span data-index="16">oaicite:16</span></li>
+<li>Evaluating <strong>equity implications</strong> across different subgroups. :contentReference<span data-index="17">oaicite:17</span></li>
 </ul>
 </section>
-<section id="fixed-effects" class="level2">
-<h2 class="anchored" data-anchor-id="fixed-effects">Fixed Effects</h2>
-<p>Fixed Effects = Categorical variables that capture all unmeasured characteristics of a group</p>
-<p>In hedonic models:</p>
+<section id="connections-to-policy" class="level2">
+<h2 class="anchored" data-anchor-id="connections-to-policy">Connections to Policy</h2>
 <ul>
-<li>Each neighborhood gets its own dummy variable</li>
-<li>Captures everything unique about that neighborhood we didn’t explicitly measure</li>
+<li>Logistic regression is widely used for risk prediction in policy areas like recidivism, health risk, and program uptake. :contentReference<span data-index="18">oaicite:18</span></li>
+<li>Threshold choice determines who gets flagged for intervention — with real consequences for individuals and resources. :contentReference<span data-index="19">oaicite:19</span></li>
+<li>Evaluating <strong>false positive vs.&nbsp;false negative costs</strong> is essential for fair and effective policy. :contentReference<span data-index="20">oaicite:20</span></li>
+<li>Equity evaluation encourages fairness across demographic groups, not just overall accuracy. :contentReference<span data-index="21">oaicite:21</span></li>
 </ul>
 </section>
-<section id="cross-validationwith-categorical-variables" class="level2">
-<h2 class="anchored" data-anchor-id="cross-validationwith-categorical-variables">Cross-Validation(with Categorical Variables)</h2>
-<p><strong>Three common validation approaches</strong> 1. Train/Test Split 2. k-Fold Cross-Validation 3. LOOCV</p>
-<p><strong>The Problem: Sparse Categories</strong></p>
-<p>When CV Fails with Categorical Variables - Don’t have enough data so the model is not well trained - Model can’t predict for a category it never learned</p>
-<p><strong>Solution</strong></p>
+<section id="reflection" class="level2">
+<h2 class="anchored" data-anchor-id="reflection">Reflection</h2>
 <ul>
-<li>Group Small Neighborhoods</li>
-<li>Alternative: Drop Spare Categories</li>
+<li>Logistic regression changed how I think about <strong>prediction problems</strong>: they are about probabilities and decisions, not just fits. :contentReference<span data-index="22">oaicite:22</span></li>
+<li>The threshold decision is a <strong>policy choice</strong>, not a purely statistical one. :contentReference<span data-index="23">oaicite:23</span></li>
+<li>I will apply this by explicitly documenting <strong>threshold choices</strong> and considering the ethical implications of errors. :contentReference<span data-index="24">oaicite:24</span></li>
 </ul>
 
 

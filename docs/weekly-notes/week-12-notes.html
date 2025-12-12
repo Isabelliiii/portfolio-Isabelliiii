@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-10-13">
+<meta name="dcterms.date" content="2025-11-24">
 
-<title>Week 6 Notes - Spatial Machine Learning &amp; Advanced Regression – Isabelle Li - MUSA 5080 Portfolio</title>
+<title>Week 12 Notes – Neighborhood Trajectories &amp; Sequence Analysis – Isabelle Li - MUSA 5080 Portfolio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -236,12 +236,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#converting-to-spatial-data" id="toc-converting-to-spatial-data" class="nav-link active" data-scroll-target="#converting-to-spatial-data">Converting to Spatial Data</a></li>
-  <li><a href="#expanding-your-regression-toolkit" id="toc-expanding-your-regression-toolkit" class="nav-link" data-scroll-target="#expanding-your-regression-toolkit">Expanding Your Regression Toolkit</a></li>
-  <li><a href="#polynomial-terms-non-linear-relationships" id="toc-polynomial-terms-non-linear-relationships" class="nav-link" data-scroll-target="#polynomial-terms-non-linear-relationships">Polynomial Terms: Non-Linear Relationships</a></li>
-  <li><a href="#creating-spatial-feartures" id="toc-creating-spatial-feartures" class="nav-link" data-scroll-target="#creating-spatial-feartures">Creating Spatial Feartures</a></li>
-  <li><a href="#fixed-effects" id="toc-fixed-effects" class="nav-link" data-scroll-target="#fixed-effects">Fixed Effects</a></li>
-  <li><a href="#cross-validationwith-categorical-variables" id="toc-cross-validationwith-categorical-variables" class="nav-link" data-scroll-target="#cross-validationwith-categorical-variables">Cross-Validation(with Categorical Variables)</a></li>
+  <li><a href="#key-concepts-learned" id="toc-key-concepts-learned" class="nav-link active" data-scroll-target="#key-concepts-learned">Key Concepts Learned</a></li>
+  <li><a href="#coding-techniques" id="toc-coding-techniques" class="nav-link" data-scroll-target="#coding-techniques">Coding Techniques</a></li>
+  <li><a href="#questions-challenges" id="toc-questions-challenges" class="nav-link" data-scroll-target="#questions-challenges">Questions &amp; Challenges</a></li>
+  <li><a href="#connections-to-policy" id="toc-connections-to-policy" class="nav-link" data-scroll-target="#connections-to-policy">Connections to Policy</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection">Reflection</a></li>
   </ul>
 </nav>
     </div>
@@ -250,7 +249,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Week 6 Notes - Spatial Machine Learning &amp; Advanced Regression</h1>
+<h1 class="title">Week 12 Notes – Neighborhood Trajectories &amp; Sequence Analysis</h1>
 </div>
 
 
@@ -261,7 +260,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 13, 2025</p>
+      <p class="date">November 24, 2025</p>
     </div>
   </div>
   
@@ -273,128 +272,56 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="converting-to-spatial-data" class="level2">
-<h2 class="anchored" data-anchor-id="converting-to-spatial-data">Converting to Spatial Data</h2>
-<p>step 1: Make your data spatial</p>
-<p>st_as_sf st_transform</p>
-<p>step 2: Spatial Join with Neighborhoods</p>
-</section>
-<section id="expanding-your-regression-toolkit" class="level2">
-<h2 class="anchored" data-anchor-id="expanding-your-regression-toolkit">Expanding Your Regression Toolkit</h2>
-<p>Continuous Variables</p>
+<section id="key-concepts-learned" class="level2">
+<h2 class="anchored" data-anchor-id="key-concepts-learned">Key Concepts Learned</h2>
 <ul>
-<li>Square footage</li>
-<li>Age of house</li>
-<li>Income levels</li>
-<li>Distance to downtown</li>
-</ul>
-<p>Categorical Variables</p>
-<ul>
-<li>Neighborhood</li>
-<li>School district</li>
-<li>Building type</li>
-<li>Has garage? (Yes/No)</li>
-</ul>
-<p>Add Dummy(Categorical) Variables to the Model</p>
-<p>Interpreting Neighborhood Dummy Variables</p>
-<p><strong>Interaction Effect: When Relationships Depend</strong></p>
-<p>Does the effect of one variable depend on the level of another variable?</p>
-<p>Example Scenarios</p>
-<ul>
-<li>Housing: Does square footage matter more in wealthy neighborhoods?</li>
-<li>Education: Do tutoring effects vary by initial skill level?</li>
-<li>Public Health: Do pollution effects differ by age?</li>
-</ul>
-<p><strong>Create an Hypothesis</strong></p>
-<p><strong>Create the Categories</strong></p>
-<ul>
-<li>Model 1: No Interaction (Parallel Slopes)</li>
-<li>Model 2: With Interaction (Different Slopes)</li>
-</ul>
-<p><strong>Interpreting the Interaction Coefficients</strong></p>
-<ul>
-<li>Breaking Down the Coefficient (Explain)</li>
-<li>Visualizing the Interaction Effect</li>
-<li>Compare Model Performance</li>
-<li>Policy Implications</li>
-</ul>
-<p><strong>When NOT to Use Interaction</strong></p>
-<ul>
-<li>Small samples: Need suffient data in each group</li>
-<li>Overfitting: Too many interactions make models unstable</li>
+<li><strong>Dynamics vs.&nbsp;snapshots</strong>: single-year classifications miss long-term neighborhood change.</li>
+<li><strong>Neighborhood sequences</strong>: each neighborhood is represented as a sequence of states across multiple years.</li>
+<li><strong>K-means clustering</strong> is used to classify neighborhoods into states for each year.</li>
+<li><strong>Sequence similarity metrics</strong> (e.g., OMstrans) allow comparison of entire trajectories, not just endpoints.</li>
+<li><strong>Hierarchical clustering (Ward’s method)</strong> groups similar trajectories together.</li>
+<li>Mapping trajectory clusters reveals <strong>spatial patterns</strong> of stability, decline, or transformation.</li>
 </ul>
 </section>
-<section id="polynomial-terms-non-linear-relationships" class="level2">
-<h2 class="anchored" data-anchor-id="polynomial-terms-non-linear-relationships">Polynomial Terms: Non-Linear Relationships</h2>
-<p><strong>Signs of Non-Linearity:</strong></p>
+<section id="coding-techniques" class="level2">
+<h2 class="anchored" data-anchor-id="coding-techniques">Coding Techniques</h2>
 <ul>
-<li>Curved residual plots</li>
-<li>Diminishing returns</li>
-<li>Accelerating effects</li>
-<li>U-shaped or inverted-U patterns</li>
-<li>Theoretical reasons</li>
-</ul>
-<p><strong>Examples:</strong></p>
-<ul>
-<li>House age: depreciation then vintage premium</li>
-<li>Test scores: plateau after studying</li>
-<li>Advertising: diminishing returns</li>
-<li>Crime prevention: early gains, then plateaus</li>
-</ul>
-<p><strong>The U-Shaped Age Effect</strong></p>
-<ul>
-<li>Create Age Variable</li>
-<li>First: Linear Model (Baseline)</li>
-<li>Visualize</li>
-<li>Add Polynomial Term: Age Squared</li>
-<li>Interpreting Polynomial Coefficients</li>
-<li>Compare Model Performance</li>
-<li>Check Residual Plot</li>
+<li><strong>Z-score normalization</strong> to make multi-year variables comparable.</li>
+<li>Using <code>kmeans()</code> to classify neighborhoods each year.</li>
+<li>Reshaping data to wide format and creating sequences with <code>TraMineR::seqdef()</code>.</li>
+<li>Computing sequence distances with <strong>OMstrans</strong>, which accounts for transitions.</li>
+<li>Using hierarchical clustering (<code>hclust(method = "ward.D2")</code>) to identify trajectory groups.</li>
+<li>Plotting trajectory clusters on maps to visualize spatial patterns.</li>
 </ul>
 </section>
-<section id="creating-spatial-feartures" class="level2">
-<h2 class="anchored" data-anchor-id="creating-spatial-feartures">Creating Spatial Feartures</h2>
-<p><strong>Three Approaches to Spatial Features</strong></p>
-<ol type="1">
-<li>Buffer Aggregation</li>
-</ol>
+<section id="questions-challenges" class="level2">
+<h2 class="anchored" data-anchor-id="questions-challenges">Questions &amp; Challenges</h2>
 <ul>
-<li>count or sum events within a defined distance</li>
-<li>Ex: Number od crimes within 500 feet</li>
-</ul>
-<ol start="2" type="1">
-<li>k-Nearest Neighbors (kNN)</li>
-</ol>
-<ul>
-<li>Average distance to k closest events</li>
-<li>Ex: Average distance to 3 nearest violent crimes</li>
-</ul>
-<ol start="3" type="1">
-<li>Distance to Specific Points</li>
-</ol>
-<ul>
-<li>Straight-line distance to important locations</li>
-<li>Ex: Distance to downtown, nearest T station</li>
+<li>Choosing the <strong>right number of clusters (K)</strong>: statistical fit vs.&nbsp;interpretability.</li>
+<li>Understanding how OMstrans parameters influence the distance matrix.</li>
+<li>Translating trajectory groups into <strong>actionable policy recommendations</strong> rather than descriptive categories.</li>
 </ul>
 </section>
-<section id="fixed-effects" class="level2">
-<h2 class="anchored" data-anchor-id="fixed-effects">Fixed Effects</h2>
-<p>Fixed Effects = Categorical variables that capture all unmeasured characteristics of a group</p>
-<p>In hedonic models:</p>
+<section id="connections-to-policy" class="level2">
+<h2 class="anchored" data-anchor-id="connections-to-policy">Connections to Policy</h2>
 <ul>
-<li>Each neighborhood gets its own dummy variable</li>
-<li>Captures everything unique about that neighborhood we didn’t explicitly measure</li>
+<li>Different trajectory patterns imply <strong>different policy needs</strong> (e.g., stable neighborhoods vs.&nbsp;rapidly transitioning ones).</li>
+<li>Sequence analysis highlights <strong>historical processes</strong>, enabling more forward-looking planning.</li>
+<li>Clusters can help identify <strong>priority areas</strong> for intervention or monitoring.</li>
+<li>Understanding long-term pathways supports more equitable and place-specific policy design.</li>
 </ul>
 </section>
-<section id="cross-validationwith-categorical-variables" class="level2">
-<h2 class="anchored" data-anchor-id="cross-validationwith-categorical-variables">Cross-Validation(with Categorical Variables)</h2>
-<p><strong>Three common validation approaches</strong> 1. Train/Test Split 2. k-Fold Cross-Validation 3. LOOCV</p>
-<p><strong>The Problem: Sparse Categories</strong></p>
-<p>When CV Fails with Categorical Variables - Don’t have enough data so the model is not well trained - Model can’t predict for a category it never learned</p>
-<p><strong>Solution</strong></p>
+<section id="reflection" class="level2">
+<h2 class="anchored" data-anchor-id="reflection">Reflection</h2>
 <ul>
-<li>Group Small Neighborhoods</li>
-<li>Alternative: Drop Spare Categories</li>
+<li>Most interesting insight: neighborhoods change through <strong>paths</strong>, not isolated snapshots.</li>
+<li>Sequence analysis provides a richer understanding of urban dynamics by revealing patterns of stability, volatility, or sustained growth.</li>
+<li>I can apply this framework to future projects by:
+<ul>
+<li>Comparing long-term neighborhood change,</li>
+<li>Identifying stagnation vs.&nbsp;transformation,</li>
+<li>And grounding policy recommendations in multi-year trends rather than single-year metrics.</li>
+</ul></li>
 </ul>
 
 
