@@ -2,86 +2,86 @@
   {
     "objectID": "weekly-notes/week-12-notes.html",
     "href": "weekly-notes/week-12-notes.html",
-    "title": "Week 12 Notes – Neighborhood Trajectories & Sequence Analysis",
+    "title": "Week 12 Notes – Neighborhood Trajectories and Sequence Analysis",
     "section": "",
-    "text": "Dynamics vs. snapshots: single-year classifications miss long-term neighborhood change.\nNeighborhood sequences: each neighborhood is represented as a sequence of states across multiple years.\nK-means clustering is used to classify neighborhoods into states for each year.\nSequence similarity metrics (e.g., OMstrans) allow comparison of entire trajectories, not just endpoints.\nHierarchical clustering (Ward’s method) groups similar trajectories together.\nMapping trajectory clusters reveals spatial patterns of stability, decline, or transformation."
+    "text": "Neighborhood change should be viewed as a dynamic process rather than a single snapshot.\nNeighborhood states can be defined through clustering methods (e.g., k-means) for each time point.\nA sequence for each neighborhood is created by stringing together its state across multiple years.\nSequence similarity metrics allow comparison of entire change trajectories.\nHierarchical clustering (such as Ward’s method) groups neighborhoods with similar developmental paths.\nMapping trajectory clusters reveals spatial patterns of stability, decline, or transformation.\nThis approach highlights both the pace and direction of neighborhood change."
   },
   {
     "objectID": "weekly-notes/week-12-notes.html#key-concepts-learned",
     "href": "weekly-notes/week-12-notes.html#key-concepts-learned",
-    "title": "Week 12 Notes – Neighborhood Trajectories & Sequence Analysis",
+    "title": "Week 12 Notes – Neighborhood Trajectories and Sequence Analysis",
     "section": "",
-    "text": "Dynamics vs. snapshots: single-year classifications miss long-term neighborhood change.\nNeighborhood sequences: each neighborhood is represented as a sequence of states across multiple years.\nK-means clustering is used to classify neighborhoods into states for each year.\nSequence similarity metrics (e.g., OMstrans) allow comparison of entire trajectories, not just endpoints.\nHierarchical clustering (Ward’s method) groups similar trajectories together.\nMapping trajectory clusters reveals spatial patterns of stability, decline, or transformation."
+    "text": "Neighborhood change should be viewed as a dynamic process rather than a single snapshot.\nNeighborhood states can be defined through clustering methods (e.g., k-means) for each time point.\nA sequence for each neighborhood is created by stringing together its state across multiple years.\nSequence similarity metrics allow comparison of entire change trajectories.\nHierarchical clustering (such as Ward’s method) groups neighborhoods with similar developmental paths.\nMapping trajectory clusters reveals spatial patterns of stability, decline, or transformation.\nThis approach highlights both the pace and direction of neighborhood change."
   },
   {
     "objectID": "weekly-notes/week-12-notes.html#coding-techniques",
     "href": "weekly-notes/week-12-notes.html#coding-techniques",
-    "title": "Week 12 Notes – Neighborhood Trajectories & Sequence Analysis",
+    "title": "Week 12 Notes – Neighborhood Trajectories and Sequence Analysis",
     "section": "Coding Techniques",
-    "text": "Coding Techniques\n\nZ-score normalization to make multi-year variables comparable.\nUsing kmeans() to classify neighborhoods each year.\nReshaping data to wide format and creating sequences with TraMineR::seqdef().\nComputing sequence distances with OMstrans, which accounts for transitions.\nUsing hierarchical clustering (hclust(method = \"ward.D2\")) to identify trajectory groups.\nPlotting trajectory clusters on maps to visualize spatial patterns."
+    "text": "Coding Techniques\n\nNormalizing variables to make them comparable across years.\nUsing kmeans() to assign yearly neighborhood categories.\nReshaping data to wide format to build sequences.\nCreating sequence objects with tools like seqdef() from sequence analysis packages.\nComputing distance matrices using sequence similarity measures.\nApplying hierarchical clustering to group neighborhoods into trajectory types.\nVisualizing the spatial distribution of trajectory clusters on maps."
   },
   {
     "objectID": "weekly-notes/week-12-notes.html#questions-challenges",
     "href": "weekly-notes/week-12-notes.html#questions-challenges",
-    "title": "Week 12 Notes – Neighborhood Trajectories & Sequence Analysis",
+    "title": "Week 12 Notes – Neighborhood Trajectories and Sequence Analysis",
     "section": "Questions & Challenges",
-    "text": "Questions & Challenges\n\nChoosing the right number of clusters (K): statistical fit vs. interpretability.\nUnderstanding how OMstrans parameters influence the distance matrix.\nTranslating trajectory groups into actionable policy recommendations rather than descriptive categories."
+    "text": "Questions & Challenges\n\nChoosing the appropriate number of clusters for meaningful interpretation.\nUnderstanding how parameter choices in sequence distance metrics influence results.\nTranslating trajectory groups into clear policy implications rather than descriptive labels.\nBalancing statistical rigor with interpretability for community and policy audiences."
   },
   {
     "objectID": "weekly-notes/week-12-notes.html#connections-to-policy",
     "href": "weekly-notes/week-12-notes.html#connections-to-policy",
-    "title": "Week 12 Notes – Neighborhood Trajectories & Sequence Analysis",
+    "title": "Week 12 Notes – Neighborhood Trajectories and Sequence Analysis",
     "section": "Connections to Policy",
-    "text": "Connections to Policy\n\nDifferent trajectory patterns imply different policy needs (e.g., stable neighborhoods vs. rapidly transitioning ones).\nSequence analysis highlights historical processes, enabling more forward-looking planning.\nClusters can help identify priority areas for intervention or monitoring.\nUnderstanding long-term pathways supports more equitable and place-specific policy design."
+    "text": "Connections to Policy\n\nDifferent trajectory patterns imply distinct policy strategies: stabilization, investment, monitoring, or protection.\nSequence analysis reveals long-term processes that may be invisible in single-year data.\nPolicymakers can identify neighborhoods showing early signs of change or long-term stagnation.\nUnderstanding trajectories supports more tailored and equitable urban interventions."
   },
   {
     "objectID": "weekly-notes/week-12-notes.html#reflection",
     "href": "weekly-notes/week-12-notes.html#reflection",
-    "title": "Week 12 Notes – Neighborhood Trajectories & Sequence Analysis",
+    "title": "Week 12 Notes – Neighborhood Trajectories and Sequence Analysis",
     "section": "Reflection",
-    "text": "Reflection\n\nMost interesting insight: neighborhoods change through paths, not isolated snapshots.\nSequence analysis provides a richer understanding of urban dynamics by revealing patterns of stability, volatility, or sustained growth.\nI can apply this framework to future projects by:\n\nComparing long-term neighborhood change,\nIdentifying stagnation vs. transformation,\nAnd grounding policy recommendations in multi-year trends rather than single-year metrics."
+    "text": "Reflection\n\nThis framework shifted my mindset from thinking about neighborhoods as fixed categories to understanding them as evolving stories.\nLooking at sequences helps capture complexity—volatility, stability, and direction—all at once.\nI can apply this approach in future projects by comparing long-term neighborhood patterns and grounding recommendations in multi-year trends."
   },
   {
     "objectID": "weekly-notes/week-10-notes.html",
     "href": "weekly-notes/week-10-notes.html",
     "title": "Week 10 Notes – Logistic Regression for Binary Outcomes",
     "section": "",
-    "text": "Logistic regression is used when the outcome is binary (yes/no) rather than continuous. :contentReferenceoaicite:1\nLinear regression is not suitable for binary outcomes because it can produce predictions outside 0–1 and violates key assumptions. :contentReferenceoaicite:2\nLogistic regression models probabilities via the logistic function, which constrains predictions between 0 and 1. :contentReferenceoaicite:3\nWe work with log-odds (logit) to create a linear relationship with predictors; exponentiated coefficients become odds ratios. :contentReferenceoaicite:4\nChoosing a probability threshold (e.g., 0.5) converts probabilities to binary decisions. :contentReferenceoaicite:5\nConfusion matrices and associated metrics help evaluate classification performance at different thresholds. :contentReferenceoaicite:6\nROC curves and AUC visualize overall model discrimination across thresholds. :contentReferenceoaicite:7\nEquity matters: a model can have good overall accuracy but perform very differently across demographic groups. :contentReferenceoaicite:8"
+    "text": "Logistic regression is used when the outcome is binary (yes/no).\nLinear regression is inappropriate for binary outcomes because predictions can fall outside 0–1 and violate assumptions.\nLogistic regression models probabilities using the logistic function.\nCoefficients are interpreted on the log-odds scale; exponentiated coefficients become odds ratios.\nA probability threshold (such as 0.5) converts predicted probabilities into binary decisions.\nConfusion matrices summarize model performance using metrics like sensitivity, specificity, and precision.\nROC curves and AUC evaluate overall discrimination across all possible thresholds.\nA model may perform differently across demographic groups, even when overall accuracy is high."
   },
   {
     "objectID": "weekly-notes/week-10-notes.html#key-concepts-learned",
     "href": "weekly-notes/week-10-notes.html#key-concepts-learned",
     "title": "Week 10 Notes – Logistic Regression for Binary Outcomes",
     "section": "",
-    "text": "Logistic regression is used when the outcome is binary (yes/no) rather than continuous. :contentReferenceoaicite:1\nLinear regression is not suitable for binary outcomes because it can produce predictions outside 0–1 and violates key assumptions. :contentReferenceoaicite:2\nLogistic regression models probabilities via the logistic function, which constrains predictions between 0 and 1. :contentReferenceoaicite:3\nWe work with log-odds (logit) to create a linear relationship with predictors; exponentiated coefficients become odds ratios. :contentReferenceoaicite:4\nChoosing a probability threshold (e.g., 0.5) converts probabilities to binary decisions. :contentReferenceoaicite:5\nConfusion matrices and associated metrics help evaluate classification performance at different thresholds. :contentReferenceoaicite:6\nROC curves and AUC visualize overall model discrimination across thresholds. :contentReferenceoaicite:7\nEquity matters: a model can have good overall accuracy but perform very differently across demographic groups. :contentReferenceoaicite:8"
+    "text": "Logistic regression is used when the outcome is binary (yes/no).\nLinear regression is inappropriate for binary outcomes because predictions can fall outside 0–1 and violate assumptions.\nLogistic regression models probabilities using the logistic function.\nCoefficients are interpreted on the log-odds scale; exponentiated coefficients become odds ratios.\nA probability threshold (such as 0.5) converts predicted probabilities into binary decisions.\nConfusion matrices summarize model performance using metrics like sensitivity, specificity, and precision.\nROC curves and AUC evaluate overall discrimination across all possible thresholds.\nA model may perform differently across demographic groups, even when overall accuracy is high."
   },
   {
     "objectID": "weekly-notes/week-10-notes.html#coding-techniques",
     "href": "weekly-notes/week-10-notes.html#coding-techniques",
     "title": "Week 10 Notes – Logistic Regression for Binary Outcomes",
     "section": "Coding Techniques",
-    "text": "Coding Techniques\n\nUse glm(..., family=\"binomial\") to fit logistic regression in R. :contentReferenceoaicite:9\nPredict probabilities with predict(model, type=\"response\"). :contentReferenceoaicite:10\nCreate confusion matrices (e.g., with caret::confusionMatrix) to compute sensitivity, specificity, precision. :contentReferenceoaicite:11\nLoop over different thresholds to compare metrics. :contentReferenceoaicite:12\nUse pROC::roc() and ggroc() to generate ROC curves and compute AUC. :contentReferenceoaicite:13"
+    "text": "Coding Techniques\n\nFit logistic regression using glm(..., family = \"binomial\").\nUse predict(model, type = \"response\") to obtain predicted probabilities.\nCreate confusion matrices to calculate metrics such as sensitivity and specificity.\nLoop through multiple thresholds to evaluate different tradeoffs.\nUse pROC::roc() to create ROC curves and compute AUC."
   },
   {
     "objectID": "weekly-notes/week-10-notes.html#questions-challenges",
     "href": "weekly-notes/week-10-notes.html#questions-challenges",
     "title": "Week 10 Notes – Logistic Regression for Binary Outcomes",
     "section": "Questions & Challenges",
-    "text": "Questions & Challenges\n\nHow to choose the optimal threshold in real policy problems? :contentReferenceoaicite:14\nUnderstanding how threshold tradeoffs affect different error types and consequences. :contentReferenceoaicite:15\nInterpreting odds ratios appropriately, especially when predictors are scaled differently. :contentReferenceoaicite:16\nEvaluating equity implications across different subgroups. :contentReferenceoaicite:17"
+    "text": "Questions & Challenges\n\nHow to choose the optimal threshold for real-world decision making.\nInterpreting odds ratios correctly when predictors are on different scales.\nUnderstanding how different threshold choices influence false positives and false negatives.\nAssessing equity and subgroup performance in a structured way."
   },
   {
     "objectID": "weekly-notes/week-10-notes.html#connections-to-policy",
     "href": "weekly-notes/week-10-notes.html#connections-to-policy",
     "title": "Week 10 Notes – Logistic Regression for Binary Outcomes",
     "section": "Connections to Policy",
-    "text": "Connections to Policy\n\nLogistic regression is widely used for risk prediction in policy areas like recidivism, health risk, and program uptake. :contentReferenceoaicite:18\nThreshold choice determines who gets flagged for intervention — with real consequences for individuals and resources. :contentReferenceoaicite:19\nEvaluating false positive vs. false negative costs is essential for fair and effective policy. :contentReferenceoaicite:20\nEquity evaluation encourages fairness across demographic groups, not just overall accuracy. :contentReferenceoaicite:21"
+    "text": "Connections to Policy\n\nLogistic regression is widely used for risk assessment in criminal justice, health, and public services.\nThreshold decisions determine who receives interventions or additional scrutiny.\nPolicymakers must consider the different costs of false positives versus false negatives.\nFairness analysis is essential to ensure that models do not disproportionately burden certain groups."
   },
   {
     "objectID": "weekly-notes/week-10-notes.html#reflection",
     "href": "weekly-notes/week-10-notes.html#reflection",
     "title": "Week 10 Notes – Logistic Regression for Binary Outcomes",
     "section": "Reflection",
-    "text": "Reflection\n\nLogistic regression changed how I think about prediction problems: they are about probabilities and decisions, not just fits. :contentReferenceoaicite:22\nThe threshold decision is a policy choice, not a purely statistical one. :contentReferenceoaicite:23\nI will apply this by explicitly documenting threshold choices and considering the ethical implications of errors. :contentReferenceoaicite:24"
+    "text": "Reflection\n\nLogistic regression reframed prediction for me as a probability and decision problem, not just a statistical fit.\nThreshold selection is fundamentally a policy choice, not a purely statistical one.\nI will be more intentional about documenting threshold decisions and considering equity impacts in future analyses."
   },
   {
     "objectID": "weekly-notes/week-07-notes.html",
@@ -1299,83 +1299,83 @@
     "href": "weekly-notes/week-09-notes.html",
     "title": "Week 9 Notes – Critical Perspectives on Predictive Policing",
     "section": "",
-    "text": "Predictive policing promises efficiency, objectivity, and proactive crime prevention. :contentReferenceoaicite:25\nBut these claims often rest on flawed data and assumptions. :contentReferenceoaicite:26\n“Dirty data” includes fabricated, biased, incomplete, or misleading data. :contentReferenceoaicite:27\nOver-policing certain communities creates feedback loops where data reflects policing patterns more than underlying crime. :contentReferenceoaicite:28\nMultiple generations of predictive policing technology (hotspots, risk terrain, ML) all risk amplifying bias if data are flawed. :contentReferenceoaicite:29\nTechnical solutions cannot fix fundamental social problems or biases embedded in data. :contentReferenceoaicite:30"
+    "text": "Predictive policing claims to increase efficiency and objectivity, but these claims rely heavily on data quality.\n“Dirty data” includes biased, incomplete, fabricated, or misleading data.\nOver-policing in certain neighborhoods creates feedback loops where the data reflect policing patterns rather than true crime patterns.\nDifferent generations of predictive policing tools (hotspot maps, risk terrain modeling, machine learning) all risk reproducing structural bias.\nTechnical improvements alone cannot overcome flawed data or deep social inequities."
   },
   {
     "objectID": "weekly-notes/week-09-notes.html#key-concepts-learned",
     "href": "weekly-notes/week-09-notes.html#key-concepts-learned",
     "title": "Week 9 Notes – Critical Perspectives on Predictive Policing",
     "section": "",
-    "text": "Predictive policing promises efficiency, objectivity, and proactive crime prevention. :contentReferenceoaicite:25\nBut these claims often rest on flawed data and assumptions. :contentReferenceoaicite:26\n“Dirty data” includes fabricated, biased, incomplete, or misleading data. :contentReferenceoaicite:27\nOver-policing certain communities creates feedback loops where data reflects policing patterns more than underlying crime. :contentReferenceoaicite:28\nMultiple generations of predictive policing technology (hotspots, risk terrain, ML) all risk amplifying bias if data are flawed. :contentReferenceoaicite:29\nTechnical solutions cannot fix fundamental social problems or biases embedded in data. :contentReferenceoaicite:30"
+    "text": "Predictive policing claims to increase efficiency and objectivity, but these claims rely heavily on data quality.\n“Dirty data” includes biased, incomplete, fabricated, or misleading data.\nOver-policing in certain neighborhoods creates feedback loops where the data reflect policing patterns rather than true crime patterns.\nDifferent generations of predictive policing tools (hotspot maps, risk terrain modeling, machine learning) all risk reproducing structural bias.\nTechnical improvements alone cannot overcome flawed data or deep social inequities."
   },
   {
     "objectID": "weekly-notes/week-09-notes.html#coding-techniques",
     "href": "weekly-notes/week-09-notes.html#coding-techniques",
     "title": "Week 9 Notes – Critical Perspectives on Predictive Policing",
     "section": "Coding Techniques",
-    "text": "Coding Techniques\n✦ Week 9 focuses on critical analysis rather than specific coding techniques.\n✦ Examples explore how different modeling approaches can build on biased data and misinterpret patterns. :contentReferenceoaicite:31"
+    "text": "Coding Techniques\n\nThis week focused on conceptual and ethical issues rather than new coding techniques.\nExamples highlighted how biased data can lead to misleading model outputs, even with sophisticated algorithms."
   },
   {
     "objectID": "weekly-notes/week-09-notes.html#questions-challenges",
     "href": "weekly-notes/week-09-notes.html#questions-challenges",
     "title": "Week 9 Notes – Critical Perspectives on Predictive Policing",
     "section": "Questions & Challenges",
-    "text": "Questions & Challenges\n\nHow to detect and measure “dirty data” before modeling? :contentReferenceoaicite:32\nCan models be designed to avoid reinforcing bias, or is this a fundamentally social problem? :contentReferenceoaicite:33\nHow to balance predictive accuracy with fairness and justice? :contentReferenceoaicite:34"
+    "text": "Questions & Challenges\n\nHow can analysts detect when data are biased or incomplete?\nCan predictive systems be designed to avoid reinforcing inequality, or is this mainly a social and institutional problem?\nHow should accuracy be balanced against fairness, accountability, and community trust?"
   },
   {
     "objectID": "weekly-notes/week-09-notes.html#connections-to-policy",
     "href": "weekly-notes/week-09-notes.html#connections-to-policy",
     "title": "Week 9 Notes – Critical Perspectives on Predictive Policing",
     "section": "Connections to Policy",
-    "text": "Connections to Policy\n\nPredictive policing can justify resource deployment, but it can also reinforce systemic inequities. :contentReferenceoaicite:35\nDirty data can unfairly target marginalized communities. :contentReferenceoaicite:36\nDecision-makers must understand data provenance and ethical risks before adopting analytic tools. :contentReferenceoaicite:37"
+    "text": "Connections to Policy\n\nPredictive policing influences real-world deployment of law enforcement resources.\nDirty data can lead to unjustified surveillance or enforcement in marginalized communities.\nPolicymakers must understand data provenance and the ethical risks before adopting algorithmic tools.\nTransparency and oversight are critical for maintaining public trust."
   },
   {
     "objectID": "weekly-notes/week-09-notes.html#reflection",
     "href": "weekly-notes/week-09-notes.html#reflection",
     "title": "Week 9 Notes – Critical Perspectives on Predictive Policing",
     "section": "Reflection",
-    "text": "Reflection\n\nThis week reminded me that good analytics is not just good math — it requires critical thinking about data sources. :contentReferenceoaicite:38\nModels built on biased data can do harm even with high technical accuracy. :contentReferenceoaicite:39\nI will be more careful to ask: where did the data come from, and what biases might it carry? :contentReferenceoaicite:40"
+    "text": "Reflection\n\nThis week emphasized that analytical rigor is not enough—context and ethics matter.\nModels built on biased data can cause real harm even when they appear accurate.\nGoing forward, I will be more critical about where my data come from and whose experiences they represent or exclude."
   },
   {
     "objectID": "weekly-notes/week-11-notes.html",
     "href": "weekly-notes/week-11-notes.html",
-    "title": "Week 11 Notes – Classification, ROC & Decision Thresholds",
+    "title": "Week 11 Notes – Classification, ROC, and Decision Thresholds",
     "section": "",
-    "text": "Difference between regression vs. classification; logistic regression predicts probabilities, not categories.\nConfusion matrix: TP, FP, TN, FN; each cell has different policy implications.\nSensitivity (Recall), Specificity, Precision — why no single metric is “best.”\nROC curve and AUC as global, threshold-free performance measures.\nThe idea of decision thresholds: model predicts probabilities, humans decide the cutoff.\nBase rates & class imbalance: high accuracy ≠ good model if minority class is important.\nCost-sensitive evaluation: false positives vs. false negatives have asymmetric impacts in policy."
+    "text": "Logistic regression produces probabilities, not discrete categories.\nClassification requires choosing a decision threshold to turn probabilities into yes/no predictions.\nConfusion matrices summarize four types of outcomes: true positives, false positives, true negatives, and false negatives.\nPerformance metrics—accuracy, sensitivity, specificity, precision, recall, F1—capture different aspects of model quality.\nROC curves show tradeoffs between sensitivity and specificity across all possible thresholds.\nAUC measures overall model discrimination independent of a specific threshold.\nBase rates and class imbalance can distort accuracy and require alternative evaluation metrics.\nChoosing a threshold is a policy decision, not a statistical one, because different types of errors have different real-world costs."
   },
   {
     "objectID": "weekly-notes/week-11-notes.html#key-concepts-learned",
     "href": "weekly-notes/week-11-notes.html#key-concepts-learned",
-    "title": "Week 11 Notes – Classification, ROC & Decision Thresholds",
+    "title": "Week 11 Notes – Classification, ROC, and Decision Thresholds",
     "section": "",
-    "text": "Difference between regression vs. classification; logistic regression predicts probabilities, not categories.\nConfusion matrix: TP, FP, TN, FN; each cell has different policy implications.\nSensitivity (Recall), Specificity, Precision — why no single metric is “best.”\nROC curve and AUC as global, threshold-free performance measures.\nThe idea of decision thresholds: model predicts probabilities, humans decide the cutoff.\nBase rates & class imbalance: high accuracy ≠ good model if minority class is important.\nCost-sensitive evaluation: false positives vs. false negatives have asymmetric impacts in policy."
+    "text": "Logistic regression produces probabilities, not discrete categories.\nClassification requires choosing a decision threshold to turn probabilities into yes/no predictions.\nConfusion matrices summarize four types of outcomes: true positives, false positives, true negatives, and false negatives.\nPerformance metrics—accuracy, sensitivity, specificity, precision, recall, F1—capture different aspects of model quality.\nROC curves show tradeoffs between sensitivity and specificity across all possible thresholds.\nAUC measures overall model discrimination independent of a specific threshold.\nBase rates and class imbalance can distort accuracy and require alternative evaluation metrics.\nChoosing a threshold is a policy decision, not a statistical one, because different types of errors have different real-world costs."
   },
   {
     "objectID": "weekly-notes/week-11-notes.html#coding-techniques",
     "href": "weekly-notes/week-11-notes.html#coding-techniques",
-    "title": "Week 11 Notes – Classification, ROC & Decision Thresholds",
+    "title": "Week 11 Notes – Classification, ROC, and Decision Thresholds",
     "section": "Coding Techniques",
-    "text": "Coding Techniques\n\nUsing predict(..., type = \"response\") to get predicted probabilities.\nGenerating a confusion matrix with caret::confusionMatrix() or manual table.\nPlotting ROC curves with pROC::roc() and extracting AUC.\nEvaluating model metrics across multiple thresholds (loop / tibble workflows).\nUsing yardstick-style metrics: accuracy, sensitivity, specificity, precision, recall, F1."
+    "text": "Coding Techniques\n\nUsing predict(..., type = \"response\") to generate predicted probabilities.\nManually converting probabilities to classifications using various thresholds.\nConstructing confusion matrices and computing metrics for each threshold.\nUsing ROC and AUC functions to evaluate model performance across thresholds.\nCreating tables or plots that compare metrics under different decision rules."
   },
   {
     "objectID": "weekly-notes/week-11-notes.html#questions-challenges",
     "href": "weekly-notes/week-11-notes.html#questions-challenges",
-    "title": "Week 11 Notes – Classification, ROC & Decision Thresholds",
+    "title": "Week 11 Notes – Classification, ROC, and Decision Thresholds",
     "section": "Questions & Challenges",
-    "text": "Questions & Challenges\n\nStill clarifying: how to pick an “optimal” threshold when costs are not formally quantified.\nNeed more practice interpreting ROC curves beyond “higher AUC is better.”\nUncertainty about how to adjust thresholds in practice when policy stakes differ.\nWant more examples of class imbalance handling (weighting, resampling, etc.)."
+    "text": "Questions & Challenges\n\nHow to determine the “best” threshold when costs of errors are not explicitly quantified.\nInterpreting ROC curves beyond simply preferring higher AUC.\nEvaluating how different thresholds affect resource allocation and public service delivery.\nTranslating statistical performance into operational decisions."
   },
   {
     "objectID": "weekly-notes/week-11-notes.html#connections-to-policy",
     "href": "weekly-notes/week-11-notes.html#connections-to-policy",
-    "title": "Week 11 Notes – Classification, ROC & Decision Thresholds",
+    "title": "Week 11 Notes – Classification, ROC, and Decision Thresholds",
     "section": "Connections to Policy",
-    "text": "Connections to Policy\n\nThreshold choices directly determine resource allocation (e.g., inspectors, fire trucks, case managers).\nFalse negatives and false positives often imply very different real-world risks.\nROC/AUC help compare models, but policy choice determines threshold, not statistics.\nClassification models support risk-based decision systems, but need governance to avoid inequity."
+    "text": "Connections to Policy\n\nThreshold choices determine who gets flagged for inspection, services, enforcement, or support.\nFalse positives and false negatives often have asymmetric consequences, requiring careful balancing.\nAUC helps compare models, but policymakers must define acceptable tradeoffs.\nClassification systems can influence equity outcomes depending on how errors impact different communities."
   },
   {
     "objectID": "weekly-notes/week-11-notes.html#reflection",
     "href": "weekly-notes/week-11-notes.html#reflection",
-    "title": "Week 11 Notes – Classification, ROC & Decision Thresholds",
+    "title": "Week 11 Notes – Classification, ROC, and Decision Thresholds",
     "section": "Reflection",
-    "text": "Reflection\n\nMost interesting: realizing classification is fundamentally about managing tradeoffs, not just accuracy.\nThe ROC + threshold framework clarified why one model can be used in multiple policy scenarios.\nI can apply this by being explicit about:\n\nwhat policy outcome matters,\nwhich errors are most costly,\nand selecting thresholds that align with those values."
+    "text": "Reflection\n\nThis week emphasized that prediction is only the first step; decisions require judgment.\nROC analysis clarified that a single model can support many policy goals depending on the threshold.\nI will pay more attention to documenting error tradeoffs and aligning threshold selection with policy priorities in future work."
   }
 ]

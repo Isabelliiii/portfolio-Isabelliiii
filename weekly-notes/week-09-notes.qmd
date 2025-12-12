@@ -4,28 +4,28 @@ date: "2025-11-03"
 ---
 
 ## Key Concepts Learned
-- Predictive policing promises efficiency, objectivity, and proactive crime prevention. :contentReference[oaicite:25]{index=25}
-- But these claims often rest on flawed data and assumptions. :contentReference[oaicite:26]{index=26}
-- **“Dirty data”** includes fabricated, biased, incomplete, or misleading data. :contentReference[oaicite:27]{index=27}
-- Over-policing certain communities creates feedback loops where data reflects policing patterns more than underlying crime. :contentReference[oaicite:28]{index=28}
-- Multiple generations of predictive policing technology (hotspots, risk terrain, ML) all risk amplifying bias if data are flawed. :contentReference[oaicite:29]{index=29}
-- Technical solutions **cannot fix fundamental social problems** or biases embedded in data. :contentReference[oaicite:30]{index=30}
+- Predictive policing claims to increase efficiency and objectivity, but these claims rely heavily on data quality.
+- “Dirty data” includes biased, incomplete, fabricated, or misleading data.
+- Over-policing in certain neighborhoods creates feedback loops where the data reflect policing patterns rather than true crime patterns.
+- Different generations of predictive policing tools (hotspot maps, risk terrain modeling, machine learning) all risk reproducing structural bias.
+- Technical improvements alone cannot overcome flawed data or deep social inequities.
 
 ## Coding Techniques
-✦ Week 9 focuses on **critical analysis** rather than specific coding techniques.  
-✦ Examples explore how different modeling approaches can build on biased data and misinterpret patterns. :contentReference[oaicite:31]{index=31}
+- This week focused on conceptual and ethical issues rather than new coding techniques.
+- Examples highlighted how biased data can lead to misleading model outputs, even with sophisticated algorithms.
 
 ## Questions & Challenges
-- How to detect and measure “dirty data” before modeling? :contentReference[oaicite:32]{index=32}
-- Can models be designed to **avoid reinforcing bias**, or is this a fundamentally social problem? :contentReference[oaicite:33]{index=33}
-- How to balance predictive accuracy with fairness and justice? :contentReference[oaicite:34]{index=34}
+- How can analysts detect when data are biased or incomplete?
+- Can predictive systems be designed to avoid reinforcing inequality, or is this mainly a social and institutional problem?
+- How should accuracy be balanced against fairness, accountability, and community trust?
 
 ## Connections to Policy
-- Predictive policing can justify **resource deployment**, but it can also reinforce systemic inequities. :contentReference[oaicite:35]{index=35}
-- Dirty data can unfairly target marginalized communities. :contentReference[oaicite:36]{index=36}
-- Decision-makers must understand **data provenance** and ethical risks before adopting analytic tools. :contentReference[oaicite:37]{index=37}
+- Predictive policing influences real-world deployment of law enforcement resources.
+- Dirty data can lead to unjustified surveillance or enforcement in marginalized communities.
+- Policymakers must understand data provenance and the ethical risks before adopting algorithmic tools.
+- Transparency and oversight are critical for maintaining public trust.
 
 ## Reflection
-- This week reminded me that **good analytics is not just good math** — it requires critical thinking about data sources. :contentReference[oaicite:38]{index=38}
-- Models built on biased data can do **harm even with high technical accuracy**. :contentReference[oaicite:39]{index=39}
-- I will be more careful to ask: where did the data come from, and what biases might it carry? :contentReference[oaicite:40]{index=40}
+- This week emphasized that analytical rigor is not enough—context and ethics matter.
+- Models built on biased data can cause real harm even when they appear accurate.
+- Going forward, I will be more critical about where my data come from and whose experiences they represent or exclude.

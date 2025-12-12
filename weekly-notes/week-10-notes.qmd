@@ -4,35 +4,35 @@ date: "2025-11-10"
 ---
 
 ## Key Concepts Learned
-- Logistic regression is used when the outcome is **binary (yes/no)** rather than continuous. :contentReference[oaicite:1]{index=1}
-- Linear regression is **not suitable** for binary outcomes because it can produce predictions outside 0–1 and violates key assumptions. :contentReference[oaicite:2]{index=2}
-- Logistic regression models **probabilities** via the logistic function, which constrains predictions between 0 and 1. :contentReference[oaicite:3]{index=3}
-- We work with **log-odds (logit)** to create a linear relationship with predictors; exponentiated coefficients become **odds ratios**. :contentReference[oaicite:4]{index=4}
-- Choosing a **probability threshold** (e.g., 0.5) converts probabilities to binary decisions. :contentReference[oaicite:5]{index=5}
-- **Confusion matrices** and associated metrics help evaluate classification performance at different thresholds. :contentReference[oaicite:6]{index=6}
-- **ROC curves and AUC** visualize overall model discrimination across thresholds. :contentReference[oaicite:7]{index=7}
-- Equity matters: a model can have good overall accuracy but perform very differently across demographic groups. :contentReference[oaicite:8]{index=8}
+- Logistic regression is used when the outcome is binary (yes/no).
+- Linear regression is inappropriate for binary outcomes because predictions can fall outside 0–1 and violate assumptions.
+- Logistic regression models probabilities using the logistic function.
+- Coefficients are interpreted on the log-odds scale; exponentiated coefficients become odds ratios.
+- A probability threshold (such as 0.5) converts predicted probabilities into binary decisions.
+- Confusion matrices summarize model performance using metrics like sensitivity, specificity, and precision.
+- ROC curves and AUC evaluate overall discrimination across all possible thresholds.
+- A model may perform differently across demographic groups, even when overall accuracy is high.
 
 ## Coding Techniques
-- Use `glm(..., family="binomial")` to fit logistic regression in R. :contentReference[oaicite:9]{index=9}
-- Predict probabilities with `predict(model, type="response")`. :contentReference[oaicite:10]{index=10}
-- Create confusion matrices (e.g., with `caret::confusionMatrix`) to compute sensitivity, specificity, precision. :contentReference[oaicite:11]{index=11}
-- Loop over different thresholds to compare metrics. :contentReference[oaicite:12]{index=12}
-- Use `pROC::roc()` and `ggroc()` to generate ROC curves and compute AUC. :contentReference[oaicite:13]{index=13}
+- Fit logistic regression using `glm(..., family = "binomial")`.
+- Use `predict(model, type = "response")` to obtain predicted probabilities.
+- Create confusion matrices to calculate metrics such as sensitivity and specificity.
+- Loop through multiple thresholds to evaluate different tradeoffs.
+- Use `pROC::roc()` to create ROC curves and compute AUC.
 
 ## Questions & Challenges
-- How to **choose the optimal threshold** in real policy problems? :contentReference[oaicite:14]{index=14}
-- Understanding how threshold tradeoffs affect **different error types** and consequences. :contentReference[oaicite:15]{index=15}
-- Interpreting odds ratios appropriately, especially when predictors are scaled differently. :contentReference[oaicite:16]{index=16}
-- Evaluating **equity implications** across different subgroups. :contentReference[oaicite:17]{index=17}
+- How to choose the optimal threshold for real-world decision making.
+- Interpreting odds ratios correctly when predictors are on different scales.
+- Understanding how different threshold choices influence false positives and false negatives.
+- Assessing equity and subgroup performance in a structured way.
 
 ## Connections to Policy
-- Logistic regression is widely used for risk prediction in policy areas like recidivism, health risk, and program uptake. :contentReference[oaicite:18]{index=18}
-- Threshold choice determines who gets flagged for intervention — with real consequences for individuals and resources. :contentReference[oaicite:19]{index=19}
-- Evaluating **false positive vs. false negative costs** is essential for fair and effective policy. :contentReference[oaicite:20]{index=20}
-- Equity evaluation encourages fairness across demographic groups, not just overall accuracy. :contentReference[oaicite:21]{index=21}
+- Logistic regression is widely used for risk assessment in criminal justice, health, and public services.
+- Threshold decisions determine who receives interventions or additional scrutiny.
+- Policymakers must consider the different costs of false positives versus false negatives.
+- Fairness analysis is essential to ensure that models do not disproportionately burden certain groups.
 
 ## Reflection
-- Logistic regression changed how I think about **prediction problems**: they are about probabilities and decisions, not just fits. :contentReference[oaicite:22]{index=22}
-- The threshold decision is a **policy choice**, not a purely statistical one. :contentReference[oaicite:23]{index=23}
-- I will apply this by explicitly documenting **threshold choices** and considering the ethical implications of errors. :contentReference[oaicite:24]{index=24}
+- Logistic regression reframed prediction for me as a probability and decision problem, not just a statistical fit.
+- Threshold selection is fundamentally a policy choice, not a purely statistical one.
+- I will be more intentional about documenting threshold decisions and considering equity impacts in future analyses.

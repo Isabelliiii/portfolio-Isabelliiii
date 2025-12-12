@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2025-11-17">
 
-<title>Week 11 Notes – Classification, ROC &amp; Decision Thresholds – Isabelle Li - MUSA 5080 Portfolio</title>
+<title>Week 11 Notes – Classification, ROC, and Decision Thresholds – Isabelle Li - MUSA 5080 Portfolio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -249,7 +249,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Week 11 Notes – Classification, ROC &amp; Decision Thresholds</h1>
+<h1 class="title">Week 11 Notes – Classification, ROC, and Decision Thresholds</h1>
 </div>
 
 
@@ -275,54 +275,50 @@ ul.task-list li input[type="checkbox"] {
 <section id="key-concepts-learned" class="level2">
 <h2 class="anchored" data-anchor-id="key-concepts-learned">Key Concepts Learned</h2>
 <ul>
-<li>Difference between <strong>regression vs.&nbsp;classification</strong>; logistic regression predicts <em>probabilities</em>, not categories.</li>
-<li><strong>Confusion matrix</strong>: TP, FP, TN, FN; each cell has different policy implications.</li>
-<li><strong>Sensitivity (Recall), Specificity, Precision</strong> — why no single metric is “best.”</li>
-<li><strong>ROC curve</strong> and <strong>AUC</strong> as global, threshold-free performance measures.</li>
-<li>The idea of <strong>decision thresholds</strong>: model predicts probabilities, humans decide the cutoff.</li>
-<li><strong>Base rates &amp; class imbalance</strong>: high accuracy ≠ good model if minority class is important.</li>
-<li><strong>Cost-sensitive evaluation</strong>: false positives vs.&nbsp;false negatives have asymmetric impacts in policy.</li>
+<li>Logistic regression produces probabilities, not discrete categories.</li>
+<li>Classification requires choosing a decision threshold to turn probabilities into yes/no predictions.</li>
+<li>Confusion matrices summarize four types of outcomes: true positives, false positives, true negatives, and false negatives.</li>
+<li>Performance metrics—accuracy, sensitivity, specificity, precision, recall, F1—capture different aspects of model quality.</li>
+<li>ROC curves show tradeoffs between sensitivity and specificity across all possible thresholds.</li>
+<li>AUC measures overall model discrimination independent of a specific threshold.</li>
+<li>Base rates and class imbalance can distort accuracy and require alternative evaluation metrics.</li>
+<li>Choosing a threshold is a policy decision, not a statistical one, because different types of errors have different real-world costs.</li>
 </ul>
 </section>
 <section id="coding-techniques" class="level2">
 <h2 class="anchored" data-anchor-id="coding-techniques">Coding Techniques</h2>
 <ul>
-<li>Using <code>predict(..., type = "response")</code> to get predicted probabilities.</li>
-<li>Generating a confusion matrix with <code>caret::confusionMatrix()</code> or manual table.</li>
-<li>Plotting ROC curves with <code>pROC::roc()</code> and extracting <strong>AUC</strong>.</li>
-<li>Evaluating model metrics across multiple thresholds (loop / tibble workflows).</li>
-<li>Using <code>yardstick</code>-style metrics: accuracy, sensitivity, specificity, precision, recall, F1.</li>
+<li>Using <code>predict(..., type = "response")</code> to generate predicted probabilities.</li>
+<li>Manually converting probabilities to classifications using various thresholds.</li>
+<li>Constructing confusion matrices and computing metrics for each threshold.</li>
+<li>Using ROC and AUC functions to evaluate model performance across thresholds.</li>
+<li>Creating tables or plots that compare metrics under different decision rules.</li>
 </ul>
 </section>
 <section id="questions-challenges" class="level2">
 <h2 class="anchored" data-anchor-id="questions-challenges">Questions &amp; Challenges</h2>
 <ul>
-<li>Still clarifying: how to pick an “optimal” threshold when costs are not formally quantified.</li>
-<li>Need more practice interpreting ROC curves beyond “higher AUC is better.”</li>
-<li>Uncertainty about how to adjust thresholds in practice when policy stakes differ.</li>
-<li>Want more examples of <strong>class imbalance handling</strong> (weighting, resampling, etc.).</li>
+<li>How to determine the “best” threshold when costs of errors are not explicitly quantified.</li>
+<li>Interpreting ROC curves beyond simply preferring higher AUC.</li>
+<li>Evaluating how different thresholds affect resource allocation and public service delivery.</li>
+<li>Translating statistical performance into operational decisions.</li>
 </ul>
 </section>
 <section id="connections-to-policy" class="level2">
 <h2 class="anchored" data-anchor-id="connections-to-policy">Connections to Policy</h2>
 <ul>
-<li>Threshold choices directly determine <strong>resource allocation</strong> (e.g., inspectors, fire trucks, case managers).</li>
-<li>False negatives and false positives often imply <strong>very different real-world risks</strong>.</li>
-<li>ROC/AUC help compare models, but <strong>policy choice</strong> determines threshold, not statistics.</li>
-<li>Classification models support <strong>risk-based decision systems</strong>, but need governance to avoid inequity.</li>
+<li>Threshold choices determine who gets flagged for inspection, services, enforcement, or support.</li>
+<li>False positives and false negatives often have asymmetric consequences, requiring careful balancing.</li>
+<li>AUC helps compare models, but policymakers must define acceptable tradeoffs.</li>
+<li>Classification systems can influence equity outcomes depending on how errors impact different communities.</li>
 </ul>
 </section>
 <section id="reflection" class="level2">
 <h2 class="anchored" data-anchor-id="reflection">Reflection</h2>
 <ul>
-<li>Most interesting: realizing classification is fundamentally about <strong>managing tradeoffs</strong>, not just accuracy.</li>
-<li>The ROC + threshold framework clarified why one model can be used in <strong>multiple policy scenarios</strong>.</li>
-<li>I can apply this by being explicit about:
-<ul>
-<li>what <em>policy outcome</em> matters,</li>
-<li>which errors are most costly,</li>
-<li>and selecting thresholds that align with those values.</li>
-</ul></li>
+<li>This week emphasized that prediction is only the first step; decisions require judgment.</li>
+<li>ROC analysis clarified that a single model can support many policy goals depending on the threshold.</li>
+<li>I will pay more attention to documenting error tradeoffs and aligning threshold selection with policy priorities in future work.</li>
 </ul>
 
 

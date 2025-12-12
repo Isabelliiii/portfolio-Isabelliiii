@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2025-11-24">
 
-<title>Week 12 Notes – Neighborhood Trajectories &amp; Sequence Analysis – Isabelle Li - MUSA 5080 Portfolio</title>
+<title>Week 12 Notes – Neighborhood Trajectories and Sequence Analysis – Isabelle Li - MUSA 5080 Portfolio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -249,7 +249,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Week 12 Notes – Neighborhood Trajectories &amp; Sequence Analysis</h1>
+<h1 class="title">Week 12 Notes – Neighborhood Trajectories and Sequence Analysis</h1>
 </div>
 
 
@@ -275,53 +275,51 @@ ul.task-list li input[type="checkbox"] {
 <section id="key-concepts-learned" class="level2">
 <h2 class="anchored" data-anchor-id="key-concepts-learned">Key Concepts Learned</h2>
 <ul>
-<li><strong>Dynamics vs.&nbsp;snapshots</strong>: single-year classifications miss long-term neighborhood change.</li>
-<li><strong>Neighborhood sequences</strong>: each neighborhood is represented as a sequence of states across multiple years.</li>
-<li><strong>K-means clustering</strong> is used to classify neighborhoods into states for each year.</li>
-<li><strong>Sequence similarity metrics</strong> (e.g., OMstrans) allow comparison of entire trajectories, not just endpoints.</li>
-<li><strong>Hierarchical clustering (Ward’s method)</strong> groups similar trajectories together.</li>
-<li>Mapping trajectory clusters reveals <strong>spatial patterns</strong> of stability, decline, or transformation.</li>
+<li>Neighborhood change should be viewed as a dynamic process rather than a single snapshot.</li>
+<li>Neighborhood states can be defined through clustering methods (e.g., k-means) for each time point.</li>
+<li>A sequence for each neighborhood is created by stringing together its state across multiple years.</li>
+<li>Sequence similarity metrics allow comparison of entire change trajectories.</li>
+<li>Hierarchical clustering (such as Ward’s method) groups neighborhoods with similar developmental paths.</li>
+<li>Mapping trajectory clusters reveals spatial patterns of stability, decline, or transformation.</li>
+<li>This approach highlights both the pace and direction of neighborhood change.</li>
 </ul>
 </section>
 <section id="coding-techniques" class="level2">
 <h2 class="anchored" data-anchor-id="coding-techniques">Coding Techniques</h2>
 <ul>
-<li><strong>Z-score normalization</strong> to make multi-year variables comparable.</li>
-<li>Using <code>kmeans()</code> to classify neighborhoods each year.</li>
-<li>Reshaping data to wide format and creating sequences with <code>TraMineR::seqdef()</code>.</li>
-<li>Computing sequence distances with <strong>OMstrans</strong>, which accounts for transitions.</li>
-<li>Using hierarchical clustering (<code>hclust(method = "ward.D2")</code>) to identify trajectory groups.</li>
-<li>Plotting trajectory clusters on maps to visualize spatial patterns.</li>
+<li>Normalizing variables to make them comparable across years.</li>
+<li>Using <code>kmeans()</code> to assign yearly neighborhood categories.</li>
+<li>Reshaping data to wide format to build sequences.</li>
+<li>Creating sequence objects with tools like <code>seqdef()</code> from sequence analysis packages.</li>
+<li>Computing distance matrices using sequence similarity measures.</li>
+<li>Applying hierarchical clustering to group neighborhoods into trajectory types.</li>
+<li>Visualizing the spatial distribution of trajectory clusters on maps.</li>
 </ul>
 </section>
 <section id="questions-challenges" class="level2">
 <h2 class="anchored" data-anchor-id="questions-challenges">Questions &amp; Challenges</h2>
 <ul>
-<li>Choosing the <strong>right number of clusters (K)</strong>: statistical fit vs.&nbsp;interpretability.</li>
-<li>Understanding how OMstrans parameters influence the distance matrix.</li>
-<li>Translating trajectory groups into <strong>actionable policy recommendations</strong> rather than descriptive categories.</li>
+<li>Choosing the appropriate number of clusters for meaningful interpretation.</li>
+<li>Understanding how parameter choices in sequence distance metrics influence results.</li>
+<li>Translating trajectory groups into clear policy implications rather than descriptive labels.</li>
+<li>Balancing statistical rigor with interpretability for community and policy audiences.</li>
 </ul>
 </section>
 <section id="connections-to-policy" class="level2">
 <h2 class="anchored" data-anchor-id="connections-to-policy">Connections to Policy</h2>
 <ul>
-<li>Different trajectory patterns imply <strong>different policy needs</strong> (e.g., stable neighborhoods vs.&nbsp;rapidly transitioning ones).</li>
-<li>Sequence analysis highlights <strong>historical processes</strong>, enabling more forward-looking planning.</li>
-<li>Clusters can help identify <strong>priority areas</strong> for intervention or monitoring.</li>
-<li>Understanding long-term pathways supports more equitable and place-specific policy design.</li>
+<li>Different trajectory patterns imply distinct policy strategies: stabilization, investment, monitoring, or protection.</li>
+<li>Sequence analysis reveals long-term processes that may be invisible in single-year data.</li>
+<li>Policymakers can identify neighborhoods showing early signs of change or long-term stagnation.</li>
+<li>Understanding trajectories supports more tailored and equitable urban interventions.</li>
 </ul>
 </section>
 <section id="reflection" class="level2">
 <h2 class="anchored" data-anchor-id="reflection">Reflection</h2>
 <ul>
-<li>Most interesting insight: neighborhoods change through <strong>paths</strong>, not isolated snapshots.</li>
-<li>Sequence analysis provides a richer understanding of urban dynamics by revealing patterns of stability, volatility, or sustained growth.</li>
-<li>I can apply this framework to future projects by:
-<ul>
-<li>Comparing long-term neighborhood change,</li>
-<li>Identifying stagnation vs.&nbsp;transformation,</li>
-<li>And grounding policy recommendations in multi-year trends rather than single-year metrics.</li>
-</ul></li>
+<li>This framework shifted my mindset from thinking about neighborhoods as fixed categories to understanding them as evolving stories.</li>
+<li>Looking at sequences helps capture complexity—volatility, stability, and direction—all at once.</li>
+<li>I can apply this approach in future projects by comparing long-term neighborhood patterns and grounding recommendations in multi-year trends.</li>
 </ul>
 
 
