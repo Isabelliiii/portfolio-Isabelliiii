@@ -1,22 +1,35 @@
 ---
-title: "MUSA 5080 Portfolio"
+title: "Isabelle Li-Portfolio"
 ---
 
-# Welcome to My Portfolio
+# Welcome
 
-This portfolio documents my learning journey in Public Policy Analytics (MUSA 5080).
+This portfolio showcases selected projects and analyses at the intersection of urban analytics, public policy, and spatial data science. It reflects both my technical training and my interest in applying data-driven methods to real-world planning and policy questions.
 
-## About This Course
-Advanced spatial analysis and data science for urban planning and public policy.
+## Focus Area
+
+-   Spatial data analysis and visualization
+-   Urban policy evaluation and modeling
+-   Applied data science for cities and communities
 
 ## Portfolio Structure
-- **Weekly Notes:** My learning reflections and key concepts
-- **Labs:** Completed assignments and analyses
-- **Final Project:** Capstone modeling challenge
+
+**Projects** – End-to-end analytical work exploring real-world urban and policy problems through data.
+
+**Research** – Research-driven projects examining cities, space, and policy through quantitative and spatial lenses.
+
+**Writing** – Reflections on policy, data, and urban issues, bridging technical analysis with human context.
 
 ## About Me
-I recently graduated from the University of Toronto with an Honours Bachelor of Science  Mathematics and Economics. I am currently pursuing a Master Urban Spatial Analytics at the University of Pennsylvania.
+
+I recently graduated from the **University of Toronto** with an Honours Bachelor of Science in **Mathematics and Economics**.
+
+I am currently pursuing a **Master of Urban Spatial Analytics** at the **University of Pennsylvania**, where my work focuses on spatial analysis, public policy analytics, and applied data science for urban contexts.
+
+I am particularly interested in roles that bridge **data, policy, and decision-making**, translating quantitative analysis into actionable insights.
 
 ## Contact
-- Email: [isabli@upenn.edu]
-- GitHub: [@Isabelliiii]
+
+-   Email: \[isabli\@upenn.edu\]
+-   GitHub: [@Isabelliiii]
+-   Linkedin: \[https://www.linkedin.com/in/isabellelii\]

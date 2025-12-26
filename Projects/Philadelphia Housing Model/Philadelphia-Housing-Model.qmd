@@ -1,5 +1,5 @@
 ---
-title: "Philadelphia Housing Model - Technical Appendix"
+title: "Philadelphia Housing Model"
 author:
   - name: "Sihan Yu"
   - name: "Isabelle Li"
