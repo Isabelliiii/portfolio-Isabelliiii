@@ -31,9 +31,15 @@ website:
              
 format:
   html:
-    theme: cosmo
-    toc: true
-    code-fold: true
+    theme:
+      light: cosmo
+    theme-variables:
+      primary: "#1f3a5f"      
+      background: "#fafafa"   
+      body-color: "#1a1a1a" 
+      link-color: "#1f3a5f"
+      link-hover-color: "#c9a24d"  
+
 
 execute:
   freeze: auto
