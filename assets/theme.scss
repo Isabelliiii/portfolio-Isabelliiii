@@ -1,0 +1,73 @@
+/*-- scss:defaults --*/
+/* Bootstrap variable overrides (consulting style) */
+$primary: #1f3a5f;         // navy
+$secondary: #c9a24d;       // muted gold
+$body-bg: #fbfaf7;         // warm off-white
+$body-color: #161a1d;      // near-black
+$link-color: $primary;
+$link-hover-color: $secondary;
+
+$gray-100: #f6f5f1;
+$gray-200: #eeeae2;
+$gray-600: #5f6b76;
+
+/*-- scss:rules --*/
+html { scroll-behavior: smooth; }
+
+body {
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.4px;
+  color: $primary;
+}
+h1 { margin-bottom: 0.9rem; }
+h2 { margin-top: 2.5rem; margin-bottom: 0.9rem; }
+h3 { margin-top: 1.6rem; margin-bottom: 0.6rem; }
+
+.page-columns { max-width: 1120px; }
+
+.navbar {
+  font-weight: 550;
+  border-bottom: 1px solid $gray-200;
+}
+.navbar a { text-decoration: none; }
+.navbar a:hover { color: $secondary !important; }
+
+a {
+  text-decoration: none;
+  text-underline-offset: 3px;
+}
+a:hover { text-decoration: underline; }
+
+.callout {
+  border: 1px solid $gray-200;
+  background: $gray-100;
+  border-radius: 14px;
+}
+.callout .callout-header {
+  border-bottom: 1px solid $gray-200;
+}
+
+table thead th {
+  border-bottom: 2px solid $gray-200;
+  color: $primary;
+}
+table tbody tr:hover { background: $gray-100; }
+
+pre {
+  background: #f2f2f2;
+  border-radius: 10px;
+  border: 1px solid $gray-200;
+}
+
+section { margin-bottom: 3rem; }
+
+blockquote {
+  border-left: 3px solid $secondary;
+  padding-left: 1rem;
+  color: $gray-600;
+}
