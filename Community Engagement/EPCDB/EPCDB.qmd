@@ -1,0 +1,82 @@
+---
+title: "East Parkside Applied Case"
+format: html
+---
+
+## Case Overview
+
+**Client:** :East Parkside Community Development Board\
+**Context:** Neighborhood development pressure, community engagement, and planning governance\
+**Focus:** Supporting sustainable, community-aligned planning through communication, data translation, and field engagement
+
+------------------------------------------------------------------------
+
+## Why This Work Was Needed
+
+In recent years, a growing number of new development projects entered the East Parkside area.
+
+Many of these projects did not align with the direction the community had previously worked toward, raising concerns around neighborhood character, scale, and long-term livability.
+
+The issue was not opposition to development itself. Rather, it was the pattern of development proceeding with limited community alignment and minimal early-stage engagement. Residents and local organizations were often brought into conversations only after key decisions had already been made.
+
+In response, EPCDB sought ways to use planning, zoning, and council-level processes to establish clearer expectations and potential restrictions on future development. However, these processes are structurally uneven: developers typically hold more information, technical resources, and institutional access, while communities are left reacting with incomplete context.
+
+------------------------------------------------------------------------
+
+## What I Did
+
+My work with EPCDB focused on supporting long-term, sustainable community engagement rather than producing a single analytical output.
+
+### Community Communication & Engagement
+
+-   Participated in door-to-door outreach and on-the-ground engagement
+-   Supported the design and organization of flyers and communication materials
+-   Thought critically about how information is accessed, interpreted, and acted upon by residents
+
+The goal was not simply information dissemination, but lowering participation barriers and making engagement more accessible.
+
+### Data & Spatial Information as Translation Tools
+
+-   Contributed to data- and mapping-informed presentation materials used in stakeholder discussions
+-   Supported PowerPoint materials designed for different audiences, including internal coordination and community-facing conversations
+-   Helped translate complex spatial and planning information into formats that could be discussed and challenged
+
+In this context, data was used not to optimize outcomes, but to support dialogue and negotiation.
+
+------------------------------------------------------------------------
+
+## Outcomes & Contributions
+
+While community work resists simple quantification, this engagement supported:
+
+-   Clearer communication channels between EPCDB and residents
+-   Shared spatial understanding within the team to ground planning discussions
+-   More informed conversations around development, constraints, and community priorities
+
+The emphasis was not on innovation for its own sake, but on enabling continuity, trust, and informed participation.
+
+------------------------------------------------------------------------
+
+## Supporting Materials
+
+Selected materials are included to document this work responsibly:
+
+**The flyer we made:**
+
+<iframe src="./epcdb-flyer.pdf" width="100%" height="600" style="border: 1px solid #ddd;">
+
+</iframe>
+
+**All Deliverables:**
+
+<iframe src="https://docs.google.com/presentation/d/e/11A_laQfu00s3jtoyNytGNbUg7WdXAc9t/embed?start=false&amp;loop=false&amp;delayms=3000" frameborder="0" width="100%" height="500" allowfullscreen="true">
+
+</iframe>
+
+------------------------------------------------------------------------
+
+## Reflection
+
+This case fundamentally reshaped how I understand applied analytics in community settings.
+
+I learned that data is most effective when it remains accountable to lived experience, and that good analytical work sometimes means slowing down rather than adding complexity. This experience reinforced the importance of judgment, restraint, and care when working at the intersection of data, policy, and people.

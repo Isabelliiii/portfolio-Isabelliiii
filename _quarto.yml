@@ -24,10 +24,14 @@ website:
           - href: https://uxiaoo22.github.io/python/part1.html
             text: "Elephant Habitat Suitability"
             
-      - text: "Writing"
+      - text: "Community Engagement"
         menu:
-          - href: Writing/
-            text: "All writing"
+          - href: Community Engagement/
+            text: "All Community Engagement"
+          - href: Community Engagement/EPCDB/EPCDB.qmd
+            text: "East Parkside Applied Case"  
+          - href: Community Engagement/Published Writing-NAMUN.qmd
+            text: "Published Writing-NAMUN"              
              
 format:
   html:

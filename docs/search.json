@@ -161,6 +161,62 @@
     "text": "6.2 Improvement Possibilities\nWith richer data, more development time, or additional funding, the model could be expanded into a multi-tier risk classification system, instead of a simple binary prediction. For example, alarms could be grouped into four levels:\n\nTier 1 = high emergency (very likely real fire)\nTier 2 = moderate risk (standard response)\nTier 3 = minor risk (non-emergency conditions possible)\nTier 4 = high-probability false alarm (light response package)\n\nAchieving this would require integrating additional features, such as alarm device age, building maintenance histories, humidity/smoke environment data, renovation activity, and more granular spatial patterns. These richer inputs would allow the model to shift from hard thresholding to continuous risk scoring and tiered operational strategies, enabling more precise allocation of fire-department resources. Future enhancements could also include multiclass models or time-series analysis to support an even more nuanced and safety-balanced dispatch framework."
   },
   {
+    "objectID": "Community Engagement/Published Writing-NAMUN.html",
+    "href": "Community Engagement/Published Writing-NAMUN.html",
+    "title": "Published Writing-NAMUN",
+    "section": "",
+    "text": "Navigating the Ethics of Reporting International Crises\nNAMUN 2024 Magazine\nAn article examining the ethical responsibilities and challenges involved in reporting on international crises, with a focus on representation, accuracy, and narrative framing.\n👉 Read the article\n\n\nMeeting Debrief — NAMUN 2024\nA written synthesis of discussions and negotiation dynamics from the third day of the conference.\n👉 Read the debrief"
+  },
+  {
+    "objectID": "Community Engagement/EPCDB/EPCDB.html",
+    "href": "Community Engagement/EPCDB/EPCDB.html",
+    "title": "East Parkside Applied Case",
+    "section": "",
+    "text": "Client: :East Parkside Community Development Board\nContext: Neighborhood development pressure, community engagement, and planning governance\nFocus: Supporting sustainable, community-aligned planning through communication, data translation, and field engagement"
+  },
+  {
+    "objectID": "Community Engagement/EPCDB/EPCDB.html#case-overview",
+    "href": "Community Engagement/EPCDB/EPCDB.html#case-overview",
+    "title": "East Parkside Applied Case",
+    "section": "",
+    "text": "Client: :East Parkside Community Development Board\nContext: Neighborhood development pressure, community engagement, and planning governance\nFocus: Supporting sustainable, community-aligned planning through communication, data translation, and field engagement"
+  },
+  {
+    "objectID": "Community Engagement/EPCDB/EPCDB.html#why-this-work-was-needed",
+    "href": "Community Engagement/EPCDB/EPCDB.html#why-this-work-was-needed",
+    "title": "East Parkside Applied Case",
+    "section": "Why This Work Was Needed",
+    "text": "Why This Work Was Needed\nIn recent years, a growing number of new development projects entered the East Parkside area.\nMany of these projects did not align with the direction the community had previously worked toward, raising concerns around neighborhood character, scale, and long-term livability.\nThe issue was not opposition to development itself. Rather, it was the pattern of development proceeding with limited community alignment and minimal early-stage engagement. Residents and local organizations were often brought into conversations only after key decisions had already been made.\nIn response, EPCDB sought ways to use planning, zoning, and council-level processes to establish clearer expectations and potential restrictions on future development. However, these processes are structurally uneven: developers typically hold more information, technical resources, and institutional access, while communities are left reacting with incomplete context."
+  },
+  {
+    "objectID": "Community Engagement/EPCDB/EPCDB.html#what-i-did",
+    "href": "Community Engagement/EPCDB/EPCDB.html#what-i-did",
+    "title": "East Parkside Applied Case",
+    "section": "What I Did",
+    "text": "What I Did\nMy work with EPCDB focused on supporting long-term, sustainable community engagement rather than producing a single analytical output.\n\nCommunity Communication & Engagement\n\nParticipated in door-to-door outreach and on-the-ground engagement\nSupported the design and organization of flyers and communication materials\nThought critically about how information is accessed, interpreted, and acted upon by residents\n\nThe goal was not simply information dissemination, but lowering participation barriers and making engagement more accessible.\n\n\nData & Spatial Information as Translation Tools\n\nContributed to data- and mapping-informed presentation materials used in stakeholder discussions\nSupported PowerPoint materials designed for different audiences, including internal coordination and community-facing conversations\nHelped translate complex spatial and planning information into formats that could be discussed and challenged\n\nIn this context, data was used not to optimize outcomes, but to support dialogue and negotiation."
+  },
+  {
+    "objectID": "Community Engagement/EPCDB/EPCDB.html#outcomes-contributions",
+    "href": "Community Engagement/EPCDB/EPCDB.html#outcomes-contributions",
+    "title": "East Parkside Applied Case",
+    "section": "Outcomes & Contributions",
+    "text": "Outcomes & Contributions\nWhile community work resists simple quantification, this engagement supported:\n\nClearer communication channels between EPCDB and residents\nShared spatial understanding within the team to ground planning discussions\nMore informed conversations around development, constraints, and community priorities\n\nThe emphasis was not on innovation for its own sake, but on enabling continuity, trust, and informed participation."
+  },
+  {
+    "objectID": "Community Engagement/EPCDB/EPCDB.html#supporting-materials",
+    "href": "Community Engagement/EPCDB/EPCDB.html#supporting-materials",
+    "title": "East Parkside Applied Case",
+    "section": "Supporting Materials",
+    "text": "Supporting Materials\nSelected materials are included to document this work responsibly:\nThe flyer we made:\n\n\nAll Deliverables:"
+  },
+  {
+    "objectID": "Community Engagement/EPCDB/EPCDB.html#reflection",
+    "href": "Community Engagement/EPCDB/EPCDB.html#reflection",
+    "title": "East Parkside Applied Case",
+    "section": "Reflection",
+    "text": "Reflection\nThis case fundamentally reshaped how I understand applied analytics in community settings.\nI learned that data is most effective when it remains accountable to lived experience, and that good analytical work sometimes means slowing down rather than adding complexity. This experience reinforced the importance of judgment, restraint, and care when working at the intersection of data, policy, and people."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Isabelle Li-Portfolio",
