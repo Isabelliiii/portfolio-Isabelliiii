@@ -1,0 +1,33 @@
+---
+format:
+  html:
+    toc: false
+---
+
+```{=html}
+<div class="category-page-header">
+  <h1 class="category-page-title">Community Engagement</h1>
+  <p class="category-page-desc">Outreach, planning support, and published writing at the intersection of data and community.</p>
+</div>
+
+<div class="project-grid">
+  <a href="Community%20Engagement/EPCDB/EPCDB.html" class="project-card">
+    <div class="project-card-preview preview-community">
+      <span class="preview-badge">ENGAGEMENT</span>
+    </div>
+    <div class="project-card-body">
+      <p class="project-card-title">East Parkside Applied Case</p>
+      <p class="project-card-desc">Community outreach and data-informed planning support for the East Parkside Community Development Board.</p>
+    </div>
+  </a>
+  <a href="Community%20Engagement/Published%20Writing-NAMUN.html" class="project-card">
+    <div class="project-card-preview preview-writing">
+      <span class="preview-badge">WRITING</span>
+    </div>
+    <div class="project-card-body">
+      <p class="project-card-title">Published Writing – NAMUN</p>
+      <p class="project-card-desc">Articles on international crisis reporting ethics and conference insights from NAMUN 2024.</p>
+    </div>
+  </a>
+</div>
+```

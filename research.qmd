@@ -1,0 +1,24 @@
+---
+format:
+  html:
+    toc: false
+---
+
+```{=html}
+<div class="category-page-header">
+  <h1 class="category-page-title">Research</h1>
+  <p class="category-page-desc">Research-driven projects examining cities, space, and the environment through spatial and quantitative lenses.</p>
+</div>
+
+<div class="project-grid">
+  <a href="https://uxiaoo22.github.io/python/part1.html" class="project-card" target="_blank" rel="noopener">
+    <div class="project-card-preview preview-research">
+      <span class="preview-badge">RESEARCH</span>
+    </div>
+    <div class="project-card-body">
+      <p class="project-card-title">Elephant Habitat Suitability</p>
+      <p class="project-card-desc">Spatial modelling of elephant habitat suitability across Southeast Asia using remote sensing and GIS. ↗</p>
+    </div>
+  </a>
+</div>
+```

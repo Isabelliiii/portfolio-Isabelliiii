@@ -27,14 +27,13 @@ ul.task-list li input[type="checkbox"] {
 
 <style>
 /* ── Fonts ───────────────────────────────────────── */
-body{font-family:'Inter',system-ui,sans-serif}
-h1,h2,h3,h4,.hero-name,.projects-heading,.project-card-title{font-family:'Playfair Display',Georgia,serif}
+:root{--bs-body-font-family:'Inter',system-ui,sans-serif;--bs-font-sans-serif:'Inter',system-ui,sans-serif;}
+body{font-family:'Inter',system-ui,sans-serif!important}
+h1,h2,h3,h4,.hero-name,.projects-heading,.project-card-title{font-family:'Playfair Display',Georgia,serif!important}
 /* ── Navbar overrides ────────────────────────────── */
 .navbar .navbar-title{display:none}
-.navbar-nav .nav-link,.navbar-nav .dropdown-toggle{font-family:'Inter',system-ui,sans-serif;font-size:.75rem;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;opacity:.85;padding-left:1rem!important;padding-right:1rem!important}
-.navbar-nav .nav-link:hover,.navbar-nav .dropdown-toggle:hover{opacity:1}
-.navbar .dropdown-menu{border-radius:10px;padding:.5rem;box-shadow:0 6px 20px rgba(31,58,95,.1)}
-.navbar .dropdown-item{font-family:'Inter',system-ui,sans-serif;font-size:.88rem;font-weight:400;letter-spacing:0;text-transform:none;border-radius:6px;padding:.45rem .9rem}
+.navbar-nav .nav-link{font-family:'Inter',system-ui,sans-serif;font-size:.75rem;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;opacity:.85;padding-left:1rem!important;padding-right:1rem!important}
+.navbar-nav .nav-link:hover{opacity:1}
 /* ── Hero ────────────────────────────────────────── */
 .hero-section{display:flex;align-items:flex-start;gap:3.5rem;padding:3.5rem 0 2.5rem}
 .hero-text{flex:1;min-width:0}
@@ -149,41 +148,15 @@ h1,h2,h3,h4,.hero-name,.projects-heading,.project-card-title{font-family:'Playfa
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page" aria-label="Home">
-      <i class="bi bi-house-fill"></i>
-    </a>
+    <a class="nav-link active" href="./index.html" aria-label="Home"><i class="bi bi-house-fill"></i></a>
   </li>
 </ul>
 <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="./index.html"><span class="menu-text">PRODUCT</span></a>
-  </li>
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-projects" role="link" data-bs-toggle="dropdown" aria-expanded="false">
-      <span class="menu-text">PROJECTS</span>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-projects">
-      <li><a class="dropdown-item" href="./Projects/Fire%20Alarm%20Prediction/Fire-Alarm-Prediction.html"><span class="dropdown-text">Fire Alarm Prediction</span></a></li>
-      <li><a class="dropdown-item" href="./Projects/Philadelphia%20Housing%20Model/Philadelphia-Housing-Model.html"><span class="dropdown-text">Philadelphia Housing Model</span></a></li>
-    </ul>
-  </li>
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-community" role="link" data-bs-toggle="dropdown" aria-expanded="false">
-      <span class="menu-text">COMMUNITY</span>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-community">
-      <li><a class="dropdown-item" href="./Community%20Engagement/EPCDB/EPCDB.html"><span class="dropdown-text">East Parkside Applied Case</span></a></li>
-      <li><a class="dropdown-item" href="./Community%20Engagement/Published%20Writing-NAMUN.html"><span class="dropdown-text">Published Writing – NAMUN</span></a></li>
-    </ul>
-  </li>
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-research" role="link" data-bs-toggle="dropdown" aria-expanded="false">
-      <span class="menu-text">RESEARCH</span>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-research">
-      <li><a class="dropdown-item" href="https://uxiaoo22.github.io/python/part1.html" target="_blank" rel="noopener"><span class="dropdown-text">Elephant Habitat Suitability</span></a></li>
-    </ul>
-  </li>
+  <li class="nav-item"><a class="nav-link" href="./product.html">PRODUCT</a></li>
+  <li class="nav-item"><a class="nav-link" href="./visualization.html">VISUALIZATION</a></li>
+  <li class="nav-item"><a class="nav-link" href="./projects.html">PROJECTS</a></li>
+  <li class="nav-item"><a class="nav-link" href="./community.html">COMMUNITY</a></li>
+  <li class="nav-item"><a class="nav-link" href="./research.html">RESEARCH</a></li>
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -214,8 +187,8 @@ h1,h2,h3,h4,.hero-name,.projects-heading,.project-card-title{font-family:'Playfa
         <i class="bi bi-github"></i>
       </a>
     </div>
-    <p class="hero-bio">I'm a master's student in Spatial Analytics with a background in mathematics and economics, focusing on how data can inform real-world decisions. Through urban data science projects, I've developed experience working with spatial datasets, building analytical pipelines, and translating complex data into clear, actionable insights.</p>
-    <p class="hero-bio">I'm particularly interested in the intersection of data and product — using data not just to analyze, but to support decision-making, improve systems, and design user-facing tools. My work often involves thinking about both the technical side (data processing, analysis, visualization) and the user side (how insights are delivered and used).</p>
+    <p class="hero-bio">I'm a master's student in <strong>Spatial Analytics</strong> with a background in mathematics and economics, focusing on <strong>how data can inform real-world decisions</strong>. Through urban data science projects, I've developed experience working with spatial datasets, building analytical pipelines, and translating complex data into <strong>clear, actionable insights</strong>.</p>
+    <p class="hero-bio">I'm particularly interested in the <strong>intersection of data and product</strong> — using data not just to analyze, but to <strong>support decision-making, improve systems, and design user-facing tools</strong>. My work often involves thinking about both the <strong>technical side</strong> (data processing, analysis, visualization) and the <strong>user side</strong> (how insights are delivered and used).</p>
   </div>
   <div class="hero-photo-wrap">
     <img src="photo.jpg" class="profile-photo" alt="Isabelle Li">
@@ -237,6 +210,20 @@ h1,h2,h3,h4,.hero-name,.projects-heading,.project-card-title{font-family:'Playfa
         <p class="project-card-desc">A data-driven tool for optimising urban tree placement to maximise environmental and community benefit. <em>Coming soon.</em></p>
       </div>
     </div>
+  </div>
+
+  <!-- VISUALIZATION -->
+  <p class="category-label">Visualization</p>
+  <div class="project-grid">
+    <a href="./visualization.html" class="project-card">
+      <div class="project-card-preview" style="background:linear-gradient(135deg,#0f2840 0%,#1a6b8a 100%)">
+        <span class="preview-badge">VISUALIZATION</span>
+      </div>
+      <div class="project-card-body">
+        <p class="project-card-title">Data Visualizations</p>
+        <p class="project-card-desc">A collection of charts, maps, and visual explorations from urban and spatial datasets. <em>Coming soon.</em></p>
+      </div>
+    </a>
   </div>
 
   <!-- PROJECTS -->

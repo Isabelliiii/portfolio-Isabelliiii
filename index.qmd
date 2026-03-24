@@ -20,8 +20,8 @@ format:
         <i class="bi bi-github"></i>
       </a>
     </div>
-    <p class="hero-bio">I'm a master's student in Spatial Analytics with a background in mathematics and economics, focusing on how data can inform real-world decisions. Through urban data science projects, I've developed experience working with spatial datasets, building analytical pipelines, and translating complex data into clear, actionable insights.</p>
-    <p class="hero-bio">I'm particularly interested in the intersection of data and product — using data not just to analyze, but to support decision-making, improve systems, and design user-facing tools. My work often involves thinking about both the technical side (data processing, analysis, visualization) and the user side (how insights are delivered and used).</p>
+    <p class="hero-bio">I'm a master's student in <strong>Spatial Analytics</strong> with a background in mathematics and economics, focusing on <strong>how data can inform real-world decisions</strong>. Through urban data science projects, I've developed experience working with spatial datasets, building analytical pipelines, and translating complex data into <strong>clear, actionable insights</strong>.</p>
+    <p class="hero-bio">I'm particularly interested in the <strong>intersection of data and product</strong> — using data not just to analyze, but to <strong>support decision-making, improve systems, and design user-facing tools</strong>. My work often involves thinking about both the <strong>technical side</strong> (data processing, analysis, visualization) and the <strong>user side</strong> (how insights are delivered and used).</p>
   </div>
   <div class="hero-photo-wrap">
     <img src="photo.jpg" class="profile-photo" alt="Isabelle Li">
@@ -43,6 +43,20 @@ format:
         <p class="project-card-desc">A data-driven tool for optimising urban tree placement to maximise environmental and community benefit. <em>Coming soon.</em></p>
       </div>
     </div>
+  </div>
+
+  <!-- VISUALIZATION -->
+  <p class="category-label">Visualization</p>
+  <div class="project-grid">
+    <a href="visualization.html" class="project-card">
+      <div class="project-card-preview preview-viz">
+        <span class="preview-badge">VISUALIZATION</span>
+      </div>
+      <div class="project-card-body">
+        <p class="project-card-title">Data Visualizations</p>
+        <p class="project-card-desc">A collection of charts, maps, and visual explorations from urban and spatial datasets. <em>Coming soon.</em></p>
+      </div>
+    </a>
   </div>
 
   <!-- PROJECTS -->

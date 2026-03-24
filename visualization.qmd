@@ -1,0 +1,31 @@
+---
+format:
+  html:
+    toc: false
+---
+
+```{=html}
+<div class="category-page-header">
+  <h1 class="category-page-title">Visualization</h1>
+  <p class="category-page-desc">Charts, maps, and visual explorations from urban and spatial datasets.</p>
+</div>
+
+<div class="viz-grid">
+
+  <!-- ── Placeholder card — replace with your PNG ──────────────────────
+       To add a real visualization, replace the .viz-placeholder-img div
+       with: <img src="your-image.png" class="viz-img" alt="description">
+       ─────────────────────────────────────────────────────────────── -->
+  <div class="viz-card">
+    <div class="viz-placeholder-img">
+      <span class="viz-icon">📊</span>
+      <span>Coming soon</span>
+    </div>
+    <div class="viz-card-body">
+      <p class="viz-card-title">Placeholder</p>
+      <p class="viz-card-desc">Replace this card with your visualization. Add an image and update the title and description.</p>
+    </div>
+  </div>
+
+</div>
+```

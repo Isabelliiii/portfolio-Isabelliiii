@@ -1,0 +1,33 @@
+---
+format:
+  html:
+    toc: false
+---
+
+```{=html}
+<div class="category-page-header">
+  <h1 class="category-page-title">Projects</h1>
+  <p class="category-page-desc">End-to-end analytical work on real-world urban and policy problems.</p>
+</div>
+
+<div class="project-grid">
+  <a href="Projects/Fire%20Alarm%20Prediction/fire-alarm-preview.html" class="project-card">
+    <div class="project-card-preview preview-fire">
+      <span class="preview-badge">ANALYSIS</span>
+    </div>
+    <div class="project-card-body">
+      <p class="project-card-title">Fire Alarm Prediction</p>
+      <p class="project-card-desc">Predicting false fire alarms in Philadelphia using spatial and socioeconomic data with logistic regression in R.</p>
+    </div>
+  </a>
+  <a href="Projects/Philadelphia%20Housing%20Model/housing-preview.html" class="project-card">
+    <div class="project-card-preview preview-housing">
+      <span class="preview-badge">MODELLING</span>
+    </div>
+    <div class="project-card-body">
+      <p class="project-card-title">Philadelphia Housing Model</p>
+      <p class="project-card-desc">Spatial modelling of residential property values using census and OPA assessment data for Philadelphia.</p>
+    </div>
+  </a>
+</div>
+```

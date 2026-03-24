@@ -324,6 +324,7 @@ blockquote {
 .preview-community{ background: linear-gradient(135deg, #3a2a1a 0%, #7a5530 100%); }
 .preview-writing  { background: linear-gradient(135deg, #252535 0%, #404060 100%); }
 .preview-research { background: linear-gradient(135deg, #1a3322 0%, #2d5c3a 100%); }
+.preview-viz      { background: linear-gradient(135deg, #0f2840 0%, #1a6b8a 100%); }
 
 /* ── Project preview pages ────────────────────────── */
 .preview-hero {
@@ -604,6 +605,97 @@ blockquote {
   background: darken($primary, 8%);
   transform: translateY(-2px);
   text-decoration: none !important;
+}
+
+/* ── Category listing pages ───────────────────────── */
+.category-page-header {
+  padding: 2.5rem 0 1.75rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid $gray-200;
+}
+
+.category-page-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: $primary;
+  margin: 0 0 0.4rem;
+}
+
+.category-page-desc {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: $gray-600;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* ── Visualization gallery ────────────────────────── */
+.viz-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.viz-card {
+  border: 1px solid $gray-200;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.viz-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(31,58,95,.1);
+}
+
+.viz-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.viz-placeholder-img {
+  width: 100%;
+  height: 220px;
+  background: $gray-100;
+  border-bottom: 2px dashed $gray-200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: $gray-600;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.5px;
+}
+
+.viz-placeholder-img .viz-icon {
+  font-size: 1.75rem;
+  opacity: 0.4;
+}
+
+.viz-card-body {
+  padding: 1rem 1.25rem 1.2rem;
+}
+
+.viz-card-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: $primary;
+  margin: 0 0 0.35rem;
+}
+
+.viz-card-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.855rem;
+  color: $gray-600;
+  margin: 0;
+  line-height: 1.5;
 }
 
 /* ── Responsive ───────────────────────────────────── */

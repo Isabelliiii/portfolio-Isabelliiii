@@ -14,23 +14,15 @@ website:
         aria-label: Home
     right:
       - text: "PRODUCT"
-        href: index.qmd
+        href: product.qmd
+      - text: "VISUALIZATION"
+        href: visualization.qmd
       - text: "PROJECTS"
-        menu:
-          - href: Projects/Fire Alarm Prediction/fire-alarm-preview.qmd
-            text: "Fire Alarm Prediction"
-          - href: Projects/Philadelphia Housing Model/housing-preview.qmd
-            text: "Philadelphia Housing Model"
+        href: projects.qmd
       - text: "COMMUNITY"
-        menu:
-          - href: Community Engagement/EPCDB/EPCDB.qmd
-            text: "East Parkside Applied Case"
-          - href: Community Engagement/Published Writing-NAMUN.qmd
-            text: "Published Writing – NAMUN"
+        href: community.qmd
       - text: "RESEARCH"
-        menu:
-          - href: https://uxiaoo22.github.io/python/part1.html
-            text: "Elephant Habitat Suitability"
+        href: research.qmd
 
 format:
   html:
