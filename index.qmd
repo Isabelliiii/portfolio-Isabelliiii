@@ -1,35 +1,108 @@
 ---
-title: "Isabelle Li-Portfolio"
+format:
+  html:
+    toc: false
 ---
 
-# Welcome
+```{=html}
+<section class="hero-section">
+  <div class="hero-text">
+    <h1 class="hero-name">Isabelle Li</h1>
+    <p class="hero-subtitle">Master's Student in Urban Spatial Analytics<br>at the University of Pennsylvania</p>
+    <div class="social-links">
+      <a href="mailto:isabli@upenn.edu" title="Email" aria-label="Email">
+        <i class="bi bi-envelope-fill"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/isabellelii" title="LinkedIn" aria-label="LinkedIn" target="_blank" rel="noopener">
+        <i class="bi bi-linkedin"></i>
+      </a>
+      <a href="https://github.com/Isabelliiii" title="GitHub" aria-label="GitHub" target="_blank" rel="noopener">
+        <i class="bi bi-github"></i>
+      </a>
+    </div>
+    <p class="hero-bio">I am a master's student in spatial analytics with a background in mathematics and economics. Through coursework and projects in urban data science, I have developed a strong interest in <strong>spatial data analysis and visualisation</strong>. I aim to leverage my skill set to effectively <strong>communicate data-driven insights and inform decision-making</strong>.</p>
+    <p class="hero-bio">I hold a bachelor's degree from the <strong>University of Toronto</strong>, specialising in Mathematics and Economics. Fluent in <strong>English and Chinese</strong>, my passion for problem-solving has shaped my ability to approach challenges from diverse perspectives.</p>
+  </div>
+  <div class="hero-photo-wrap">
+    <img src="photo.jpg" class="profile-photo" alt="Isabelle Li">
+  </div>
+</section>
 
-This portfolio showcases selected projects and analyses at the intersection of urban analytics, public policy, and spatial data science. It reflects both my technical training and my interest in applying data-driven methods to real-world planning and policy questions.
+<section class="projects-section">
+  <h2 class="projects-heading">Selected Projects</h2>
 
-## Focus Area
+  <!-- PRODUCT -->
+  <p class="category-label">Product</p>
+  <div class="project-grid">
+    <div class="project-card no-link">
+      <div class="project-card-preview preview-product">
+        <span class="preview-badge">PRODUCT</span>
+      </div>
+      <div class="project-card-body">
+        <p class="project-card-title">Tree Planting Decision System</p>
+        <p class="project-card-desc">A data-driven tool for optimising urban tree placement to maximise environmental and community benefit. <em>Coming soon.</em></p>
+      </div>
+    </div>
+  </div>
 
--   Spatial data analysis and visualization
--   Urban policy evaluation and modeling
--   Applied data science for cities and communities
+  <!-- PROJECTS -->
+  <p class="category-label">Projects</p>
+  <div class="project-grid">
+    <a href="Projects/Fire%20Alarm%20Prediction/Fire-Alarm-Prediction.html" class="project-card">
+      <div class="project-card-preview preview-fire">
+        <span class="preview-badge">ANALYSIS</span>
+      </div>
+      <div class="project-card-body">
+        <p class="project-card-title">Fire Alarm Prediction</p>
+        <p class="project-card-desc">Predicting false fire alarms in Philadelphia using spatial and socioeconomic data with machine learning in R.</p>
+      </div>
+    </a>
+    <a href="Projects/Philadelphia%20Housing%20Model/Philadelphia-Housing-Model.html" class="project-card">
+      <div class="project-card-preview preview-housing">
+        <span class="preview-badge">MODELLING</span>
+      </div>
+      <div class="project-card-body">
+        <p class="project-card-title">Philadelphia Housing Model</p>
+        <p class="project-card-desc">Spatial modelling of residential property values using census and property assessment data for Philadelphia.</p>
+      </div>
+    </a>
+  </div>
 
-## Portfolio Structure
+  <!-- COMMUNITY ENGAGEMENT -->
+  <p class="category-label">Community Engagement</p>
+  <div class="project-grid">
+    <a href="Community%20Engagement/EPCDB/EPCDB.html" class="project-card">
+      <div class="project-card-preview preview-community">
+        <span class="preview-badge">ENGAGEMENT</span>
+      </div>
+      <div class="project-card-body">
+        <p class="project-card-title">East Parkside Applied Case</p>
+        <p class="project-card-desc">Community outreach and data-informed planning support for the East Parkside Community Development Board.</p>
+      </div>
+    </a>
+    <a href="Community%20Engagement/Published%20Writing-NAMUN.html" class="project-card">
+      <div class="project-card-preview preview-writing">
+        <span class="preview-badge">WRITING</span>
+      </div>
+      <div class="project-card-body">
+        <p class="project-card-title">Published Writing – NAMUN</p>
+        <p class="project-card-desc">Articles on international crisis reporting ethics and conference insights from NAMUN 2024.</p>
+      </div>
+    </a>
+  </div>
 
-**Projects** – End-to-end analytical work exploring real-world urban and policy problems through data.
-
-**Research** – Research-driven projects examining cities, space, and policy through quantitative and spatial lenses.
-
-**Writing** – Reflections on policy, data, and urban issues, bridging technical analysis with human context.
-
-## About Me
-
-I recently graduated from the **University of Toronto** with an Honours Bachelor of Science in **Mathematics and Economics**.
-
-I am currently pursuing a **Master of Urban Spatial Analytics** at the **University of Pennsylvania**, where my work focuses on spatial analysis, public policy analytics, and applied data science for urban contexts.
-
-I am particularly interested in roles that bridge **data, policy, and decision-making**, translating quantitative analysis into actionable insights.
-
-## Contact
-
--   Email: \[isabli\@upenn.edu\]
--   GitHub: [@Isabelliiii]
--   Linkedin: \[https://www.linkedin.com/in/isabellelii\]
+  <!-- RESEARCH -->
+  <p class="category-label">Research</p>
+  <div class="project-grid">
+    <a href="https://uxiaoo22.github.io/python/part1.html" class="project-card" target="_blank" rel="noopener">
+      <div class="project-card-preview preview-research">
+        <span class="preview-badge">RESEARCH</span>
+      </div>
+      <div class="project-card-body">
+        <p class="project-card-title">Elephant Habitat Suitability</p>
+        <p class="project-card-desc">Spatial modelling of elephant habitat suitability across Southeast Asia using remote sensing and GIS.</p>
+      </div>
+    </a>
+  </div>
+</section>
+```
