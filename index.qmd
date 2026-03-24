@@ -20,8 +20,8 @@ format:
         <i class="bi bi-github"></i>
       </a>
     </div>
-    <p class="hero-bio">I am a master's student in spatial analytics with a background in mathematics and economics. Through coursework and projects in urban data science, I have developed a strong interest in <strong>spatial data analysis and visualisation</strong>. I aim to leverage my skill set to effectively <strong>communicate data-driven insights and inform decision-making</strong>.</p>
-    <p class="hero-bio">I hold a bachelor's degree from the <strong>University of Toronto</strong>, specialising in Mathematics and Economics. Fluent in <strong>English and Chinese</strong>, my passion for problem-solving has shaped my ability to approach challenges from diverse perspectives.</p>
+    <p class="hero-bio">I'm a master's student in Spatial Analytics with a background in mathematics and economics, focusing on how data can inform real-world decisions. Through urban data science projects, I've developed experience working with spatial datasets, building analytical pipelines, and translating complex data into clear, actionable insights.</p>
+    <p class="hero-bio">I'm particularly interested in the intersection of data and product — using data not just to analyze, but to support decision-making, improve systems, and design user-facing tools. My work often involves thinking about both the technical side (data processing, analysis, visualization) and the user side (how insights are delivered and used).</p>
   </div>
   <div class="hero-photo-wrap">
     <img src="photo.jpg" class="profile-photo" alt="Isabelle Li">
@@ -48,7 +48,7 @@ format:
   <!-- PROJECTS -->
   <p class="category-label">Projects</p>
   <div class="project-grid">
-    <a href="Projects/Fire%20Alarm%20Prediction/Fire-Alarm-Prediction.html" class="project-card">
+    <a href="Projects/Fire%20Alarm%20Prediction/fire-alarm-preview.html" class="project-card">
       <div class="project-card-preview preview-fire">
         <span class="preview-badge">ANALYSIS</span>
       </div>
@@ -57,7 +57,7 @@ format:
         <p class="project-card-desc">Predicting false fire alarms in Philadelphia using spatial and socioeconomic data with machine learning in R.</p>
       </div>
     </a>
-    <a href="Projects/Philadelphia%20Housing%20Model/Philadelphia-Housing-Model.html" class="project-card">
+    <a href="Projects/Philadelphia%20Housing%20Model/housing-preview.html" class="project-card">
       <div class="project-card-preview preview-housing">
         <span class="preview-badge">MODELLING</span>
       </div>

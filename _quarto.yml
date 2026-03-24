@@ -5,40 +5,41 @@ project:
     - photo.jpg
 
 website:
-  title: "Isabelle Li - Portfolio"
+  title: "Isabelle Li"
   navbar:
-    left: 
-      - href: index.qmd
-        text: Home
-      - text: "Projects" 
+    background: primary
+    left:
+      - icon: house-fill
+        href: index.qmd
+        aria-label: Home
+    right:
+      - text: "PRODUCT"
+        href: index.qmd
+      - text: "PROJECTS"
         menu:
-          - href: Projects/
-            text: "All Projects"
-          - href: Projects/Fire Alarm Prediction/Fire-Alarm-Prediction.qmd
+          - href: Projects/Fire Alarm Prediction/fire-alarm-preview.qmd
             text: "Fire Alarm Prediction"
-          - href: Projects/Philadelphia Housing Model/Philadelphia-Housing-Model.qmd
+          - href: Projects/Philadelphia Housing Model/housing-preview.qmd
             text: "Philadelphia Housing Model"
-            
-      - text: "Research"
+      - text: "COMMUNITY"
         menu:
-          - href: Research/
-            text: "All Research"
+          - href: Community Engagement/EPCDB/EPCDB.qmd
+            text: "East Parkside Applied Case"
+          - href: Community Engagement/Published Writing-NAMUN.qmd
+            text: "Published Writing – NAMUN"
+      - text: "RESEARCH"
+        menu:
           - href: https://uxiaoo22.github.io/python/part1.html
             text: "Elephant Habitat Suitability"
-            
-      - text: "Community Engagement"
-        menu:
-          - href: Community Engagement/
-            text: "All Community Engagement"
-          - href: Community Engagement/EPCDB/EPCDB.qmd
-            text: "East Parkside Applied Case"  
-          - href: Community Engagement/Published Writing-NAMUN.qmd
-            text: "Published Writing-NAMUN"              
-             
+
 format:
   html:
     theme: [cosmo, assets/theme.scss]
-
+    include-in-header:
+      text: |
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 execute:
   freeze: auto

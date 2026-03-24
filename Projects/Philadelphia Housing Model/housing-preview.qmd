@@ -1,0 +1,155 @@
+---
+format:
+  html:
+    toc: false
+---
+
+```{=html}
+<div class="preview-hero preview-hero--housing">
+  <div class="preview-tags">
+    <span class="ptag">SPATIAL ANALYSIS</span>
+    <span class="ptag">MODELLING</span>
+    <span class="ptag">EQUITY</span>
+  </div>
+  <h1 class="preview-title">Philadelphia Housing Price Model</h1>
+  <p class="preview-meta">Philadelphia, PA · 2024 · with Sihan Yu, Jingqi Lu</p>
+  <div class="preview-stats">
+    <div class="pstat"><span class="pstat-n">4</span><span class="pstat-l">OLS regression models</span></div>
+    <div class="pstat"><span class="pstat-n">R² = 0.61</span><span class="pstat-l">final model fit</span></div>
+    <div class="pstat"><span class="pstat-n">$81K</span><span class="pstat-l">mean absolute error</span></div>
+  </div>
+</div>
+```
+
+## Overview
+
+Philadelphia's housing market reflects deep spatial inequality — value is concentrated in certain districts while lower-income neighbourhoods remain underserved. This project models residential property sale prices to understand the **structural, demographic, and spatial drivers of housing value** and to examine whether the city's assessment system distributes tax burdens equitably.
+
+Data covers 2023–2024 single-family sales from the Office of Property Assessment, joined with ACS census demographics, crime records, transit stops, recreation facilities, and hospital locations.
+
+## Data
+
+```{=html}
+<div class="data-grid">
+  <div class="data-card">
+    <div class="data-card-icon">🏠</div>
+    <div class="data-card-content">
+      <p class="data-card-title">OPA Property Sales</p>
+      <p class="data-card-desc">2023–2024 single-family transactions from Philadelphia's Office of Property Assessment, filtered to remove non-market transfers and outliers</p>
+    </div>
+  </div>
+  <div class="data-card">
+    <div class="data-card-icon">📊</div>
+    <div class="data-card-content">
+      <p class="data-card-title">Census Demographics</p>
+      <p class="data-card-desc">2023 ACS tract-level data: median income, education, unemployment, racial composition — spatially joined to each property</p>
+    </div>
+  </div>
+  <div class="data-card">
+    <div class="data-card-icon">📍</div>
+    <div class="data-card-content">
+      <p class="data-card-title">Spatial Amenities</p>
+      <p class="data-card-desc">Transit stops within 400 m, recreation facilities within 1.2 km, nearest hospital distance, and crime count per census boundary</p>
+    </div>
+  </div>
+  <div class="data-card">
+    <div class="data-card-icon">🗺️</div>
+    <div class="data-card-content">
+      <p class="data-card-title">Location Features</p>
+      <p class="data-card-desc">Center City boundary indicator, ward-level geography for residual diagnostics</p>
+    </div>
+  </div>
+</div>
+```
+
+## Methodology
+
+Four OLS models built iteratively, each adding a new group of predictors:
+
+```{=html}
+<div class="method-steps">
+  <div class="method-step">
+    <div class="step-num">01</div>
+    <div class="step-body">
+      <p class="step-title">Structural Features Only</p>
+      <p class="step-desc">Livable area, bedrooms, bathrooms, house age (+ quadratic term). R² = 0.45. Larger homes and more bathrooms increase price; older homes depreciate but the decline slows over time.</p>
+    </div>
+  </div>
+  <div class="method-step">
+    <div class="step-num">02</div>
+    <div class="step-body">
+      <p class="step-title">+ Census Variables</p>
+      <p class="step-desc">Adds median income, BA rate, unemployment, Black population share. R² rises to 0.60. Neighbourhood socioeconomic context explains a large share of price variation beyond physical attributes.</p>
+    </div>
+  </div>
+  <div class="method-step">
+    <div class="step-num">03</div>
+    <div class="step-body">
+      <p class="step-title">+ Spatial Features</p>
+      <p class="step-desc">Adds crime count, transit stops, recreation count, hospital proximity. R² = 0.61. Transit access and recreation show strong positive effects; hospital proximity matters with diminishing returns.</p>
+    </div>
+  </div>
+  <div class="method-step">
+    <div class="step-num">04</div>
+    <div class="step-body">
+      <p class="step-title">+ Interactions & Fixed Effects</p>
+      <p class="step-desc">Adds garage dummy, Center City indicator, recreation level, crime × unemployment interaction. R² = 0.61. Crime impact on price varies by economic context: stronger in low-unemployment areas.</p>
+    </div>
+  </div>
+</div>
+```
+
+## Model Performance
+
+10-fold cross-validation across all four models:
+
+```{=html}
+<div class="perf-table-wrap">
+  <table class="perf-table">
+    <thead>
+      <tr><th>Model</th><th>R²</th><th>MAE ($)</th><th>RMSE ($)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1 · Structural only</td><td>0.45</td><td>106,328</td><td>153,662</td></tr>
+      <tr><td>2 · + Census</td><td>0.60</td><td>82,093</td><td>130,385</td></tr>
+      <tr><td>3 · + Spatial</td><td>0.61</td><td>81,709</td><td>129,308</td></tr>
+      <tr class="best-row"><td>4 · + Interactions ✓</td><td><strong>0.61</strong></td><td><strong>81,139</strong></td><td><strong>129,019</strong></td></tr>
+    </tbody>
+  </table>
+</div>
+```
+
+## Key Findings
+
+```{=html}
+<div class="findings-grid">
+  <div class="finding-card">
+    <p class="finding-label">Strongest Predictor</p>
+    <p class="finding-text">Total livable area has the largest positive standardised coefficient — larger homes consistently sell for more, even after controlling for neighbourhood and location.</p>
+  </div>
+  <div class="finding-card">
+    <p class="finding-label">Neighbourhood Context</p>
+    <p class="finding-text">Areas with higher income and education levels command higher prices. Higher unemployment and larger Black population shares correspond to lower values — reflecting structural inequalities.</p>
+  </div>
+  <div class="finding-card">
+    <p class="finding-label">Accessibility Matters</p>
+    <p class="finding-text">Transit access and recreation facilities show strong positive effects. Proximity to hospitals adds value. Crime has limited direct effect once socioeconomic factors are controlled.</p>
+  </div>
+  <div class="finding-card">
+    <p class="finding-label">Spatial Equity Issue</p>
+    <p class="finding-text">Residual maps show high-value wards are consistently <em>underestimated</em> (actual > predicted), suggesting potential under-assessment. Lower-income wards tend to be <em>overestimated</em> — consistent with regressive assessment.</p>
+  </div>
+</div>
+```
+
+## Conclusions & Recommendations
+
+Philadelphia's housing values are spatially organised along socioeconomic lines, with high-value neighbourhoods concentrated in Centre City, the northeast, and parts of the northwest. The model's residual pattern points to a **potential systemic bias in property assessment**: wealthier areas appear undertaxed relative to true market values, while lower-income areas may face over-assessment.
+
+In high-unemployment neighbourhoods, housing markets no longer respond to safety improvements in isolation — policies must address the **underlying economic base** (jobs, small business support, public infrastructure) rather than security measures alone. Future work should integrate temporal dynamics and machine learning to improve accuracy at both the upper and lower ends of the price distribution.
+
+```{=html}
+<div class="preview-cta">
+  <a href="Philadelphia-Housing-Model.html" class="cta-btn">View Full Technical Report →</a>
+</div>
+```

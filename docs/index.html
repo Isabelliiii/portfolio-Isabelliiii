@@ -8,6 +8,9 @@
 
 
 <title>Isabelle Li-Portfolio – Isabelle Li - Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,15 +26,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 <style>
+/* ── Fonts ───────────────────────────────────────── */
+body{font-family:'Inter',system-ui,sans-serif}
+h1,h2,h3,h4,.hero-name,.projects-heading,.project-card-title{font-family:'Playfair Display',Georgia,serif}
+/* ── Navbar overrides ────────────────────────────── */
+.navbar .navbar-title{display:none}
+.navbar-nav .nav-link,.navbar-nav .dropdown-toggle{font-family:'Inter',system-ui,sans-serif;font-size:.75rem;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;opacity:.85;padding-left:1rem!important;padding-right:1rem!important}
+.navbar-nav .nav-link:hover,.navbar-nav .dropdown-toggle:hover{opacity:1}
+.navbar .dropdown-menu{border-radius:10px;padding:.5rem;box-shadow:0 6px 20px rgba(31,58,95,.1)}
+.navbar .dropdown-item{font-family:'Inter',system-ui,sans-serif;font-size:.88rem;font-weight:400;letter-spacing:0;text-transform:none;border-radius:6px;padding:.45rem .9rem}
 /* ── Hero ────────────────────────────────────────── */
 .hero-section{display:flex;align-items:flex-start;gap:3.5rem;padding:3.5rem 0 2.5rem}
 .hero-text{flex:1;min-width:0}
-.hero-name{font-size:2.6rem;font-weight:700;color:#1f3a5f;margin-bottom:.5rem;letter-spacing:-.8px}
-.hero-subtitle{color:#5f6b76;font-size:1.05rem;line-height:1.5;margin-bottom:1.4rem}
+.hero-name{font-family:'Playfair Display',Georgia,serif;font-size:2.8rem;font-weight:700;color:#1f3a5f;margin-bottom:.5rem;letter-spacing:-.5px}
+.hero-subtitle{font-family:'Inter',system-ui,sans-serif;color:#5f6b76;font-size:1.05rem;line-height:1.5;margin-bottom:1.4rem}
 .social-links{display:flex;gap:.6rem;margin-bottom:1.75rem}
 .social-links a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:#eeeae2;color:#1f3a5f;font-size:.95rem;transition:background .18s,color .18s;text-decoration:none!important}
 .social-links a:hover{background:#1f3a5f;color:#fff}
-.hero-bio{color:#161a1d;font-size:1rem;margin-bottom:1rem;max-width:600px}
+.hero-bio{font-family:'Inter',system-ui,sans-serif;color:#161a1d;font-size:1rem;margin-bottom:1rem;max-width:600px;line-height:1.75}
 .hero-photo-wrap{flex-shrink:0;display:flex;align-items:flex-start;padding-top:.5rem}
 .profile-photo{width:270px;height:270px;object-fit:cover;border-radius:50%;border:3px solid #eeeae2;display:block}
 /* ── Projects ────────────────────────────────────── */
@@ -137,60 +149,39 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
-<span class="menu-text">Home</span></a>
-  </li>  
-  <li class="nav-item dropdown ">
+    <a class="nav-link active" href="./index.html" aria-current="page" aria-label="Home">
+      <i class="bi bi-house-fill"></i>
+    </a>
+  </li>
+</ul>
+<ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"><span class="menu-text">PRODUCT</span></a>
+  </li>
+  <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-projects" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Projects</span>
+      <span class="menu-text">PROJECTS</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-projects">    
-        <li>
-    <a class="dropdown-item" href="./Projects/">
- <span class="dropdown-text">All Projects</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./Projects/Fire Alarm Prediction/Fire-Alarm-Prediction.html">
- <span class="dropdown-text">Fire Alarm Prediction</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./Projects/Philadelphia Housing Model/Philadelphia-Housing-Model.html">
- <span class="dropdown-text">Philadelphia Housing Model</span></a>
-  </li>  
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-projects">
+      <li><a class="dropdown-item" href="./Projects/Fire%20Alarm%20Prediction/Fire-Alarm-Prediction.html"><span class="dropdown-text">Fire Alarm Prediction</span></a></li>
+      <li><a class="dropdown-item" href="./Projects/Philadelphia%20Housing%20Model/Philadelphia-Housing-Model.html"><span class="dropdown-text">Philadelphia Housing Model</span></a></li>
     </ul>
   </li>
-  <li class="nav-item dropdown ">
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-community" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+      <span class="menu-text">COMMUNITY</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-community">
+      <li><a class="dropdown-item" href="./Community%20Engagement/EPCDB/EPCDB.html"><span class="dropdown-text">East Parkside Applied Case</span></a></li>
+      <li><a class="dropdown-item" href="./Community%20Engagement/Published%20Writing-NAMUN.html"><span class="dropdown-text">Published Writing – NAMUN</span></a></li>
+    </ul>
+  </li>
+  <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-research" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Research</span>
+      <span class="menu-text">RESEARCH</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-research">    
-        <li>
-    <a class="dropdown-item" href="./Research/">
- <span class="dropdown-text">All Research</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="https://uxiaoo22.github.io/python/part1.html">
- <span class="dropdown-text">Elephant Habitat Suitability</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-community-engagement" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Community Engagement</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-community-engagement">    
-        <li>
-    <a class="dropdown-item" href="./Community Engagement/">
- <span class="dropdown-text">All Community Engagement</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./Community Engagement/EPCDB/EPCDB.html">
- <span class="dropdown-text">East Parkside Applied Case</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./Community Engagement/Published Writing-NAMUN.html">
- <span class="dropdown-text">Published Writing-NAMUN</span></a>
-  </li>  
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-research">
+      <li><a class="dropdown-item" href="https://uxiaoo22.github.io/python/part1.html" target="_blank" rel="noopener"><span class="dropdown-text">Elephant Habitat Suitability</span></a></li>
     </ul>
   </li>
 </ul>
@@ -223,8 +214,8 @@ ul.task-list li input[type="checkbox"] {
         <i class="bi bi-github"></i>
       </a>
     </div>
-    <p class="hero-bio">I am a master's student in spatial analytics with a background in mathematics and economics. Through coursework and projects in urban data science, I have developed a strong interest in <strong>spatial data analysis and visualisation</strong>. I aim to leverage my skill set to effectively <strong>communicate data-driven insights and inform decision-making</strong>.</p>
-    <p class="hero-bio">I hold a bachelor's degree from the <strong>University of Toronto</strong>, specialising in Mathematics and Economics. Fluent in <strong>English and Chinese</strong>, my passion for problem-solving has shaped my ability to approach challenges from diverse perspectives.</p>
+    <p class="hero-bio">I'm a master's student in Spatial Analytics with a background in mathematics and economics, focusing on how data can inform real-world decisions. Through urban data science projects, I've developed experience working with spatial datasets, building analytical pipelines, and translating complex data into clear, actionable insights.</p>
+    <p class="hero-bio">I'm particularly interested in the intersection of data and product — using data not just to analyze, but to support decision-making, improve systems, and design user-facing tools. My work often involves thinking about both the technical side (data processing, analysis, visualization) and the user side (how insights are delivered and used).</p>
   </div>
   <div class="hero-photo-wrap">
     <img src="photo.jpg" class="profile-photo" alt="Isabelle Li">
@@ -251,7 +242,7 @@ ul.task-list li input[type="checkbox"] {
   <!-- PROJECTS -->
   <p class="category-label">Projects</p>
   <div class="project-grid">
-    <a href="Projects/Fire%20Alarm%20Prediction/Fire-Alarm-Prediction.html" class="project-card">
+    <a href="Projects/Fire%20Alarm%20Prediction/fire-alarm-preview.html" class="project-card">
       <div class="project-card-preview preview-fire">
         <span class="preview-badge">ANALYSIS</span>
       </div>
@@ -260,7 +251,7 @@ ul.task-list li input[type="checkbox"] {
         <p class="project-card-desc">Predicting false fire alarms in Philadelphia using spatial and socioeconomic data with machine learning in R.</p>
       </div>
     </a>
-    <a href="Projects/Philadelphia%20Housing%20Model/Philadelphia-Housing-Model.html" class="project-card">
+    <a href="Projects/Philadelphia%20Housing%20Model/housing-preview.html" class="project-card">
       <div class="project-card-preview preview-housing">
         <span class="preview-badge">MODELLING</span>
       </div>

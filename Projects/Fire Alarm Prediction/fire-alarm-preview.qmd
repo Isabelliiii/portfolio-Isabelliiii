@@ -1,0 +1,153 @@
+---
+format:
+  html:
+    toc: false
+---
+
+```{=html}
+<div class="preview-hero preview-hero--fire">
+  <div class="preview-tags">
+    <span class="ptag">ANALYSIS</span>
+    <span class="ptag">PREDICTION</span>
+    <span class="ptag">URBAN POLICY</span>
+  </div>
+  <h1 class="preview-title">Fire Alarm False Alarm Prediction</h1>
+  <p class="preview-meta">Philadelphia, PA · 2024 · with Sihan Yu, Jingqi Lu, Ming Cao</p>
+  <div class="preview-stats">
+    <div class="pstat"><span class="pstat-n">77%</span><span class="pstat-l">of incidents are false alarms</span></div>
+    <div class="pstat"><span class="pstat-n">3</span><span class="pstat-l">logistic regression models</span></div>
+    <div class="pstat"><span class="pstat-n">2</span><span class="pstat-l">threshold scenarios evaluated</span></div>
+  </div>
+</div>
+```
+
+## Overview
+
+In Philadelphia's National Fire Incident Reporting System, **77% of all fire-related incidents are false alarms** — system malfunctions, accidental activations, and malicious calls that each still trigger a full emergency response. Every false alarm ties up multiple firefighters, apparatus, and equipment while removing units from availability for real emergencies.
+
+This project builds a logistic regression model to predict the probability that an incoming incident is a false alarm, allowing the fire department to apply **graduated response protocols** and deploy resources more efficiently.
+
+## Data
+
+```{=html}
+<div class="data-grid">
+  <div class="data-card">
+    <div class="data-card-icon">🔥</div>
+    <div class="data-card-content">
+      <p class="data-card-title">Fire Incidents</p>
+      <p class="data-card-desc">NFIRS incident records filtered to false alarms (7xx codes) and real fires (1xx, 2xx codes)</p>
+    </div>
+  </div>
+  <div class="data-card">
+    <div class="data-card-icon">📊</div>
+    <div class="data-card-content">
+      <p class="data-card-title">Census Demographics</p>
+      <p class="data-card-desc">2023 ACS tract-level data: population, income, education, unemployment, racial composition</p>
+    </div>
+  </div>
+  <div class="data-card">
+    <div class="data-card-icon">🏢</div>
+    <div class="data-card-content">
+      <p class="data-card-title">Building Certifications</p>
+      <p class="data-card-desc">L&I building certification records (Active / Expired / Deficient) joined to census tracts</p>
+    </div>
+  </div>
+  <div class="data-card">
+    <div class="data-card-icon">🌤️</div>
+    <div class="data-card-content">
+      <p class="data-card-title">Weather Data</p>
+      <p class="data-card-desc">Daily temperature, precipitation, and wind speed matched to incident dates</p>
+    </div>
+  </div>
+</div>
+```
+
+## Methodology
+
+Three logistic regression models were built, each adding a new layer of predictors:
+
+```{=html}
+<div class="method-steps">
+  <div class="method-step">
+    <div class="step-num">01</div>
+    <div class="step-body">
+      <p class="step-title">Model 1 — Weather Baseline</p>
+      <p class="step-desc">Temperature, precipitation, wind speed, and building certification rate. Establishes baseline fit. Temperature and precipitation are significant; limited overall explanatory power.</p>
+    </div>
+  </div>
+  <div class="method-step">
+    <div class="step-num">02</div>
+    <div class="step-body">
+      <p class="step-title">Model 2 — + Socioeconomic Context</p>
+      <p class="step-desc">Adds median income, education rate (BA degree), Black population share, and unemployment rate. AIC drops substantially (67,143 → 59,748), confirming socioeconomic context is a strong signal.</p>
+    </div>
+  </div>
+  <div class="method-step">
+    <div class="step-num">03</div>
+    <div class="step-body">
+      <p class="step-title">Model 3 — Full Model (Best)</p>
+      <p class="step-desc">Adds temporal indicators (weekend, quarter) and spatial features (proximity to fire station, distance from City Hall). Best overall fit. Selected for threshold analysis and policy use.</p>
+    </div>
+  </div>
+</div>
+```
+
+## Key Findings
+
+```{=html}
+<div class="findings-grid">
+  <div class="finding-card">
+    <p class="finding-label">Weather</p>
+    <p class="finding-text">Higher temperatures and any measurable precipitation significantly increase the likelihood of a false alarm — likely due to heat-related system stress and moisture-triggered detectors.</p>
+  </div>
+  <div class="finding-card">
+    <p class="finding-label">Neighbourhood Context</p>
+    <p class="finding-text">Higher education levels, larger Black population share, and higher unemployment are all associated with elevated false-alarm odds — indicating structural and socioeconomic patterns in alarm activity.</p>
+  </div>
+  <div class="finding-card">
+    <p class="finding-label">Building Compliance</p>
+    <p class="finding-text">Tracts with more <em>active</em> alarm certifications show higher false-alarm rates — suggesting well-monitored buildings generate more nuisance activations than poorly maintained ones.</p>
+  </div>
+  <div class="finding-card">
+    <p class="finding-label">Spatial & Temporal</p>
+    <p class="finding-text">False alarms are slightly less likely on weekends, in Q4, and near fire stations. Incidents farther from Center City also show modestly lower false-alarm odds.</p>
+  </div>
+</div>
+```
+
+## Threshold Trade-offs
+
+Logistic regression outputs a probability. A decision threshold converts that probability into a binary classification. Two scenarios:
+
+```{=html}
+<div class="threshold-compare">
+  <div class="threshold-card threshold-conservative">
+    <p class="threshold-label">Threshold = 0.9 · Conservative</p>
+    <div class="threshold-metrics">
+      <div class="tm"><span class="tm-n">96.4%</span><span class="tm-l">Specificity</span></div>
+      <div class="tm"><span class="tm-n">8.1%</span><span class="tm-l">Sensitivity</span></div>
+    </div>
+    <p class="threshold-interp">Identifies only the most extreme false alarms. Minimises risk of misclassifying a real emergency, but misses 42,000+ false alarms.</p>
+  </div>
+  <div class="threshold-card threshold-aggressive">
+    <p class="threshold-label">Threshold = 0.4 · Aggressive</p>
+    <div class="threshold-metrics">
+      <div class="tm"><span class="tm-n">99.95%</span><span class="tm-l">Sensitivity</span></div>
+      <div class="tm"><span class="tm-n">0.28%</span><span class="tm-l">Specificity</span></div>
+    </div>
+    <p class="threshold-interp">Catches almost every false alarm. Enables graduated response — still respond, but with a lighter crew and fewer apparatus.</p>
+  </div>
+</div>
+```
+
+## Conclusions & Recommendations
+
+The full model shows that false alarm activity reflects an interaction of **environmental conditions, neighbourhood characteristics, and building system quality** — not a single cause. A lower threshold (around 0.4) is recommended operationally: the fire department still responds to every call, but predicted-likely false alarms receive a lighter response package, reducing cost and freeing resources for real emergencies.
+
+Longer-term, the city should strengthen **mandatory inspection and compliance enforcement** for buildings with repeat violations, and expand **community education** programmes targeting neighbourhoods and building types with historically high false-alarm rates.
+
+```{=html}
+<div class="preview-cta">
+  <a href="Fire-Alarm-Prediction.html" class="cta-btn">View Full Technical Report →</a>
+</div>
+```
