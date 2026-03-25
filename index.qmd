@@ -6,13 +6,26 @@ format:
 ---
 
 ```{=html}
-<div class="dashboard">
+<div class="page-body">
 
-  <!-- ── Hero Card ─────────────────────────────────── -->
-  <div class="hero-card">
-    <div class="hc-left">
-      <h1 class="hero-name">Isabelle Li</h1>
-      <p class="hero-subtitle">Master's Student in Urban Spatial Analytics<br>at the University of Pennsylvania</p>
+  <!-- ══ Introduction ══════════════════════════════════ -->
+  <section class="intro-section">
+
+    <div class="intro-left">
+      <!-- Photo + Name inline -->
+      <div class="name-row">
+        <img src="photo.jpg" class="profile-photo-inline" alt="Isabelle Li">
+        <div class="name-block">
+          <h1 class="hero-name">Isabelle Li</h1>
+          <p class="hero-subtitle">Master's Student in Urban Spatial Analytics<br>at the University of Pennsylvania</p>
+        </div>
+      </div>
+
+      <!-- Bio -->
+      <p class="hero-bio">I'm a master's student in <strong>Spatial Analytics</strong> with a background in mathematics and economics, focusing on <strong>how data can inform real-world decisions</strong>. Through urban data science projects, I've developed experience working with spatial datasets, building analytical pipelines, and translating complex data into <strong>clear, actionable insights</strong>.</p>
+      <p class="hero-bio">I'm particularly interested in the <strong>intersection of data and product</strong> — using data not just to analyze, but to <strong>support decision-making, improve systems, and design user-facing tools</strong>. My work often involves thinking about both the <strong>technical side</strong> (data processing, analysis, visualization) and the <strong>user side</strong> (how insights are delivered and used).</p>
+
+      <!-- Social -->
       <div class="social-links">
         <a href="mailto:isabli@upenn.edu" title="Email" aria-label="Email">
           <i class="bi bi-envelope-fill"></i>
@@ -25,150 +38,129 @@ format:
         </a>
       </div>
     </div>
-    <div class="hc-right">
+
+    <div class="intro-right">
       <p class="skills-label">Skills &amp; Tools</p>
-      <div class="skills-grid">
-        <div class="skill-chip">
-          <span class="skill-icon-wrap"><i class="bi bi-pin-map-fill"></i></span>
-          <span>GIS (ArcGIS, QGIS)</span>
+      <div class="skills-chips">
+        <span class="skill-chip"><span class="skill-icon-wrap"><i class="bi bi-pin-map-fill"></i></span>GIS (ArcGIS, QGIS)</span>
+        <span class="skill-chip"><span class="skill-icon-wrap"><i class="bi bi-code-slash"></i></span>Python (Pandas, GeoPandas)</span>
+        <span class="skill-chip"><span class="skill-icon-wrap"><i class="bi bi-bar-chart-fill"></i></span>R</span>
+        <span class="skill-chip"><span class="skill-icon-wrap"><i class="bi bi-database-fill"></i></span>SQL</span>
+        <span class="skill-chip"><span class="skill-icon-wrap"><i class="bi bi-cpu-fill"></i></span>Machine Learning</span>
+        <span class="skill-chip"><span class="skill-icon-wrap"><i class="bi bi-globe"></i></span>Spatial Modeling</span>
+        <span class="skill-chip"><span class="skill-icon-wrap"><i class="bi bi-layout-text-window-reverse"></i></span>User-Facing Tool Design</span>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ══ Portfolio ═════════════════════════════════════ -->
+  <section class="portfolio-section">
+
+    <p class="portfolio-label">Portfolio</p>
+
+    <div class="portfolio-tabs" role="tablist">
+      <button class="ptab active" data-tab="product">Product</button>
+      <button class="ptab" data-tab="project">Projects</button>
+      <button class="ptab" data-tab="visualization">Visualization</button>
+      <button class="ptab" data-tab="research">Research</button>
+      <button class="ptab" data-tab="community">Community</button>
+    </div>
+
+    <!-- PRODUCT -->
+    <div class="ptab-panel active" data-panel="product">
+      <div class="project-card no-link">
+        <div class="project-card-preview preview-product">
+          <span class="preview-badge">PRODUCT</span>
+          <span class="coming-soon-tag">Coming soon</span>
         </div>
-        <div class="skill-chip">
-          <span class="skill-icon-wrap"><i class="bi bi-code-slash"></i></span>
-          <span>Python (Pandas, GeoPandas)</span>
-        </div>
-        <div class="skill-chip">
-          <span class="skill-icon-wrap"><i class="bi bi-bar-chart-fill"></i></span>
-          <span>R</span>
-        </div>
-        <div class="skill-chip">
-          <span class="skill-icon-wrap"><i class="bi bi-database-fill"></i></span>
-          <span>SQL</span>
-        </div>
-        <div class="skill-chip">
-          <span class="skill-icon-wrap"><i class="bi bi-cpu-fill"></i></span>
-          <span>Machine Learning</span>
-        </div>
-        <div class="skill-chip">
-          <span class="skill-icon-wrap"><i class="bi bi-globe"></i></span>
-          <span>Spatial Modeling</span>
-        </div>
-        <div class="skill-chip">
-          <span class="skill-icon-wrap"><i class="bi bi-layout-text-window-reverse"></i></span>
-          <span>User-Facing Tool Design</span>
+        <div class="project-card-body">
+          <p class="project-card-title">Tree Planting Decision System</p>
+          <p class="project-card-desc">A data-driven tool for optimising urban tree placement to maximise environmental and community benefit.</p>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- ── Portfolio Card ────────────────────────────── -->
-  <div class="portfolio-card">
-    <div class="pc-photo">
-      <img src="photo.jpg" class="profile-photo profile-photo-sm" alt="Isabelle Li">
-    </div>
-    <div class="pc-content">
-      <p class="portfolio-label">PORTFOLIO</p>
-      <div class="portfolio-tabs" role="tablist">
-        <button class="ptab active" data-tab="product">PRODUCT</button>
-        <button class="ptab" data-tab="project">PROJECT</button>
-        <button class="ptab" data-tab="visualization">VISUALIZATION</button>
-        <button class="ptab" data-tab="research">RESEARCH</button>
-        <button class="ptab" data-tab="community">COMMUNITY</button>
-      </div>
-
-      <!-- PRODUCT -->
-      <div class="ptab-panel active" data-panel="product">
-        <div class="mini-card no-link">
-          <div class="mini-card-preview preview-product">
-            <span class="mini-badge">PRODUCT</span>
-          </div>
-          <div class="mini-card-body">
-            <p class="mini-card-title">Tree Planting Decision System</p>
-            <p class="mini-card-desc">Data-driven tool for optimising urban tree placement. <em>Coming soon.</em></p>
-          </div>
+    <!-- PROJECTS -->
+    <div class="ptab-panel" data-panel="project">
+      <a href="Projects/Fire%20Alarm%20Prediction/fire-alarm-preview.html" class="project-card">
+        <div class="project-card-preview preview-fire">
+          <span class="preview-badge">ANALYSIS</span>
         </div>
-      </div>
-
-      <!-- PROJECT -->
-      <div class="ptab-panel" data-panel="project">
-        <a href="Projects/Fire%20Alarm%20Prediction/fire-alarm-preview.html" class="mini-card">
-          <div class="mini-card-preview preview-fire">
-            <span class="mini-badge">ANALYSIS</span>
-          </div>
-          <div class="mini-card-body">
-            <p class="mini-card-title">Fire Alarm Prediction</p>
-            <p class="mini-card-desc">Predicting false fire alarms in Philadelphia using spatial and ML methods in R.</p>
-          </div>
-        </a>
-        <a href="Projects/Philadelphia%20Housing%20Model/housing-preview.html" class="mini-card">
-          <div class="mini-card-preview preview-housing">
-            <span class="mini-badge">MODELLING</span>
-          </div>
-          <div class="mini-card-body">
-            <p class="mini-card-title">Philadelphia Housing Model</p>
-            <p class="mini-card-desc">Spatial modelling of residential property values using census and assessment data.</p>
-          </div>
-        </a>
-      </div>
-
-      <!-- VISUALIZATION -->
-      <div class="ptab-panel" data-panel="visualization">
-        <a href="visualization.html" class="mini-card">
-          <div class="mini-card-preview preview-viz">
-            <span class="mini-badge">VISUALIZATION</span>
-          </div>
-          <div class="mini-card-body">
-            <p class="mini-card-title">Data Visualizations</p>
-            <p class="mini-card-desc">Charts, maps, and visual explorations from urban and spatial datasets. <em>Coming soon.</em></p>
-          </div>
-        </a>
-      </div>
-
-      <!-- RESEARCH -->
-      <div class="ptab-panel" data-panel="research">
-        <a href="https://uxiaoo22.github.io/python/part1.html" class="mini-card" target="_blank" rel="noopener">
-          <div class="mini-card-preview preview-research">
-            <span class="mini-badge">RESEARCH</span>
-          </div>
-          <div class="mini-card-body">
-            <p class="mini-card-title">Elephant Habitat Suitability</p>
-            <p class="mini-card-desc">Spatial modelling of elephant habitat across Southeast Asia using remote sensing and GIS.</p>
-          </div>
-        </a>
-      </div>
-
-      <!-- COMMUNITY -->
-      <div class="ptab-panel" data-panel="community">
-        <a href="Community%20Engagement/EPCDB/EPCDB.html" class="mini-card">
-          <div class="mini-card-preview preview-community">
-            <span class="mini-badge">ENGAGEMENT</span>
-          </div>
-          <div class="mini-card-body">
-            <p class="mini-card-title">East Parkside Applied Case</p>
-            <p class="mini-card-desc">Community outreach and data-informed planning support for East Parkside CDB.</p>
-          </div>
-        </a>
-        <a href="Community%20Engagement/Published%20Writing-NAMUN.html" class="mini-card">
-          <div class="mini-card-preview preview-writing">
-            <span class="mini-badge">WRITING</span>
-          </div>
-          <div class="mini-card-body">
-            <p class="mini-card-title">Published Writing – NAMUN</p>
-            <p class="mini-card-desc">Articles on international crisis reporting ethics from NAMUN 2024.</p>
-          </div>
-        </a>
-      </div>
-
+        <div class="project-card-body">
+          <p class="project-card-title">Fire Alarm Prediction</p>
+          <p class="project-card-desc">Predicting false fire alarms in Philadelphia using spatial and socioeconomic data with machine learning in R.</p>
+        </div>
+      </a>
+      <a href="Projects/Philadelphia%20Housing%20Model/housing-preview.html" class="project-card">
+        <div class="project-card-preview preview-housing">
+          <span class="preview-badge">MODELLING</span>
+        </div>
+        <div class="project-card-body">
+          <p class="project-card-title">Philadelphia Housing Model</p>
+          <p class="project-card-desc">Spatial modelling of residential property values using census and property assessment data for Philadelphia.</p>
+        </div>
+      </a>
     </div>
-  </div>
+
+    <!-- VISUALIZATION -->
+    <div class="ptab-panel" data-panel="visualization">
+      <a href="visualization.html" class="project-card">
+        <div class="project-card-preview preview-viz">
+          <span class="preview-badge">VISUALIZATION</span>
+          <span class="coming-soon-tag">Coming soon</span>
+        </div>
+        <div class="project-card-body">
+          <p class="project-card-title">Data Visualizations</p>
+          <p class="project-card-desc">A collection of charts, maps, and visual explorations from urban and spatial datasets.</p>
+        </div>
+      </a>
+    </div>
+
+    <!-- RESEARCH -->
+    <div class="ptab-panel" data-panel="research">
+      <a href="https://uxiaoo22.github.io/python/part1.html" class="project-card" target="_blank" rel="noopener">
+        <div class="project-card-preview preview-research">
+          <span class="preview-badge">RESEARCH</span>
+        </div>
+        <div class="project-card-body">
+          <p class="project-card-title">Elephant Habitat Suitability</p>
+          <p class="project-card-desc">Spatial modelling of elephant habitat suitability across Southeast Asia using remote sensing and GIS.</p>
+        </div>
+      </a>
+    </div>
+
+    <!-- COMMUNITY -->
+    <div class="ptab-panel" data-panel="community">
+      <a href="Community%20Engagement/EPCDB/EPCDB.html" class="project-card">
+        <div class="project-card-preview preview-community">
+          <span class="preview-badge">ENGAGEMENT</span>
+        </div>
+        <div class="project-card-body">
+          <p class="project-card-title">East Parkside Applied Case</p>
+          <p class="project-card-desc">Community outreach and data-informed planning support for the East Parkside Community Development Board.</p>
+        </div>
+      </a>
+      <a href="Community%20Engagement/Published%20Writing-NAMUN.html" class="project-card">
+        <div class="project-card-preview preview-writing">
+          <span class="preview-badge">WRITING</span>
+        </div>
+        <div class="project-card-body">
+          <p class="project-card-title">Published Writing – NAMUN</p>
+          <p class="project-card-desc">Articles on international crisis reporting ethics and conference insights from NAMUN 2024.</p>
+        </div>
+      </a>
+    </div>
+
+  </section>
 
 </div>
 
 <script>
 (function () {
-  var tabs = document.querySelectorAll('.ptab');
-  tabs.forEach(function (btn) {
+  document.querySelectorAll('.ptab').forEach(function (btn) {
     btn.addEventListener('click', function () {
-      tabs.forEach(function (b) { b.classList.remove('active'); });
+      document.querySelectorAll('.ptab').forEach(function (b) { b.classList.remove('active'); });
       document.querySelectorAll('.ptab-panel').forEach(function (p) { p.classList.remove('active'); });
       btn.classList.add('active');
       document.querySelector('[data-panel="' + btn.dataset.tab + '"]').classList.add('active');
