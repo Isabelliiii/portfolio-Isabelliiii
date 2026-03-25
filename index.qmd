@@ -1,5 +1,6 @@
 ---
 title: "Isabelle Li"
+page-layout: full
 format:
   html:
     toc: false

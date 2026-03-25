@@ -36,7 +36,7 @@ h1 { margin-bottom: 0.9rem; }
 h2 { margin-top: 2.5rem; margin-bottom: 0.9rem; }
 h3 { margin-top: 1.6rem; margin-bottom: 0.6rem; }
 
-.page-columns { max-width: 1120px; }
+.page-columns { max-width: 1200px; }
 
 /* ── Navbar ──────────────────────────────────────── */
 .navbar {
@@ -148,9 +148,11 @@ blockquote {
   color: $gray-600;
 }
 
-/* ── Page body ────────────────────────────────────── */
+/* ── Page body — v3 ──────────────────────────────── */
 .page-body {
-  padding: 3.5rem 0 5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3.5rem 2.5rem 5rem;
 }
 
 /* ── Introduction Section ─────────────────────────── */
