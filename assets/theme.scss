@@ -144,13 +144,14 @@ blockquote {
 
 /* ── Hero ────────────────────────────────────────── */
 .hero-section {
-  display: flex;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  align-items: center;
   gap: 3.5rem;
-  padding: 3.5rem 0 2.5rem;
+  padding: 4rem 0 3rem;
 }
 
-.hero-text { flex: 1; min-width: 0; }
+.hero-text { min-width: 0; }
 
 .hero-name {
   font-family: 'Playfair Display', Georgia, serif;
@@ -204,19 +205,34 @@ blockquote {
 }
 
 .hero-photo-wrap {
-  flex-shrink: 0;
   display: flex;
-  align-items: flex-start;
-  padding-top: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 1.5rem;
+}
+
+/* Decorative ring behind photo fills the right column */
+.hero-photo-wrap::after {
+  content: "";
+  position: absolute;
+  width: 330px;
+  height: 330px;
+  border-radius: 50%;
+  background: $gray-100;
+  border: 2px solid $gray-200;
+  z-index: 0;
 }
 
 .profile-photo {
-  width: 270px;
-  height: 270px;
+  width: 290px;
+  height: 290px;
   object-fit: cover;
   border-radius: 50%;
   border: 3px solid $gray-200;
   display: block;
+  position: relative;
+  z-index: 1;
 }
 
 /* ── Projects section ─────────────────────────────── */
@@ -699,18 +715,51 @@ blockquote {
 }
 
 /* ── Responsive ───────────────────────────────────── */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .hero-section {
+    grid-template-columns: 1fr 280px;
+    gap: 2.5rem;
+    padding: 3rem 0 2rem;
+  }
+  .hero-photo-wrap::after {
+    width: 260px;
+    height: 260px;
+  }
+  .profile-photo { width: 230px; height: 230px; }
+  .hero-name { font-size: 2.4rem; }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
   .hero-section {
-    flex-direction: column-reverse;
+    grid-template-columns: 1fr;
     gap: 1.75rem;
     padding: 2rem 0 1.5rem;
-    align-items: center;
+    text-align: center;
   }
-  .hero-photo-wrap { padding-top: 0; }
+  .hero-photo-wrap {
+    order: -1;
+    padding: 0.75rem;
+  }
+  .hero-photo-wrap::after {
+    width: 215px;
+    height: 215px;
+  }
   .profile-photo { width: 190px; height: 190px; }
-  .hero-name { font-size: 2.1rem; text-align: center; }
+  .hero-name { font-size: 2.1rem; }
   .hero-subtitle { text-align: center; }
   .social-links { justify-content: center; }
   .hero-bio { max-width: 100%; }
   .project-grid { grid-template-columns: 1fr; }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .hero-section { padding: 1.5rem 0 1rem; gap: 1.25rem; }
+  .hero-name { font-size: 1.9rem; }
+  .hero-photo-wrap::after { width: 185px; height: 185px; }
+  .profile-photo { width: 160px; height: 160px; }
+  .navbar-nav .nav-link { padding-left: 0.5rem !important; padding-right: 0.5rem !important; letter-spacing: 1.5px; }
 }
