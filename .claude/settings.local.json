@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(quarto render:*)"
+      "Bash(quarto render:*)",
+      "Bash(ls \"d:\\\\Work\\\\portfolio-Isabelliiii\\\\docs\\\\site_libs\\\\bootstrap\"\" | grep \".min.css \")",
+      "Bash(python -c \":*)"
     ]
   }
 }

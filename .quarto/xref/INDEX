@@ -94,5 +94,26 @@
   },
   "Community Engagement/Published Writing-NAMUN.qmd": {
     "Published Writing-NAMUN.html": "092fb323"
+  },
+  "community.qmd": {
+    "community.html": "293e02c0"
+  },
+  "product.qmd": {
+    "product.html": "a8aac81c"
+  },
+  "Projects/Fire Alarm Prediction/fire-alarm-preview.qmd": {
+    "fire-alarm-preview.html": "8b7ae529"
+  },
+  "Projects/Philadelphia Housing Model/housing-preview.qmd": {
+    "housing-preview.html": "42078ec9"
+  },
+  "projects.qmd": {
+    "projects.html": "7398984b"
+  },
+  "research.qmd": {
+    "research.html": "ebe949a2"
+  },
+  "visualization.qmd": {
+    "visualization.html": "67787397"
   }
 }
