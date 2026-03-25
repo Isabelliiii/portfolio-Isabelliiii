@@ -17,6 +17,9 @@ $font-size-base: 1rem;
 /*-- scss:rules --*/
 html { scroll-behavior: smooth; }
 
+/* Hide Quarto's auto-extracted title block — we use our own h1 inside .hero-section */
+#title-block-header { display: none; }
+
 body {
   font-family: 'Inter', system-ui, sans-serif;
   line-height: 1.65;
@@ -52,6 +55,9 @@ h3 { margin-top: 1.6rem; margin-bottom: 0.6rem; }
 
 /* Hide the brand title text — just use the home icon */
 .navbar .navbar-title { display: none; }
+
+/* Hide "index.html" text that Quarto auto-generates next to the home icon */
+.navbar-nav.me-auto .menu-text { display: none; }
 
 .navbar-nav .nav-link,
 .navbar-nav .dropdown-toggle {
