@@ -150,42 +150,41 @@ blockquote {
 
 /* ── Page body ────────────────────────────────────── */
 .page-body {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem 2rem 4rem;
+  padding: 1.75rem 2.5rem 4rem;
 }
 
 /* ── Dashboard layout ─────────────────────────────── */
 .dashboard {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1.5rem;
 }
 
 /* ── Card 1: Hero ─────────────────────────────────── */
 .hero-card {
   background: #fff;
-  border-radius: 18px;
+  border-radius: 20px;
   border: 1px solid $gray-200;
-  box-shadow: 0 2px 16px rgba(31,58,95,0.07);
-  padding: 2.25rem 2.5rem;
+  box-shadow: 0 2px 20px rgba(31,58,95,0.06);
+  padding: 2.5rem 2.75rem;
   display: grid;
-  grid-template-columns: 1fr 150px 1fr;
-  gap: 2.5rem;
-  align-items: center;
+  grid-template-columns: 160px 1fr 1.05fr;
+  gap: 2.75rem;
+  align-items: start;
+}
+
+.hc-photo {
+  padding-top: 0.25rem;
 }
 
 .hc-bio { min-width: 0; }
-.hc-photo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .hc-skills { min-width: 0; }
 
 .profile-photo-hero {
-  width: 150px;
-  height: 150px;
+  width: 148px;
+  height: 148px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid $gray-200;
@@ -194,10 +193,10 @@ blockquote {
 
 .hero-name {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   font-weight: 700;
   color: $primary;
-  margin: 0 0 0.45rem;
+  margin: 0 0 0.4rem;
   letter-spacing: -0.5px;
   line-height: 1.1;
 }
@@ -205,18 +204,17 @@ blockquote {
 .hero-subtitle {
   font-family: 'Inter', system-ui, sans-serif;
   color: $gray-600;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   line-height: 1.55;
-  margin: 0 0 1.35rem;
+  margin: 0 0 1.1rem;
 }
 
 .hero-bio {
   font-family: 'Inter', system-ui, sans-serif;
   color: $body-color;
-  font-size: 1rem;
-  line-height: 1.8;
-  margin-bottom: 1rem;
-  max-width: 580px;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
 }
 
 .social-links {
@@ -243,120 +241,146 @@ blockquote {
   color: #fff;
 }
 
-/* Skills — right side of hero card */
+/* Skills — right column of hero card */
 .skills-label {
   font-family: 'Inter', system-ui, sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  color: $body-color;
-  margin: 0 0 1rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $gray-600;
+  margin: 0 0 0.85rem;
 }
 
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.6rem;
+  gap: 0.55rem;
 }
 
 .skill-chip {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
-  padding: 0.55rem 0.85rem;
+  gap: 0.55rem;
+  padding: 0.5rem 0.7rem;
   background: $gray-100;
   border: 1px solid $gray-200;
   border-radius: 10px;
   font-family: 'Inter', system-ui, sans-serif;
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   color: $body-color;
   line-height: 1.3;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.skill-chip:hover {
+  background: #fff;
+  border-color: rgba($primary, 0.25);
 }
 
 .skill-icon-wrap {
-  width: 28px;
-  height: 28px;
-  border-radius: 7px;
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
   background: $primary;
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  font-size: 0.85rem;
+  font-size: 0.78rem;
 }
 
 /* ── Card 2: Portfolio ────────────────────────────── */
 .portfolio-card {
   background: #fff;
-  border-radius: 18px;
+  border-radius: 20px;
   border: 1px solid $gray-200;
-  box-shadow: 0 2px 16px rgba(31,58,95,0.07);
-  padding: 2rem 2.5rem;
+  box-shadow: 0 2px 20px rgba(31,58,95,0.06);
+  padding: 2rem 2.75rem 2.5rem;
   min-width: 0;
 }
 
-.pc-header {
+.pc-top {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 2.5rem;
   margin-bottom: 1.5rem;
   flex-wrap: wrap;
 }
 
+.pc-title-col {
+  flex-shrink: 0;
+}
+
 .portfolio-heading {
   font-family: 'Inter', system-ui, sans-serif;
-  font-size: 1rem;
+  font-size: 1.15rem;
   font-weight: 800;
   letter-spacing: 4px;
   text-transform: uppercase;
   color: $primary;
+  margin: 0 0 0.15rem;
+}
+
+.pc-sub {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $gray-600;
   margin: 0;
-  white-space: nowrap;
 }
 
 /* Tabs */
 .portfolio-tabs {
   display: flex;
-  border-bottom: 2px solid $gray-200;
-  margin-bottom: 1.5rem;
-  gap: 0;
-  flex-wrap: nowrap;
-  overflow-x: auto;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .ptab {
   font-family: 'Inter', system-ui, sans-serif;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 1.5px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.8px;
   text-transform: uppercase;
-  padding: 0.5rem 1.1rem 0.6rem;
-  background: none;
-  border: none;
-  border-bottom: 2px solid transparent;
-  margin-bottom: -2px;
+  padding: 0.45rem 1rem;
+  background: $gray-100;
+  border: 1px solid $gray-200;
+  border-radius: 100px;
   cursor: pointer;
   color: $gray-600;
-  transition: color 0.15s, border-color 0.15s, background 0.15s;
+  transition: color 0.15s, background 0.15s, border-color 0.15s;
   white-space: nowrap;
-  border-radius: 4px 4px 0 0;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
 }
+
+.ptab i { font-size: 0.75rem; }
 
 .ptab.active {
   background: $primary;
   color: #fff;
-  border-bottom-color: $primary;
+  border-color: $primary;
 }
 
-.ptab:hover:not(.active) { color: $primary; }
+.ptab:hover:not(.active) {
+  background: #fff;
+  color: $primary;
+  border-color: rgba($primary, 0.3);
+}
 
 /* Tab panels */
 .ptab-panel { display: none; }
 
 .ptab-panel.active {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.1rem;
 }
 
 /* Coming-soon overlay badge */
@@ -859,25 +883,42 @@ blockquote {
 /* ── Responsive ───────────────────────────────────── */
 
 /* Tablet */
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
+  .page-body { padding: 1.5rem 1.75rem 3rem; }
   .hero-card {
-    grid-template-columns: 120px 1fr;
-    grid-template-areas: "photo bio" "photo skills";
-    gap: 1.5rem 2rem;
-    padding: 1.75rem 2rem;
+    grid-template-columns: 130px 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem 2rem;
   }
-  .hc-photo { grid-area: photo; align-self: start; padding-top: 0.5rem; }
-  .hc-bio { grid-area: bio; }
-  .hc-skills { grid-area: skills; }
-  .profile-photo-hero { width: 110px; height: 110px; }
+  .profile-photo-hero { width: 120px; height: 120px; }
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
   .hero-name { font-size: 2.1rem; }
-  .portfolio-card { padding: 1.75rem 2rem; }
+  .ptab-panel.active { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Small tablet */
+@media (max-width: 768px) {
+  .page-body { padding: 1.25rem 1.25rem 3rem; }
+  .hero-card {
+    grid-template-columns: 110px 1fr;
+    grid-template-areas: "photo bio" "skills skills";
+    gap: 1.5rem 1.75rem;
+    padding: 1.75rem 1.5rem;
+  }
+  .hc-photo { grid-area: photo; }
+  .hc-bio { grid-area: bio; }
+  .hc-skills { grid-area: skills; }
+  .profile-photo-hero { width: 100px; height: 100px; }
+  .skills-grid { grid-template-columns: repeat(3, 1fr); }
+  .hero-name { font-size: 1.9rem; }
+  .portfolio-card { padding: 1.5rem 1.5rem 2rem; }
+  .pc-top { gap: 1.25rem; }
+  .ptab-panel.active { grid-template-columns: repeat(2, 1fr); gap: 0.85rem; }
 }
 
 /* Mobile */
-@media (max-width: 768px) {
-  .page-body { padding: 1.25rem 1.25rem 3rem; }
+@media (max-width: 540px) {
+  .page-body { padding: 1rem 1rem 3rem; }
   .hero-card {
     grid-template-columns: 1fr;
     grid-template-areas: none;
@@ -885,24 +926,17 @@ blockquote {
     padding: 1.5rem;
     text-align: center;
   }
-  .hc-photo { grid-area: unset; align-self: center; }
+  .hc-photo { grid-area: unset; display: flex; justify-content: center; }
   .hc-bio { grid-area: unset; }
   .hc-skills { grid-area: unset; }
   .social-links { justify-content: center; }
-  .profile-photo-hero { width: 120px; height: 120px; }
+  .profile-photo-hero { width: 110px; height: 110px; }
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
-  .hero-bio { max-width: 100%; }
-  .hero-name { font-size: 2rem; }
-  .portfolio-card { padding: 1.5rem; }
-  .ptab-panel.active { grid-template-columns: 1fr 1fr; gap: 0.85rem; }
-  .project-grid { grid-template-columns: 1fr; }
-}
-
-/* Small mobile */
-@media (max-width: 480px) {
   .hero-name { font-size: 1.8rem; }
-  .skills-grid { grid-template-columns: 1fr 1fr; }
+  .portfolio-card { padding: 1.25rem 1.25rem 1.75rem; }
   .ptab-panel.active { grid-template-columns: 1fr; }
-  .portfolio-tabs { overflow-x: auto; }
+  .portfolio-tabs { gap: 0.3rem; }
+  .ptab { font-size: 0.65rem; padding: 0.4rem 0.75rem; }
+  .project-grid { grid-template-columns: 1fr; }
   .navbar-nav .nav-link { padding-left: 0.5rem !important; padding-right: 0.5rem !important; letter-spacing: 1.5px; }
 }

@@ -10,8 +10,12 @@ format:
 <div class="page-body">
 <div class="dashboard">
 
-  <!-- ══ Card 1 — Intro (3-col: bio | photo | skills) ══ -->
+  <!-- ══ Hero: photo | bio | skills ══ -->
   <div class="hero-card">
+
+    <div class="hc-photo">
+      <img src="photo.jpg" class="profile-photo-hero" alt="Isabelle Li">
+    </div>
 
     <div class="hc-bio">
       <h1 class="hero-name">Isabelle Li</h1>
@@ -30,10 +34,6 @@ format:
       </div>
     </div>
 
-    <div class="hc-photo">
-      <img src="photo.jpg" class="profile-photo-hero" alt="Isabelle Li">
-    </div>
-
     <div class="hc-skills">
       <p class="skills-label">Skills &amp; Tools</p>
       <div class="skills-grid">
@@ -44,22 +44,37 @@ format:
         <div class="skill-chip"><span class="skill-icon-wrap"><i class="bi bi-bar-chart-fill"></i></span><span>R</span></div>
         <div class="skill-chip"><span class="skill-icon-wrap"><i class="bi bi-database-fill"></i></span><span>SQL</span></div>
         <div class="skill-chip"><span class="skill-icon-wrap"><i class="bi bi-layout-text-window-reverse"></i></span><span>User-Facing Tool Design</span></div>
+        <div class="skill-chip"><span class="skill-icon-wrap"><i class="bi bi-graph-up"></i></span><span>Data Visualization</span></div>
+        <div class="skill-chip"><span class="skill-icon-wrap"><i class="bi bi-layers-fill"></i></span><span>Remote Sensing</span></div>
       </div>
     </div>
 
   </div>
 
-  <!-- ══ Card 2 — Portfolio (full-width) ══ -->
+  <!-- ══ Portfolio ══ -->
   <div class="portfolio-card">
 
-    <div class="pc-header">
-      <p class="portfolio-heading">Portfolio</p>
+    <div class="pc-top">
+      <div class="pc-title-col">
+        <p class="portfolio-heading">Portfolio</p>
+        <p class="pc-sub">Recent Projects</p>
+      </div>
       <div class="portfolio-tabs" role="tablist">
-        <button class="ptab active" data-tab="product">Product</button>
-        <button class="ptab" data-tab="project">Projects</button>
-        <button class="ptab" data-tab="visualization">Visualization</button>
-        <button class="ptab" data-tab="research">Research</button>
-        <button class="ptab" data-tab="community">Community</button>
+        <button class="ptab active" data-tab="product">
+          <i class="bi bi-box-seam"></i><span>Product</span>
+        </button>
+        <button class="ptab" data-tab="project">
+          <i class="bi bi-folder2-open"></i><span>Projects</span>
+        </button>
+        <button class="ptab" data-tab="visualization">
+          <i class="bi bi-bar-chart-line"></i><span>Visualization</span>
+        </button>
+        <button class="ptab" data-tab="research">
+          <i class="bi bi-journal-text"></i><span>Research</span>
+        </button>
+        <button class="ptab" data-tab="community">
+          <i class="bi bi-people-fill"></i><span>Community</span>
+        </button>
       </div>
     </div>
 
