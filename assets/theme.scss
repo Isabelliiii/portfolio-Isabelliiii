@@ -17,8 +17,19 @@ $font-size-base: 1rem;
 /*-- scss:rules --*/
 html { scroll-behavior: smooth; }
 
-/* Hide Quarto's auto-extracted title block — we use our own h1 inside .hero-section */
+/* Hide Quarto's auto-extracted title block */
 #title-block-header { display: none; }
+
+/* ── Break out of Quarto's page-columns grid ──────── */
+/* Quarto's .page-columns grid reserves 5fr gutters on both sides,
+   constraining .column-page to page-start/page-end.
+   Override to span the full screen so our .page-body controls margins. */
+main#quarto-document-content {
+  grid-column: screen-start / screen-end !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  max-width: 100% !important;
+}
 
 body {
   font-family: 'Inter', system-ui, sans-serif;
@@ -35,8 +46,6 @@ h1, h2, h3, h4 {
 h1 { margin-bottom: 0.9rem; }
 h2 { margin-top: 2.5rem; margin-bottom: 0.9rem; }
 h3 { margin-top: 1.6rem; margin-bottom: 0.6rem; }
-
-.page-columns { max-width: 1200px; }
 
 /* ── Navbar ──────────────────────────────────────── */
 .navbar {
@@ -150,8 +159,8 @@ blockquote {
 
 /* ── Page body ────────────────────────────────────── */
 .page-body {
-  max-width: 1500px;
-  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
   padding: 1.75rem 2.5rem 4rem;
 }
 
@@ -170,25 +179,27 @@ blockquote {
   box-shadow: 0 2px 20px rgba(31,58,95,0.06);
   padding: 2.5rem 2.75rem;
   display: flex;
-  gap: 3rem;
+  gap: 2.75rem;
   align-items: flex-start;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-/* Left column: photo + bio stacked */
+/* Left column: photo + bio stacked, fixed at 35% */
 .hc-left {
+  flex: 0 0 35%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 1.25rem;
-  flex: 0 0 auto;
-  width: 38%;
-  max-width: 460px;
+  min-width: 0;
 }
 
-/* Right column: skills fills all remaining space */
+/* Right column: fills ALL remaining space, no max-width */
 .hc-right {
-  flex: 1;
+  flex: 1 1 auto;
   min-width: 0;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -269,6 +280,7 @@ blockquote {
   grid-template-columns: repeat(3, 1fr);
   gap: 0.65rem;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .skill-chip {

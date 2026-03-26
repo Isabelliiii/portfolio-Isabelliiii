@@ -3,7 +3,8 @@
     "allow": [
       "Bash(quarto render:*)",
       "Bash(ls \"d:\\\\Work\\\\portfolio-Isabelliiii\\\\docs\\\\site_libs\\\\bootstrap\"\" | grep \".min.css \")",
-      "Bash(python -c \":*)"
+      "Bash(python -c \":*)",
+      "Bash(grep -r \"column-page\\\\|quarto-container\\\\|page-columns\\\\|page-layout-full\" d:/Work/portfolio-Isabelliiii/docs/site_libs/bootstrap/ --include=*.css -l)"
     ]
   }
 }
