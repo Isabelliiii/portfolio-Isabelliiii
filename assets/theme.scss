@@ -150,9 +150,9 @@ blockquote {
 
 /* ── Page body ────────────────────────────────────── */
 .page-body {
-  max-width: 1440px;
+  max-width: 1500px;
   margin: 0 auto;
-  padding: 1.75rem 3rem 4rem;
+  padding: 1.75rem 2.5rem 4rem;
 }
 
 /* ── Dashboard layout ─────────────────────────────── */
@@ -168,27 +168,39 @@ blockquote {
   border-radius: 20px;
   border: 1px solid $gray-200;
   box-shadow: 0 2px 20px rgba(31,58,95,0.06);
-  padding: 2.75rem 3rem;
-  display: grid;
-  grid-template-columns: 220px 1fr 1.55fr;
+  padding: 2.5rem 2.75rem;
+  display: flex;
   gap: 3rem;
-  align-items: start;
+  align-items: flex-start;
 }
 
-.hc-photo {
-  padding-top: 0;
+/* Left column: photo + bio stacked */
+.hc-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  flex: 0 0 auto;
+  width: 38%;
+  max-width: 460px;
 }
 
-.hc-bio { min-width: 0; }
-.hc-skills { min-width: 0; }
+/* Right column: skills fills all remaining space */
+.hc-right {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
 
 .profile-photo-hero {
-  width: 210px;
-  height: 210px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid $gray-200;
   display: block;
+  flex-shrink: 0;
 }
 
 .hero-name {
@@ -256,6 +268,7 @@ blockquote {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0.65rem;
+  width: 100%;
 }
 
 .skill-chip {
@@ -380,9 +393,16 @@ blockquote {
 .ptab-panel { display: none; }
 
 .ptab-panel.active {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: nowrap;
   gap: 1.1rem;
+  overflow-x: auto;
+  padding-bottom: 0.25rem;
+}
+
+.ptab-panel.active .project-card {
+  flex: 0 0 calc(25% - 0.83rem);
+  min-width: 220px;
 }
 
 /* Coming-soon overlay badge */
@@ -884,62 +904,45 @@ blockquote {
 
 /* ── Responsive ───────────────────────────────────── */
 
-/* Tablet */
+/* Tablet — hero stays flex but left col narrows */
 @media (max-width: 1100px) {
   .page-body { padding: 1.5rem 2rem 3rem; }
-  .hero-card {
-    grid-template-columns: 175px 1fr 1.3fr;
-    gap: 2.25rem;
-    padding: 2.25rem 2.25rem;
-  }
-  .profile-photo-hero { width: 165px; height: 165px; }
+  .hero-card { gap: 2rem; padding: 2.25rem 2.25rem; }
+  .hc-left { width: 42%; max-width: 380px; }
+  .profile-photo-hero { width: 170px; height: 170px; }
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
   .hero-name { font-size: 2.1rem; }
-  .ptab-panel.active { grid-template-columns: repeat(3, 1fr); }
   .portfolio-card { padding: 1.75rem 2.25rem 2.25rem; }
+  .ptab-panel.active .project-card { flex: 0 0 calc(33.33% - 0.75rem); }
 }
 
-/* Small tablet */
+/* Small tablet — stack hero vertically */
 @media (max-width: 800px) {
   .page-body { padding: 1.25rem 1.5rem 3rem; }
-  .hero-card {
-    grid-template-columns: 130px 1fr;
-    grid-template-areas: "photo bio" "skills skills";
-    gap: 1.5rem 2rem;
-    padding: 2rem 1.75rem;
-  }
-  .hc-photo { grid-area: photo; }
-  .hc-bio { grid-area: bio; }
-  .hc-skills { grid-area: skills; }
-  .profile-photo-hero { width: 120px; height: 120px; }
+  .hero-card { flex-direction: column; gap: 1.5rem; padding: 2rem 1.75rem; }
+  .hc-left { width: 100%; max-width: 100%; flex-direction: row; align-items: flex-start; gap: 1.5rem; }
+  .hc-bio { flex: 1; }
+  .profile-photo-hero { width: 130px; height: 130px; flex-shrink: 0; }
+  .hc-right { width: 100%; }
   .skills-grid { grid-template-columns: repeat(3, 1fr); }
   .hero-name { font-size: 1.9rem; }
   .portfolio-card { padding: 1.5rem 1.75rem 2rem; }
   .pc-top { gap: 1.25rem; }
-  .ptab-panel.active { grid-template-columns: repeat(2, 1fr); gap: 0.85rem; }
+  .ptab-panel.active .project-card { flex: 0 0 calc(50% - 0.55rem); }
 }
 
-/* Mobile */
+/* Mobile — single column */
 @media (max-width: 540px) {
   .page-body { padding: 1rem 1rem 3rem; }
-  .hero-card {
-    grid-template-columns: 1fr;
-    grid-template-areas: none;
-    gap: 1.5rem;
-    padding: 1.5rem;
-    text-align: center;
-  }
-  .hc-photo { grid-area: unset; display: flex; justify-content: center; }
-  .hc-bio { grid-area: unset; }
-  .hc-skills { grid-area: unset; }
+  .hero-card { padding: 1.5rem; gap: 1.25rem; text-align: center; }
+  .hc-left { flex-direction: column; align-items: center; gap: 1rem; }
   .social-links { justify-content: center; }
   .profile-photo-hero { width: 130px; height: 130px; }
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
   .hero-name { font-size: 1.8rem; }
   .portfolio-card { padding: 1.25rem 1.25rem 1.75rem; }
-  .ptab-panel.active { grid-template-columns: 1fr; }
+  .ptab-panel.active .project-card { flex: 0 0 calc(100% - 0rem); }
   .portfolio-tabs { gap: 0.3rem; }
   .ptab { font-size: 0.65rem; padding: 0.4rem 0.75rem; }
-  .project-grid { grid-template-columns: 1fr; }
   .navbar-nav .nav-link { padding-left: 0.5rem !important; padding-right: 0.5rem !important; letter-spacing: 1.5px; }
 }
