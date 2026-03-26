@@ -10,12 +10,13 @@ format:
 <div class="page-body">
 <div class="dashboard">
 
-  <!-- ══ Card 1 — Intro ════════════════════════════ -->
+  <!-- ══ Card 1 — Intro (3-col: bio | photo | skills) ══ -->
   <div class="hero-card">
 
-    <div class="hc-left">
+    <div class="hc-bio">
       <h1 class="hero-name">Isabelle Li</h1>
       <p class="hero-subtitle">Master's Student in Urban Spatial Analytics<br>at the University of Pennsylvania</p>
+      <p class="hero-bio">Spatial analytics student at Penn with a background in mathematics and economics. Focused on <strong>how data informs real-world decisions</strong> — from building spatial models and analytical pipelines to designing <strong>user-facing tools</strong> that turn complex data into clear, actionable insights.</p>
       <div class="social-links">
         <a href="mailto:isabli@upenn.edu" title="Email" aria-label="Email">
           <i class="bi bi-envelope-fill"></i>
@@ -29,31 +30,30 @@ format:
       </div>
     </div>
 
-    <div class="hc-right">
+    <div class="hc-photo">
+      <img src="photo.jpg" class="profile-photo-hero" alt="Isabelle Li">
+    </div>
+
+    <div class="hc-skills">
       <p class="skills-label">Skills &amp; Tools</p>
       <div class="skills-grid">
         <div class="skill-chip"><span class="skill-icon-wrap"><i class="bi bi-pin-map-fill"></i></span><span>GIS (ArcGIS, QGIS)</span></div>
+        <div class="skill-chip"><span class="skill-icon-wrap"><i class="bi bi-cpu-fill"></i></span><span>Machine Learning</span></div>
         <div class="skill-chip"><span class="skill-icon-wrap"><i class="bi bi-code-slash"></i></span><span>Python (Pandas, GeoPandas)</span></div>
+        <div class="skill-chip"><span class="skill-icon-wrap"><i class="bi bi-globe"></i></span><span>Spatial Modeling</span></div>
         <div class="skill-chip"><span class="skill-icon-wrap"><i class="bi bi-bar-chart-fill"></i></span><span>R</span></div>
         <div class="skill-chip"><span class="skill-icon-wrap"><i class="bi bi-database-fill"></i></span><span>SQL</span></div>
-        <div class="skill-chip"><span class="skill-icon-wrap"><i class="bi bi-cpu-fill"></i></span><span>Machine Learning</span></div>
-        <div class="skill-chip"><span class="skill-icon-wrap"><i class="bi bi-globe"></i></span><span>Spatial Modeling</span></div>
         <div class="skill-chip"><span class="skill-icon-wrap"><i class="bi bi-layout-text-window-reverse"></i></span><span>User-Facing Tool Design</span></div>
       </div>
     </div>
 
   </div>
 
-  <!-- ══ Card 2 — Portfolio ════════════════════════ -->
+  <!-- ══ Card 2 — Portfolio (full-width) ══ -->
   <div class="portfolio-card">
 
-    <div class="pc-photo-col">
-      <img src="photo.jpg" class="profile-photo-lg" alt="Isabelle Li">
-    </div>
-
-    <div class="pc-content">
+    <div class="pc-header">
       <p class="portfolio-heading">Portfolio</p>
-
       <div class="portfolio-tabs" role="tablist">
         <button class="ptab active" data-tab="product">Product</button>
         <button class="ptab" data-tab="project">Projects</button>
@@ -61,94 +61,94 @@ format:
         <button class="ptab" data-tab="research">Research</button>
         <button class="ptab" data-tab="community">Community</button>
       </div>
+    </div>
 
-      <!-- PRODUCT -->
-      <div class="ptab-panel active" data-panel="product">
-        <div class="project-card no-link">
-          <div class="project-card-preview preview-product">
-            <span class="preview-badge">PRODUCT</span>
-            <span class="coming-soon-tag">Coming soon</span>
-          </div>
-          <div class="project-card-body">
-            <p class="project-card-title">Tree Planting Decision System</p>
-            <p class="project-card-desc">A data-driven tool for optimising urban tree placement to maximise environmental and community benefit.</p>
-          </div>
+    <!-- PRODUCT -->
+    <div class="ptab-panel active" data-panel="product">
+      <div class="project-card no-link">
+        <div class="project-card-preview preview-product">
+          <span class="preview-badge">PRODUCT</span>
+          <span class="coming-soon-tag">Coming soon</span>
+        </div>
+        <div class="project-card-body">
+          <p class="project-card-title">Tree Planting Decision System</p>
+          <p class="project-card-desc">A data-driven tool for optimising urban tree placement to maximise environmental and community benefit.</p>
         </div>
       </div>
-
-      <!-- PROJECTS -->
-      <div class="ptab-panel" data-panel="project">
-        <a href="Projects/Fire%20Alarm%20Prediction/fire-alarm-preview.html" class="project-card">
-          <div class="project-card-preview preview-fire">
-            <span class="preview-badge">ANALYSIS</span>
-          </div>
-          <div class="project-card-body">
-            <p class="project-card-title">Fire Alarm Prediction</p>
-            <p class="project-card-desc">Predicting false fire alarms in Philadelphia using spatial and socioeconomic data with machine learning in R.</p>
-          </div>
-        </a>
-        <a href="Projects/Philadelphia%20Housing%20Model/housing-preview.html" class="project-card">
-          <div class="project-card-preview preview-housing">
-            <span class="preview-badge">MODELLING</span>
-          </div>
-          <div class="project-card-body">
-            <p class="project-card-title">Philadelphia Housing Model</p>
-            <p class="project-card-desc">Spatial modelling of residential property values using census and property assessment data for Philadelphia.</p>
-          </div>
-        </a>
-      </div>
-
-      <!-- VISUALIZATION -->
-      <div class="ptab-panel" data-panel="visualization">
-        <a href="visualization.html" class="project-card">
-          <div class="project-card-preview preview-viz">
-            <span class="preview-badge">VISUALIZATION</span>
-            <span class="coming-soon-tag">Coming soon</span>
-          </div>
-          <div class="project-card-body">
-            <p class="project-card-title">Data Visualizations</p>
-            <p class="project-card-desc">A collection of charts, maps, and visual explorations from urban and spatial datasets.</p>
-          </div>
-        </a>
-      </div>
-
-      <!-- RESEARCH -->
-      <div class="ptab-panel" data-panel="research">
-        <a href="https://uxiaoo22.github.io/python/part1.html" class="project-card" target="_blank" rel="noopener">
-          <div class="project-card-preview preview-research">
-            <span class="preview-badge">RESEARCH</span>
-          </div>
-          <div class="project-card-body">
-            <p class="project-card-title">Elephant Habitat Suitability</p>
-            <p class="project-card-desc">Spatial modelling of elephant habitat suitability across Southeast Asia using remote sensing and GIS.</p>
-          </div>
-        </a>
-      </div>
-
-      <!-- COMMUNITY -->
-      <div class="ptab-panel" data-panel="community">
-        <a href="Community%20Engagement/EPCDB/EPCDB.html" class="project-card">
-          <div class="project-card-preview preview-community">
-            <span class="preview-badge">ENGAGEMENT</span>
-          </div>
-          <div class="project-card-body">
-            <p class="project-card-title">East Parkside Applied Case</p>
-            <p class="project-card-desc">Community outreach and data-informed planning support for the East Parkside Community Development Board.</p>
-          </div>
-        </a>
-        <a href="Community%20Engagement/Published%20Writing-NAMUN.html" class="project-card">
-          <div class="project-card-preview preview-writing">
-            <span class="preview-badge">WRITING</span>
-          </div>
-          <div class="project-card-body">
-            <p class="project-card-title">Published Writing – NAMUN</p>
-            <p class="project-card-desc">Articles on international crisis reporting ethics and conference insights from NAMUN 2024.</p>
-          </div>
-        </a>
-      </div>
-
     </div>
-  </div>
+
+    <!-- PROJECTS -->
+    <div class="ptab-panel" data-panel="project">
+      <a href="Projects/Fire%20Alarm%20Prediction/fire-alarm-preview.html" class="project-card">
+        <div class="project-card-preview preview-fire">
+          <span class="preview-badge">ANALYSIS</span>
+        </div>
+        <div class="project-card-body">
+          <p class="project-card-title">Fire Alarm Prediction</p>
+          <p class="project-card-desc">Predicting false fire alarms in Philadelphia using spatial and socioeconomic data with machine learning in R.</p>
+        </div>
+      </a>
+      <a href="Projects/Philadelphia%20Housing%20Model/housing-preview.html" class="project-card">
+        <div class="project-card-preview preview-housing">
+          <span class="preview-badge">MODELLING</span>
+        </div>
+        <div class="project-card-body">
+          <p class="project-card-title">Philadelphia Housing Model</p>
+          <p class="project-card-desc">Spatial modelling of residential property values using census and property assessment data for Philadelphia.</p>
+        </div>
+      </a>
+    </div>
+
+    <!-- VISUALIZATION -->
+    <div class="ptab-panel" data-panel="visualization">
+      <a href="visualization.html" class="project-card">
+        <div class="project-card-preview preview-viz">
+          <span class="preview-badge">VISUALIZATION</span>
+          <span class="coming-soon-tag">Coming soon</span>
+        </div>
+        <div class="project-card-body">
+          <p class="project-card-title">Data Visualizations</p>
+          <p class="project-card-desc">A collection of charts, maps, and visual explorations from urban and spatial datasets.</p>
+        </div>
+      </a>
+    </div>
+
+    <!-- RESEARCH -->
+    <div class="ptab-panel" data-panel="research">
+      <a href="https://uxiaoo22.github.io/python/part1.html" class="project-card" target="_blank" rel="noopener">
+        <div class="project-card-preview preview-research">
+          <span class="preview-badge">RESEARCH</span>
+        </div>
+        <div class="project-card-body">
+          <p class="project-card-title">Elephant Habitat Suitability</p>
+          <p class="project-card-desc">Spatial modelling of elephant habitat suitability across Southeast Asia using remote sensing and GIS.</p>
+        </div>
+      </a>
+    </div>
+
+    <!-- COMMUNITY -->
+    <div class="ptab-panel" data-panel="community">
+      <a href="Community%20Engagement/EPCDB/EPCDB.html" class="project-card">
+        <div class="project-card-preview preview-community">
+          <span class="preview-badge">ENGAGEMENT</span>
+        </div>
+        <div class="project-card-body">
+          <p class="project-card-title">East Parkside Applied Case</p>
+          <p class="project-card-desc">Community outreach and data-informed planning support for the East Parkside Community Development Board.</p>
+        </div>
+      </a>
+      <a href="Community%20Engagement/Published%20Writing-NAMUN.html" class="project-card">
+        <div class="project-card-preview preview-writing">
+          <span class="preview-badge">WRITING</span>
+        </div>
+        <div class="project-card-body">
+          <p class="project-card-title">Published Writing – NAMUN</p>
+          <p class="project-card-desc">Articles on international crisis reporting ethics and conference insights from NAMUN 2024.</p>
+        </div>
+      </a>
+    </div>
+
+  </div><!-- /portfolio-card -->
 
 </div><!-- /dashboard -->
 </div><!-- /page-body -->
