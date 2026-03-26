@@ -1,0 +1,21 @@
+/* ── Quarto grid column override ──────────────────── */
+/* Quarto's bootstrap CSS: .column-page { grid-column: page-start/page-end }
+   Named grid lines leave 5fr gutters on both sides.
+   1/-1 spans every column track unconditionally. */
+
+main#quarto-document-content,
+main.column-page,
+#quarto-content > main {
+  grid-column: 1 / -1 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Ensure .page-body (inside main) controls all horizontal spacing */
+.page-body {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  max-width: none !important;
+}
