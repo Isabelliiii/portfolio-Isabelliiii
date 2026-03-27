@@ -82,16 +82,15 @@ format:
 
     <!-- PRODUCT -->
     <div class="ptab-panel active" data-panel="product">
-      <div class="project-card no-link">
+      <a href="product.html" class="project-card">
         <div class="project-card-preview preview-product">
           <span class="preview-badge">PRODUCT</span>
-          <span class="coming-soon-tag">Coming soon</span>
         </div>
         <div class="project-card-body">
           <p class="project-card-title">Tree Planting Decision System</p>
           <p class="project-card-desc">A data-driven tool for optimising urban tree placement to maximise environmental and community benefit.</p>
         </div>
-      </div>
+      </a>
     </div>
 
     <!-- PROJECTS -->

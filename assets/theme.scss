@@ -10,8 +10,8 @@ $gray-100: #f6f5f1;
 $gray-200: #eeeae2;
 $gray-600: #5f6b76;
 
-$font-family-base: 'Inter', system-ui, sans-serif;
-$headings-font-family: 'Playfair Display', Georgia, serif;
+$font-family-base: 'DM Sans', system-ui, sans-serif;
+$headings-font-family: 'Cormorant Garamond', Georgia, serif;
 $font-size-base: 1rem;
 
 /*-- scss:rules --*/
@@ -20,26 +20,15 @@ html { scroll-behavior: smooth; }
 /* Hide Quarto's auto-extracted title block */
 #title-block-header { display: none; }
 
-/* ── Break out of Quarto's page-columns grid ──────── */
-/* Quarto's .page-columns grid reserves 5fr gutters on both sides,
-   constraining .column-page to page-start/page-end.
-   Override to span the full screen so our .page-body controls margins. */
-main#quarto-document-content {
-  grid-column: screen-start / screen-end !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  max-width: 100% !important;
-}
-
 body {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'DM Sans', system-ui, sans-serif;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Cormorant Garamond', Georgia, serif;
   letter-spacing: -0.3px;
   color: $primary;
 }
@@ -56,7 +45,7 @@ h3 { margin-top: 1.6rem; margin-bottom: 0.6rem; }
 
 .navbar .navbar-brand,
 .navbar .navbar-title {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Cormorant Garamond', Georgia, serif;
   font-weight: 600;
   font-size: 1.1rem;
   letter-spacing: 0.2px;
@@ -70,7 +59,7 @@ h3 { margin-top: 1.6rem; margin-bottom: 0.6rem; }
 
 .navbar-nav .nav-link,
 .navbar-nav .dropdown-toggle {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'DM Sans', system-ui, sans-serif;
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 2.5px;
@@ -106,7 +95,7 @@ h3 { margin-top: 1.6rem; margin-bottom: 0.6rem; }
 }
 
 .navbar .dropdown-item {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'DM Sans', system-ui, sans-serif;
   font-size: 0.88rem;
   font-weight: 400;
   letter-spacing: 0;
@@ -215,7 +204,7 @@ blockquote {
 }
 
 .hero-name {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: 2.4rem;
   font-weight: 700;
   color: $primary;
@@ -225,7 +214,7 @@ blockquote {
 }
 
 .hero-subtitle {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'DM Sans', system-ui, sans-serif;
   color: $gray-600;
   font-size: 0.92rem;
   line-height: 1.55;
@@ -233,7 +222,7 @@ blockquote {
 }
 
 .hero-bio {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'DM Sans', system-ui, sans-serif;
   color: $body-color;
   font-size: 0.95rem;
   line-height: 1.75;
@@ -266,7 +255,7 @@ blockquote {
 
 /* Skills — right column of hero card */
 .skills-label {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'DM Sans', system-ui, sans-serif;
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 2px;
@@ -291,7 +280,7 @@ blockquote {
   background: $gray-100;
   border: 1px solid $gray-200;
   border-radius: 12px;
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'DM Sans', system-ui, sans-serif;
   font-size: 0.84rem;
   font-weight: 500;
   color: $body-color;
@@ -341,7 +330,7 @@ blockquote {
 }
 
 .portfolio-heading {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'DM Sans', system-ui, sans-serif;
   font-size: 1.15rem;
   font-weight: 800;
   letter-spacing: 4px;
@@ -351,7 +340,7 @@ blockquote {
 }
 
 .pc-sub {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'DM Sans', system-ui, sans-serif;
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 2px;
@@ -369,7 +358,7 @@ blockquote {
 }
 
 .ptab {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'DM Sans', system-ui, sans-serif;
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.8px;
@@ -425,7 +414,7 @@ blockquote {
   z-index: 2;
   background: rgba(255,255,255,0.15);
   color: rgba(255,255,255,0.9);
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'DM Sans', system-ui, sans-serif;
   font-size: 0.6rem;
   font-weight: 600;
   letter-spacing: 1.2px;
@@ -439,7 +428,7 @@ blockquote {
 .projects-section { padding-bottom: 3rem; }
 
 .projects-heading {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: 1.75rem;
   font-weight: 700;
   color: $primary;
@@ -450,7 +439,7 @@ blockquote {
 }
 
 .category-label {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'DM Sans', system-ui, sans-serif;
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 2.5px;
@@ -505,7 +494,7 @@ blockquote {
 .preview-badge {
   position: relative;
   z-index: 1;
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'DM Sans', system-ui, sans-serif;
   font-size: 1.35rem;
   font-weight: 800;
   letter-spacing: 3px;
@@ -517,7 +506,7 @@ blockquote {
 .project-card-body { padding: 1.1rem 1.4rem 1.25rem; }
 
 .project-card-title {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Cormorant Garamond', Georgia, serif;
   font-weight: 600;
   color: $primary;
   margin: 0 0 0.4rem;
@@ -526,7 +515,7 @@ blockquote {
 }
 
 .project-card-desc {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'DM Sans', system-ui, sans-serif;
   color: $gray-600;
   font-size: 0.855rem;
   margin: 0;
@@ -555,7 +544,7 @@ blockquote {
 .preview-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem; }
 
 .ptag {
-  font-family: 'Inter', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 0.65rem;
   font-weight: 700;
   letter-spacing: 1.8px;
@@ -568,7 +557,7 @@ blockquote {
 }
 
 .preview-title {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 2.1rem;
   font-weight: 700;
   color: $primary;
@@ -577,7 +566,7 @@ blockquote {
 }
 
 .preview-meta {
-  font-family: 'Inter', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   color: $gray-600;
   font-size: 0.9rem;
   margin-bottom: 1.75rem;
@@ -591,14 +580,14 @@ blockquote {
 
 .pstat { display: flex; flex-direction: column; gap: 0.15rem; }
 .pstat-n {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 1.6rem;
   font-weight: 700;
   color: $primary;
   line-height: 1;
 }
 .pstat-l {
-  font-family: 'Inter', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 0.78rem;
   color: $gray-600;
 }
@@ -623,14 +612,14 @@ blockquote {
 
 .data-card-icon { font-size: 1.3rem; line-height: 1; padding-top: 0.1rem; }
 .data-card-title {
-  font-family: 'Inter', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-weight: 600;
   font-size: 0.875rem;
   color: $primary;
   margin: 0 0 0.3rem;
 }
 .data-card-desc {
-  font-family: 'Inter', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 0.82rem;
   color: $gray-600;
   margin: 0;
@@ -656,7 +645,7 @@ blockquote {
 .method-step:last-child { border-bottom: none; }
 
 .step-num {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 1.3rem;
   font-weight: 700;
   color: rgba($primary, 0.25);
@@ -669,14 +658,14 @@ blockquote {
 
 .step-body { padding: 1.1rem 1.4rem 1.1rem 0.5rem; }
 .step-title {
-  font-family: 'Inter', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-weight: 600;
   font-size: 0.9rem;
   color: $primary;
   margin: 0 0 0.3rem;
 }
 .step-desc {
-  font-family: 'Inter', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 0.865rem;
   color: $body-color;
   margin: 0;
@@ -699,7 +688,7 @@ blockquote {
 }
 
 .finding-label {
-  font-family: 'Inter', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 1.8px;
@@ -709,7 +698,7 @@ blockquote {
 }
 
 .finding-text {
-  font-family: 'Inter', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 0.875rem;
   color: $body-color;
   margin: 0;
@@ -734,7 +723,7 @@ blockquote {
 .threshold-aggressive   { background: rgba($primary, 0.05); border-color: rgba($primary, 0.2); }
 
 .threshold-label {
-  font-family: 'Inter', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.5px;
@@ -746,16 +735,16 @@ blockquote {
 .threshold-metrics { display: flex; gap: 1.5rem; margin-bottom: 0.9rem; }
 .tm { display: flex; flex-direction: column; gap: 0.1rem; }
 .tm-n {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 1.4rem;
   font-weight: 700;
   color: $primary;
   line-height: 1;
 }
-.tm-l { font-family: 'Inter', sans-serif; font-size: 0.75rem; color: $gray-600; }
+.tm-l { font-family: 'DM Sans', sans-serif; font-size: 0.75rem; color: $gray-600; }
 
 .threshold-interp {
-  font-family: 'Inter', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 0.85rem;
   color: $body-color;
   margin: 0;
@@ -771,7 +760,7 @@ blockquote {
 .perf-table {
   width: 100%;
   border-collapse: collapse;
-  font-family: 'Inter', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 0.875rem;
 }
 
@@ -805,7 +794,7 @@ blockquote {
 
 .cta-btn {
   display: inline-block;
-  font-family: 'Inter', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -831,7 +820,7 @@ blockquote {
 }
 
 .category-page-title {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: 2.2rem;
   font-weight: 700;
   color: $primary;
@@ -839,7 +828,7 @@ blockquote {
 }
 
 .category-page-desc {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'DM Sans', system-ui, sans-serif;
   color: $gray-600;
   font-size: 1rem;
   margin: 0;
@@ -884,7 +873,7 @@ blockquote {
   flex-direction: column;
   gap: 0.5rem;
   color: $gray-600;
-  font-family: 'Inter', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 0.82rem;
   letter-spacing: 0.5px;
 }
@@ -899,7 +888,7 @@ blockquote {
 }
 
 .viz-card-title {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-weight: 600;
   font-size: 1rem;
   color: $primary;
@@ -907,7 +896,7 @@ blockquote {
 }
 
 .viz-card-desc {
-  font-family: 'Inter', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 0.855rem;
   color: $gray-600;
   margin: 0;
@@ -928,7 +917,7 @@ blockquote {
 .product-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem; }
 
 .product-title {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: 2rem;
   font-weight: 700;
   color: $primary;
@@ -937,7 +926,7 @@ blockquote {
 }
 
 .product-subtitle {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'DM Sans', system-ui, sans-serif;
   color: $gray-600;
   font-size: 1rem;
   line-height: 1.7;
@@ -954,7 +943,7 @@ blockquote {
 .demo-block {}
 
 .demo-label {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'DM Sans', system-ui, sans-serif;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 2px;
@@ -964,7 +953,7 @@ blockquote {
 }
 
 .demo-desc {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'DM Sans', system-ui, sans-serif;
   color: $gray-600;
   font-size: 0.92rem;
   line-height: 1.6;

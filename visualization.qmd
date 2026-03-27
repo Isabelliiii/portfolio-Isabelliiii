@@ -13,7 +13,9 @@ format:
 <div class="viz-grid">
 
   <div class="viz-card">
-    <img src="visualization-sample/Philadelphia_Heat_Canopy_Bivariate.png" class="viz-img" alt="Philadelphia Heat and Canopy Bivariate Map">
+    <a href="visualization-sample/Philadelphia_Heat_Canopy_Bivariate.png" class="glightbox" data-title="Philadelphia Heat &amp; Canopy Cover" data-description="Bivariate choropleth showing the spatial relationship between urban heat exposure and tree canopy coverage across Philadelphia neighbourhoods.">
+      <img src="visualization-sample/Philadelphia_Heat_Canopy_Bivariate.png" class="viz-img" alt="Philadelphia Heat and Canopy Bivariate Map">
+    </a>
     <div class="viz-card-body">
       <p class="viz-card-title">Philadelphia Heat &amp; Canopy Cover</p>
       <p class="viz-card-desc">Bivariate choropleth showing the spatial relationship between urban heat exposure and tree canopy coverage across Philadelphia neighbourhoods.</p>
@@ -21,7 +23,9 @@ format:
   </div>
 
   <div class="viz-card">
-    <img src="visualization-sample/philly_housing_final.png" class="viz-img" alt="Philadelphia Housing Model Map">
+    <a href="visualization-sample/philly_housing_final.png" class="glightbox" data-title="Philadelphia Housing Price Model" data-description="Choropleth of predicted residential sale prices from a spatial OLS regression model, highlighting value gradients across the city.">
+      <img src="visualization-sample/philly_housing_final.png" class="viz-img" alt="Philadelphia Housing Model Map">
+    </a>
     <div class="viz-card-body">
       <p class="viz-card-title">Philadelphia Housing Price Model</p>
       <p class="viz-card-desc">Choropleth of predicted residential sale prices from a spatial OLS regression model, highlighting value gradients across the city.</p>
@@ -29,7 +33,9 @@ format:
   </div>
 
   <div class="viz-card">
-    <img src="visualization-sample/map_output.png" class="viz-img" alt="Spatial Analysis Map Output">
+    <a href="visualization-sample/map_output.png" class="glightbox" data-title="Spatial Analysis Output" data-description="Thematic map produced from a GIS-based spatial analysis workflow, visualising geographic patterns in urban data.">
+      <img src="visualization-sample/map_output.png" class="viz-img" alt="Spatial Analysis Map Output">
+    </a>
     <div class="viz-card-body">
       <p class="viz-card-title">Spatial Analysis Output</p>
       <p class="viz-card-desc">Thematic map produced from a GIS-based spatial analysis workflow, visualising geographic patterns in urban data.</p>
@@ -37,7 +43,9 @@ format:
   </div>
 
   <div class="viz-card">
-    <img src="visualization-sample/arctic_projection_map.png" class="viz-img" alt="Arctic Projection Map">
+    <a href="visualization-sample/arctic_projection_map.png" class="glightbox" data-title="Arctic Polar Projection" data-description="Polar-centred map projection visualising Arctic spatial data, demonstrating custom CRS and cartographic design in Python.">
+      <img src="visualization-sample/arctic_projection_map.png" class="viz-img" alt="Arctic Projection Map">
+    </a>
     <div class="viz-card-body">
       <p class="viz-card-title">Arctic Polar Projection</p>
       <p class="viz-card-desc">Polar-centred map projection visualising Arctic spatial data, demonstrating custom CRS and cartographic design in Python.</p>
@@ -45,7 +53,9 @@ format:
   </div>
 
   <div class="viz-card">
-    <img src="visualization-sample/Fertility vs Female Life Expectancy-2.png" class="viz-img" alt="Fertility vs Female Life Expectancy">
+    <a href="visualization-sample/Fertility vs Female Life Expectancy-2.png" class="glightbox" data-title="Fertility vs. Female Life Expectancy" data-description="Scatter plot exploring the cross-national relationship between total fertility rate and female life expectancy, faceted by world region.">
+      <img src="visualization-sample/Fertility vs Female Life Expectancy-2.png" class="viz-img" alt="Fertility vs Female Life Expectancy">
+    </a>
     <div class="viz-card-body">
       <p class="viz-card-title">Fertility vs. Female Life Expectancy</p>
       <p class="viz-card-desc">Scatter plot exploring the cross-national relationship between total fertility rate and female life expectancy, faceted by world region.</p>
@@ -53,7 +63,9 @@ format:
   </div>
 
   <div class="viz-card">
-    <img src="visualization-sample/Wage-Gap-2.png" class="viz-img" alt="Wage Gap Chart">
+    <a href="visualization-sample/Wage-Gap-2.png" class="glightbox" data-title="Wage Gap by Demographic Group" data-description="Bar chart comparing median wage gaps across gender and racial demographic groups, highlighting persistent earnings disparities.">
+      <img src="visualization-sample/Wage-Gap-2.png" class="viz-img" alt="Wage Gap Chart">
+    </a>
     <div class="viz-card-body">
       <p class="viz-card-title">Wage Gap by Demographic Group</p>
       <p class="viz-card-desc">Bar chart comparing median wage gaps across gender and racial demographic groups, highlighting persistent earnings disparities.</p>
@@ -61,7 +73,9 @@ format:
   </div>
 
   <div class="viz-card">
-    <img src="visualization-sample/public_vs_private_grouped-2.png" class="viz-img" alt="Public vs Private Grouped Chart">
+    <a href="visualization-sample/public_vs_private_grouped-2.png" class="glightbox" data-title="Public vs. Private Sector Outcomes" data-description="Grouped bar chart comparing key economic outcomes between public and private sector employment across different cohorts.">
+      <img src="visualization-sample/public_vs_private_grouped-2.png" class="viz-img" alt="Public vs Private Grouped Chart">
+    </a>
     <div class="viz-card-body">
       <p class="viz-card-title">Public vs. Private Sector Outcomes</p>
       <p class="viz-card-desc">Grouped bar chart comparing key economic outcomes between public and private sector employment across different cohorts.</p>
