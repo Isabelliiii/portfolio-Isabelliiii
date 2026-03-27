@@ -18,9 +18,9 @@ format:
       <div class="hc-bio">
         <h1 class="hero-name">Isabelle Li</h1>
         <p class="hero-subtitle">Master's Student in Urban Spatial Analytics<br>at the University of Pennsylvania</p>
-        <p class="hero-bio">Spatial analytics student at Penn with a background in mathematics and economics. Focused on <strong>how data informs real-world decisions</strong> — from building spatial models and analytical pipelines to designing <strong>user-facing tools</strong> that turn complex data into clear, actionable insights.</p>
+        <p class="hero-bio">Spatial analytics student at Penn with a background in mathematics and economics. Focused on <strong>how data informs real-world decisions</strong>, from building spatial models and analytical pipelines to designing <strong>user-facing tools</strong> that turn complex data into clear, actionable insights.</p>
         <div class="social-links">
-          <a href="mailto:isabli@upenn.edu" title="Email" aria-label="Email">
+          <a href="mailto:isabelliii2023@gmail.com" title="Email" aria-label="Email">
             <i class="bi bi-envelope-fill"></i>
           </a>
           <a href="https://www.linkedin.com/in/isabellelii" title="LinkedIn" aria-label="LinkedIn" target="_blank" rel="noopener">
@@ -120,7 +120,6 @@ format:
       <a href="visualization.html" class="project-card">
         <div class="project-card-preview preview-viz">
           <span class="preview-badge">VISUALIZATION</span>
-          <span class="coming-soon-tag">Coming soon</span>
         </div>
         <div class="project-card-body">
           <p class="project-card-title">Data Visualizations</p>
