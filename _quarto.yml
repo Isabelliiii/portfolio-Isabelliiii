@@ -3,6 +3,8 @@ project:
   output-dir: docs
   resources:
     - photo.jpg
+    - visualization-sample/
+    - tree-system-gif/
 
 website:
   title: "Isabelle Li"

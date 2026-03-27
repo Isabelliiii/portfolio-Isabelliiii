@@ -1,11 +1,10 @@
-/* ── Quarto grid column override ──────────────────── */
-/* Quarto's bootstrap CSS: .column-page { grid-column: page-start/page-end }
-   Named grid lines leave 5fr gutters on both sides.
-   1/-1 spans every column track unconditionally. */
+/* ── Quarto grid override — homepage (page-layout-full) ONLY ── */
+/* Scoped to .page-layout-full so article pages keep their natural width.
+   1/-1 bypasses named lines (page-start/page-end) that leave 5fr gutters. */
 
-main#quarto-document-content,
-main.column-page,
-#quarto-content > main {
+.page-layout-full main#quarto-document-content,
+.page-layout-full main.column-page,
+.page-layout-full #quarto-content > main {
   grid-column: 1 / -1 !important;
   width: 100% !important;
   max-width: 100% !important;
@@ -13,9 +12,16 @@ main.column-page,
   padding-right: 0 !important;
 }
 
-/* Ensure .page-body (inside main) controls all horizontal spacing */
-.page-body {
+.page-layout-full .page-body {
   width: 100% !important;
   box-sizing: border-box !important;
   max-width: none !important;
+}
+
+/* ── Article pages — breathing room ──────────────── */
+/* Give project/visualization/community pages generous padding
+   so section headings and content don't feel cramped. */
+.page-layout-article main#quarto-document-content {
+  padding-top: 2.5rem !important;
+  padding-bottom: 4rem !important;
 }

@@ -4,7 +4,7 @@
     "href": "visualization.html",
     "title": "Visualization",
     "section": "",
-    "text": "Charts, maps, and visual explorations from urban and spatial datasets.\n\n\n\n\n  \n  \n    \n      📊\n      Coming soon\n    \n    \n      Placeholder\n      Replace this card with your visualization. Add an image and update the title and description."
+    "text": "Charts, maps, and visual explorations from urban and spatial datasets.\n\n\n\n\n  \n    \n    \n      Philadelphia Heat & Canopy Cover\n      Bivariate choropleth showing the spatial relationship between urban heat exposure and tree canopy coverage across Philadelphia neighbourhoods.\n    \n  \n\n  \n    \n    \n      Philadelphia Housing Price Model\n      Choropleth of predicted residential sale prices from a spatial OLS regression model, highlighting value gradients across the city.\n    \n  \n\n  \n    \n    \n      Spatial Analysis Output\n      Thematic map produced from a GIS-based spatial analysis workflow, visualising geographic patterns in urban data.\n    \n  \n\n  \n    \n    \n      Arctic Polar Projection\n      Polar-centred map projection visualising Arctic spatial data, demonstrating custom CRS and cartographic design in Python.\n    \n  \n\n  \n    \n    \n      Fertility vs. Female Life Expectancy\n      Scatter plot exploring the cross-national relationship between total fertility rate and female life expectancy, faceted by world region.\n    \n  \n\n  \n    \n    \n      Wage Gap by Demographic Group\n      Bar chart comparing median wage gaps across gender and racial demographic groups, highlighting persistent earnings disparities.\n    \n  \n\n  \n    \n    \n      Public vs. Private Sector Outcomes\n      Grouped bar chart comparing key economic outcomes between public and private sector employment across different cohorts."
   },
   {
     "objectID": "projects.html",
@@ -116,7 +116,7 @@
     "href": "product.html",
     "title": "Product",
     "section": "",
-    "text": "Data-driven tools and systems designed to support real-world decisions.\n\n\n\n  \n    \n      PRODUCT\n    \n    \n      Tree Planting Decision System\n      A data-driven tool for optimising urban tree placement to maximise environmental and community benefit. Coming soon."
+    "text": "Data-driven tools and systems designed to support real-world decisions.\n\n\n\n\n  \n    \n      PRODUCT\n      URBAN PLANNING\n      GIS\n    \n    Tree Planting Decision System\n    A data-driven tool for optimising urban tree placement to maximise environmental and community benefit across Philadelphia neighbourhoods.\n  \n\n  \n\n    \n      Explore the Map\n      Browse candidate planting sites across the city, filtered by heat exposure, canopy gap, and community priority scores.\n      \n        \n          \n        \n      \n    \n\n    \n      Submit a Request\n      Community members and planners can submit site-specific planting requests with supporting data through an integrated form."
   },
   {
     "objectID": "community.html",
