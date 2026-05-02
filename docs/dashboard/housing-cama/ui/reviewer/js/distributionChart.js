@@ -1,10 +1,7 @@
 const DistributionChart = (() => {
-  const TAX_YEAR_DATA_URL =
-    'https://storage.googleapis.com/musa5090s26-team2-public/configs/tax_year_assessment_bins.json';
-  const CURRENT_DATA_URL =
-    'https://storage.googleapis.com/musa5090s26-team2-public/configs/current_assessment_bins.json';
-  const TRANSACTION_TREND_URL =
-    'https://storage.googleapis.com/musa5090s26-team2-public/configs/transaction_volume_trend.json';
+  const TAX_YEAR_DATA_URL = '../../configs/tax_year_assessment_bins.json';
+  const CURRENT_DATA_URL = '../../configs/current_assessment_bins.json';
+  const TRANSACTION_TREND_URL = '../../configs/transaction_volume_trend.json';
 
   const colors = {
     bg: '#121414',

@@ -70,6 +70,45 @@ ul.task-list li input[type="checkbox"] {
 <script>document.addEventListener('DOMContentLoaded',function(){if(typeof GLightbox!=='undefined'){GLightbox({selector:'.glightbox',touchNavigation:true,loop:false,zoomable:true});}});</script>
 
 <link rel="stylesheet" href="../assets/override.css">
+
+<style>
+.cama-preview-wrap {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #eeeae2;
+  box-shadow: 0 4px 20px rgba(31,58,95,0.08);
+  background: #f2f4f7;
+  position: relative;
+}
+.cama-preview-iframe {
+  width: 100%;
+  height: 480px;
+  border: none;
+  display: block;
+}
+.cama-open-btn {
+  display: block;
+  margin-top: 1rem;
+  text-align: center;
+}
+.cama-open-btn a {
+  display: inline-block;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #fff !important;
+  background: #1f3a5f;
+  border-radius: 8px;
+  padding: 0.75rem 1.75rem;
+  text-decoration: none !important;
+  transition: background 0.18s, transform 0.18s;
+}
+.cama-open-btn a:hover {
+  background: #162d4a;
+  transform: translateY(-2px);
+}
+</style>
 </head>
 
 <body class="nav-fixed fullcontent quarto-light">
@@ -146,22 +185,19 @@ ul.task-list li input[type="checkbox"] {
   <div class="product-demos">
 
     <div class="demo-block">
-      <p class="demo-label">Housing Assessor Portal</p>
-      <p class="demo-desc">Review predicted versus assessed property values across the city. Search or click any parcel to inspect property-level valuations, compare against official assessments, and analyse citywide value distributions on an interactive map.</p>
-      <div class="preview-cta">
-        <a href="housing-cama/ui/reviewer/index.html" class="cta-btn" target="_blank">
-          Open Assessor Portal &nbsp;↗
-        </a>
+      <p class="demo-label">Live Portal Preview</p>
+      <p class="demo-desc">Select a portal below to explore the system. The Housing Assessor portal reviews predicted versus official assessed values on an interactive citywide map; the Property Owner portal lets residents look up any parcel by address.</p>
+      <div class="cama-preview-wrap">
+        <iframe
+          class="cama-preview-iframe"
+          src="housing-cama/ui/index.html"
+          title="Philadelphia CAMA — select a portal"
+          loading="lazy"
+          sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-top-navigation"
+        ></iframe>
       </div>
-    </div>
-
-    <div class="demo-block">
-      <p class="demo-label">Property Owner Portal</p>
-      <p class="demo-desc">Residents and property owners can look up any parcel by address, view the model's predicted value, compare it against the official assessed value, and understand the factors driving the estimate.</p>
-      <div class="preview-cta">
-        <a href="housing-cama/ui/widget/index.html" class="cta-btn" target="_blank">
-          Open Owner Portal &nbsp;↗
-        </a>
+      <div class="cama-open-btn">
+        <a href="housing-cama/ui/index.html" target="_blank">Open in Full Screen &nbsp;↗</a>
       </div>
     </div>
 
