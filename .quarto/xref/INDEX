@@ -115,5 +115,11 @@
   },
   "visualization.qmd": {
     "visualization.html": "67787397"
+  },
+  "dashboard/housing-cama/DEPLOYMENT.md": {
+    "DEPLOYMENT.html": "dd819b8f"
+  },
+  "dashboard.qmd": {
+    "dashboard.html": "a6cd499c"
   }
 }

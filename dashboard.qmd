@@ -1,0 +1,82 @@
+---
+format:
+  html:
+    toc: false
+---
+
+```{=html}
+<div class="category-page-header">
+  <h1 class="category-page-title">Dashboard</h1>
+  <p class="category-page-desc">Data-driven tools and interactive systems designed to support real-world decisions.</p>
+</div>
+
+<div class="product-feature">
+
+  <div class="product-header">
+    <div class="product-tags">
+      <span class="ptag">PRODUCT</span>
+      <span class="ptag">URBAN PLANNING</span>
+      <span class="ptag">GIS</span>
+    </div>
+    <h2 class="product-title">Tree Planting Decision System</h2>
+    <p class="product-subtitle">A data-driven tool for optimising urban tree placement to maximise environmental and community benefit across Philadelphia neighbourhoods.</p>
+  </div>
+
+  <div class="product-demos">
+
+    <div class="demo-block">
+      <p class="demo-label">Explore the Map</p>
+      <p class="demo-desc">Browse candidate planting sites across the city, filtered by heat exposure, canopy gap, and community priority scores.</p>
+      <div class="demo-gif-wrap">
+        <video class="demo-gif" autoplay loop muted playsinline>
+          <source src="tree-system-gif/explore_trees.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <div class="demo-block">
+      <p class="demo-label">Submit a Request</p>
+      <p class="demo-desc">Community members and planners can submit site-specific planting requests with supporting data through an integrated form.</p>
+      <div class="demo-gif-wrap">
+        <video class="demo-gif" autoplay loop muted playsinline>
+          <source src="tree-system-gif/request_form.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="product-feature" style="margin-top: 5rem; padding-top: 3rem; border-top: 2px solid #eeeae2;">
+
+  <div class="product-header">
+    <div class="product-tags">
+      <span class="ptag">DASHBOARD</span>
+      <span class="ptag">REAL ESTATE</span>
+      <span class="ptag">DATA PIPELINE</span>
+    </div>
+    <h2 class="product-title">Philadelphia CAMA Assessment Review</h2>
+    <p class="product-subtitle">An end-to-end property assessment platform for Philadelphia, combining a machine learning valuation model with interactive review portals for tax assessors and property owners.</p>
+  </div>
+
+  <div class="product-demos">
+
+    <div class="demo-block">
+      <p class="demo-label">Assessment Portal</p>
+      <p class="demo-desc">Explore the dual-portal system: the Housing Assessor portal reviews predicted versus official values across the city, while the Property Owner portal lets residents look up their own parcel and understand the valuation.</p>
+      <div class="demo-gif-wrap">
+        <iframe
+          src="dashboard/housing-cama/ui/index.html"
+          class="demo-gif"
+          style="height: 520px; border: none;"
+          title="Philadelphia CAMA Assessment Review Dashboard"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+```

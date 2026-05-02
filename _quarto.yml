@@ -15,8 +15,8 @@ website:
         href: index.qmd
         aria-label: Home
     right:
-      - text: "PRODUCT"
-        href: product.qmd
+      - text: "DASHBOARD"
+        href: dashboard.qmd
       - text: "VISUALIZATION"
         href: visualization.qmd
       - text: "PROJECTS"

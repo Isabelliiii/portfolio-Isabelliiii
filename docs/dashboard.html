@@ -7,9 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>product – Isabelle Li</title>
-<meta http-equiv="refresh" content="0; url=./dashboard.html">
-<script>window.location.replace("./dashboard.html");</script>
+<title>dashboard – Isabelle Li</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,7 +17,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */
   vertical-align: middle;
 }
 </style>
@@ -102,31 +100,31 @@ ul.task-list li input[type="checkbox"] {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="./index.html"> <i class="bi bi-house-fill" role="img" aria-label="Home">
-</i> 
+</i>
 <span class="menu-text">Isabelle Li</span></a>
-  </li>  
+  </li>
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./dashboard.html">
+    <a class="nav-link active" href="./dashboard.html" aria-current="page">
 <span class="menu-text">DASHBOARD</span></a>
-  </li>  
+  </li>
   <li class="nav-item">
-    <a class="nav-link" href="./visualization.html"> 
+    <a class="nav-link" href="./visualization.html">
 <span class="menu-text">VISUALIZATION</span></a>
-  </li>  
+  </li>
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html"> 
+    <a class="nav-link" href="./projects.html">
 <span class="menu-text">PROJECTS</span></a>
-  </li>  
+  </li>
   <li class="nav-item">
-    <a class="nav-link" href="./community.html"> 
+    <a class="nav-link" href="./community.html">
 <span class="menu-text">COMMUNITY</span></a>
-  </li>  
+  </li>
   <li class="nav-item">
-    <a class="nav-link" href="./research.html"> 
+    <a class="nav-link" href="./research.html">
 <span class="menu-text">RESEARCH</span></a>
-  </li>  
+  </li>
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -138,16 +136,16 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="category-page-title title display-7">Product</h1></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="category-page-title title display-7">Dashboard</h1></header>
 
 
 
 
 <div class="category-page-header">
-  
-  <p class="category-page-desc">Data-driven tools and systems designed to support real-world decisions.</p>
+
+  <p class="category-page-desc">Data-driven tools and interactive systems designed to support real-world decisions.</p>
 </div>
 
 <div class="product-feature">
@@ -188,12 +186,44 @@ ul.task-list li input[type="checkbox"] {
 
 </div>
 
+<div class="product-feature" style="margin-top: 5rem; padding-top: 3rem; border-top: 2px solid #eeeae2;">
+
+  <div class="product-header">
+    <div class="product-tags">
+      <span class="ptag">DASHBOARD</span>
+      <span class="ptag">REAL ESTATE</span>
+      <span class="ptag">DATA PIPELINE</span>
+    </div>
+    <h2 class="product-title anchored">Philadelphia CAMA Assessment Review</h2>
+    <p class="product-subtitle">An end-to-end property assessment platform for Philadelphia, combining a machine learning valuation model with interactive review portals for tax assessors and property owners.</p>
+  </div>
+
+  <div class="product-demos">
+
+    <div class="demo-block">
+      <p class="demo-label">Assessment Portal</p>
+      <p class="demo-desc">Explore the dual-portal system: the Housing Assessor portal reviews predicted versus official values across the city, while the Property Owner portal lets residents look up their own parcel and understand the valuation.</p>
+      <div class="demo-gif-wrap">
+        <iframe
+          src="dashboard/housing-cama/ui/index.html"
+          class="demo-gif"
+          style="height: 520px; border: none;"
+          title="Philadelphia CAMA Assessment Review Dashboard"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
 
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
+    const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
       placement: 'right',
@@ -202,7 +232,7 @@ ul.task-list li input[type="checkbox"] {
     anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
+        if (clz.startsWith('code-annotation-')) {
           return true;
         }
       }
@@ -222,11 +252,11 @@ ul.task-list li input[type="checkbox"] {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
         button.setAttribute("data-bs-title", "Copied!");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
+        tooltip = new bootstrap.Tooltip(button,
+          { trigger: "manual",
             customClass: "code-copy-button-tooltip",
             offset: [0, -8]});
-        tooltip.show();    
+        tooltip.show();
       }
       setTimeout(function() {
         if (tooltip) {
@@ -303,7 +333,7 @@ ul.task-list li input[type="checkbox"] {
       if (onUntriggerFn) {
         config.onUntrigger = onUntriggerFn;
       }
-      window.tippy(el, config); 
+      window.tippy(el, config);
     }
     const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
     for (var i=0; i<noterefs.length; i++) {
@@ -378,7 +408,7 @@ ul.task-list li input[type="checkbox"] {
       tippyHover(xref, undefined, function(instance) {
         instance.disable();
         let url = xref.getAttribute('href');
-        let hash = undefined; 
+        let hash = undefined;
         if (url.startsWith('#')) {
           hash = url;
         } else {
@@ -406,7 +436,7 @@ ul.task-list li input[type="checkbox"] {
               if (note !== null) {
                 const html = processXRef(id, note);
                 instance.setContent(html);
-              } 
+              }
             }).finally(() => {
               instance.enable();
               instance.show();
@@ -430,7 +460,7 @@ ul.task-list li input[type="checkbox"] {
               }
               const html = processXRef(null, note);
               instance.setContent(html);
-            } 
+            }
           }).finally(() => {
             instance.enable();
             instance.show();
@@ -470,7 +500,7 @@ ul.task-list li input[type="checkbox"] {
               height = bottom - top;
             }
             if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
+              // cook up a div (if necessary) and position it
               let div = window.document.getElementById("code-annotation-line-highlight");
               if (div === null) {
                 div = window.document.createElement("div");
