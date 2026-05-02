@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(quarto --version)",
-      "Bash(git checkout *)"
+      "Bash(git checkout *)",
+      "PowerShell(New-Item -ItemType Directory -Path \"d:\\\\Work\\\\portfolio-Isabelliiii\\\\docs\\\\dashboard\" -Force)"
     ]
   }
 }
