@@ -11,7 +11,9 @@
       "Bash(Remove-Item -Path \"tree-system-gif\\\\backend.mp4\" -Force)",
       "Bash(Write-Host \"Deleted large files\")",
       "Bash(git add *)",
-      "Bash(git rm *)"
+      "Bash(git rm *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)"
     ],
     "additionalDirectories": [
       "d:\\Work\\portfolio-Isabelliiii\\tree-system-gif"
