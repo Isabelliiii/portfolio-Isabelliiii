@@ -3,7 +3,18 @@
     "allow": [
       "Bash(quarto --version)",
       "Bash(git checkout *)",
-      "PowerShell(New-Item -ItemType Directory -Path \"d:\\\\Work\\\\portfolio-Isabelliiii\\\\docs\\\\dashboard\" -Force)"
+      "PowerShell(New-Item -ItemType Directory -Path \"d:\\\\Work\\\\portfolio-Isabelliiii\\\\docs\\\\dashboard\" -Force)",
+      "Bash(git reset *)",
+      "Bash(Remove-Item -Path \"docs\\\\tree-system-gif\\\\Front-end-presentation.mp4\" -Force)",
+      "Bash(Remove-Item -Path \"docs\\\\tree-system-gif\\\\backend.mp4\" -Force)",
+      "Bash(Remove-Item -Path \"tree-system-gif\\\\Front-end-presentation.mp4\" -Force)",
+      "Bash(Remove-Item -Path \"tree-system-gif\\\\backend.mp4\" -Force)",
+      "Bash(Write-Host \"Deleted large files\")",
+      "Bash(git add *)",
+      "Bash(git rm *)"
+    ],
+    "additionalDirectories": [
+      "d:\\Work\\portfolio-Isabelliiii\\tree-system-gif"
     ]
   }
 }
