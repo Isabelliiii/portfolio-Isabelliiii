@@ -5,6 +5,8 @@ project:
     - photo.jpg
     - visualization-sample/
     - tree-system-gif/
+    - assets/img/
+    - assets/Isabelle-Li-resume.pdf
 
 website:
   title: "Isabelle Li"
