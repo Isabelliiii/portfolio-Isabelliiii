@@ -1,0 +1,293 @@
+/* ══════════════════════════════════════════════════════════════
+   Site-wide look for the inner pages, matching the homepage.
+   Loaded after the Quarto theme so it overrides theme.scss.
+   Palette: cool paper ground, ink text, one blue accent.
+   Type: Bricolage Grotesque (display), IBM Plex Sans (body),
+         IBM Plex Mono (labels).
+   ══════════════════════════════════════════════════════════════ */
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap");
+
+:root {
+  --st-ground: #F2F4F1;
+  --st-paper: #FFFFFF;
+  --st-ink: #14211D;
+  --st-ink-soft: #33423D;
+  --st-muted: #51605A;
+  --st-rule: #C9D0CA;
+  --st-tint: #E4E9E5;
+  --st-accent: #1B45D1;
+  --st-display: "Bricolage Grotesque", "IBM Plex Sans", "Helvetica Neue", sans-serif;
+  --st-body: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --st-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+
+/* ── Base ───────────────────────────────────────────────────── */
+body {
+  background: var(--st-ground) !important;
+  color: var(--st-ink);
+  font-family: var(--st-body);
+  font-size: 17px;
+  line-height: 1.6;
+}
+main p, main li { color: var(--st-ink-soft); }
+main strong { color: var(--st-ink); font-weight: 600; }
+main a { color: var(--st-accent); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+main a:hover { color: var(--st-ink); }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--st-accent); outline-offset: 3px; }
+
+main h1:not([class^="hp-"]),
+main h2:not([class^="hp-"]),
+main h3:not([class^="hp-"]),
+main h4:not([class^="hp-"]) {
+  font-family: var(--st-display);
+  color: var(--st-ink);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.15;
+}
+main h1:not([class^="hp-"]) { font-size: clamp(2.2rem, 4.5vw, 3.25rem); font-weight: 700; letter-spacing: -0.025em; }
+main h2:not([class^="hp-"]) {
+  font-size: 1.75rem;
+  margin-top: 3.5rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--st-rule);
+}
+main h3:not([class^="hp-"]) { font-size: 1.3rem; margin-top: 2.2rem; }
+main h4:not([class^="hp-"]) { font-size: 1.08rem; }
+main hr { border: 0; border-top: 1px solid var(--st-rule); opacity: 1; }
+
+/* ── Navbar ─────────────────────────────────────────────────── */
+.navbar {
+  background: var(--st-ground) !important;
+  border-bottom: 1px solid var(--st-rule) !important;
+  box-shadow: none !important;
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+}
+.navbar .navbar-nav .nav-link,
+.navbar .navbar-nav .dropdown-toggle {
+  font-family: var(--st-mono) !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: none !important;
+  color: var(--st-ink) !important;
+  opacity: 1 !important;
+}
+.navbar .navbar-nav .nav-link .menu-text { text-transform: capitalize; }
+.navbar .navbar-nav .nav-link:hover { color: var(--st-accent) !important; }
+.navbar .navbar-nav .nav-link.active {
+  color: var(--st-accent) !important;
+  border-bottom: 0 !important;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 6px;
+}
+.navbar .bi-house-fill { color: var(--st-ink) !important; font-size: 1rem; }
+.navbar .navbar-toggler { border-color: var(--st-ink); }
+.navbar .navbar-toggler-icon { filter: invert(1) brightness(0.2); }
+.navbar #quarto-search .aa-DetachedSearchButton,
+.navbar #quarto-search .aa-DetachedSearchButtonIcon,
+.navbar .quarto-search svg { color: var(--st-ink) !important; }
+.navbar .aa-DetachedSearchButtonIcon svg { stroke: var(--st-ink); color: var(--st-ink); }
+
+/* ── Category pages (Dashboard, Projects, …) ────────────────── */
+.category-page-header { border-bottom: 2px solid var(--st-ink) !important; padding-bottom: 1.25rem !important; margin-bottom: 2rem !important; }
+.category-page-title { display: block !important; font-family: var(--st-display) !important; color: var(--st-ink) !important; font-weight: 700 !important; }
+.category-page-desc { color: var(--st-ink-soft) !important; font-size: 18px !important; max-width: 40em; }
+.category-label, .projects-heading { font-family: var(--st-mono) !important; color: var(--st-muted) !important; letter-spacing: 0.06em !important; }
+
+.project-card, .viz-card {
+  background: var(--st-paper) !important;
+  border: 1px solid var(--st-rule) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+  transform: none !important;
+  transition: border-color 0.15s;
+}
+.project-card:not(.no-link):hover, .viz-card:hover { border-color: var(--st-ink) !important; box-shadow: none !important; transform: none !important; }
+.project-card-preview {
+  background: var(--st-tint) !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid var(--st-rule);
+}
+.project-card-preview::before { display: none !important; }
+.preview-badge {
+  font-family: var(--st-mono) !important;
+  font-size: 12.5px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.08em !important;
+  color: var(--st-ink) !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+.project-card-title, .viz-card-title {
+  font-family: var(--st-display) !important;
+  font-weight: 600 !important;
+  font-size: 1.3rem !important;
+  line-height: 1.2 !important;
+  color: var(--st-ink) !important;
+}
+.project-card-desc, .viz-card-desc { color: var(--st-ink-soft) !important; font-size: 15.5px !important; line-height: 1.5 !important; }
+.viz-img, .viz-card img { border-radius: 0 !important; }
+.coming-soon-tag { font-family: var(--st-mono) !important; border-radius: 0 !important; background: var(--st-tint) !important; color: var(--st-muted) !important; }
+
+/* ── Tags and small labels ──────────────────────────────────── */
+.ptag {
+  font-family: var(--st-mono) !important;
+  font-size: 11.5px !important;
+  letter-spacing: 0.06em !important;
+  color: var(--st-muted) !important;
+  background: transparent !important;
+  border: 1px solid var(--st-rule) !important;
+  border-radius: 0 !important;
+}
+.demo-label, .finding-label, .threshold-label, .step-num, .preview-meta, .pstat-l, .tm-l {
+  font-family: var(--st-mono) !important;
+  color: var(--st-muted) !important;
+  letter-spacing: 0.04em !important;
+}
+.demo-label { font-size: 13px !important; text-transform: uppercase; letter-spacing: 0.06em !important; }
+
+/* ── Project preview pages ──────────────────────────────────── */
+.preview-hero, .preview-hero--fire, .preview-hero--housing {
+  background: transparent !important;
+  border: 0 !important;
+  border-bottom: 2px solid var(--st-ink) !important;
+  border-radius: 0 !important;
+  padding: 0 0 1.75rem 0 !important;
+  box-shadow: none !important;
+}
+.preview-title, .product-title {
+  font-family: var(--st-display) !important;
+  font-weight: 700 !important;
+  font-size: clamp(2rem, 4.5vw, 3rem) !important;
+  letter-spacing: -0.025em !important;
+  line-height: 1.05 !important;
+  color: var(--st-ink) !important;
+  border: 0 !important;
+}
+.product-subtitle { color: var(--st-ink-soft) !important; font-size: 18px !important; }
+.product-header { border-bottom: 2px solid var(--st-ink) !important; }
+.pstat-n, .tm-n { font-family: var(--st-display) !important; font-weight: 700 !important; color: var(--st-ink) !important; }
+.preview-stats { border-top: 1px solid var(--st-rule); padding-top: 1rem; }
+
+.data-card, .finding-card, .threshold-card, .demo-block, .method-step, .callout {
+  background: var(--st-paper) !important;
+  border: 1px solid var(--st-rule) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+.demo-block { padding: 1.5rem !important; }
+.method-step { border-width: 0 0 1px 0 !important; background: transparent !important; }
+.threshold-aggressive, .threshold-conservative { border-top: 3px solid var(--st-ink) !important; }
+.data-card-title, .step-title { font-family: var(--st-display) !important; font-weight: 600 !important; color: var(--st-ink) !important; }
+.data-card-desc, .step-desc, .demo-desc, .finding-text, .threshold-interp { color: var(--st-ink-soft) !important; }
+.demo-gif-wrap, .cama-preview-wrap {
+  background: var(--st-paper) !important;
+  border: 1px solid var(--st-rule) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  overflow: hidden;
+}
+.demo-gif, .cama-preview-iframe { border-radius: 0 !important; }
+
+.cta-btn, .cama-open-btn a {
+  display: inline-flex !important;
+  align-items: center;
+  min-height: 46px;
+  padding: 0 20px !important;
+  background: var(--st-ink) !important;
+  color: var(--st-ground) !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  font-family: var(--st-body) !important;
+  font-weight: 500 !important;
+  font-size: 15.5px !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
+}
+.cta-btn:hover, .cama-open-btn a:hover { background: var(--st-accent) !important; color: #FFFFFF !important; transform: none !important; }
+.preview-cta { border-top-color: var(--st-rule) !important; }
+
+/* ── Long-form report pages ─────────────────────────────────── */
+main table { font-size: 15px; font-variant-numeric: tabular-nums; }
+main table thead th, .perf-table th {
+  font-family: var(--st-mono) !important;
+  font-size: 12.5px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.04em !important;
+  color: var(--st-muted) !important;
+  background: transparent !important;
+  border-bottom: 2px solid var(--st-ink) !important;
+}
+main table td, .perf-table td { border-color: var(--st-rule) !important; }
+main table tbody tr:hover, .perf-table tbody tr:hover { background: var(--st-tint) !important; }
+.perf-table .best-row td { background: var(--st-tint) !important; color: var(--st-ink) !important; font-weight: 600; }
+.perf-table-wrap { border: 1px solid var(--st-rule) !important; border-radius: 0 !important; box-shadow: none !important; background: var(--st-paper) !important; }
+
+main pre, main pre.sourceCode, main div.sourceCode {
+  background: var(--st-paper) !important;
+  border: 1px solid var(--st-rule) !important;
+  border-radius: 0 !important;
+  font-family: var(--st-mono);
+  font-size: 13.5px;
+}
+main code { font-family: var(--st-mono); }
+main p code, main li code { background: var(--st-tint); color: var(--st-ink); border-radius: 0; padding: 0.1em 0.3em; }
+main details > summary { font-family: var(--st-mono); font-size: 13px; color: var(--st-muted); }
+main blockquote { border-left: 2px solid var(--st-ink) !important; color: var(--st-ink-soft) !important; background: transparent !important; }
+main figure img, main p > img { border: 1px solid var(--st-rule); background: var(--st-paper); }
+main figcaption, .figure-caption { font-family: var(--st-mono); font-size: 12.5px; color: var(--st-muted); }
+
+#TOC, .sidebar nav[role="doc-toc"] { font-family: var(--st-body); }
+#toc-title { font-family: var(--st-mono) !important; font-size: 12.5px !important; letter-spacing: 0.06em; text-transform: uppercase; color: var(--st-muted) !important; }
+.sidebar nav[role="doc-toc"] ul > li > a { color: var(--st-muted) !important; border-left-color: var(--st-rule) !important; }
+.sidebar nav[role="doc-toc"] ul > li > a.active,
+.sidebar nav[role="doc-toc"] ul > li > a:hover { color: var(--st-accent) !important; border-left-color: var(--st-accent) !important; }
+
+.nav-footer { background: transparent !important; border-top: 1px solid var(--st-rule); font-family: var(--st-mono); font-size: 12.5px; color: var(--st-muted); }
+
+/* ── Card previews: real images where they exist, a slim label band otherwise ── */
+.project-card-preview { height: auto !important; min-height: 0 !important; padding: 14px 24px !important; display: flex; align-items: center; }
+.project-card-preview .preview-badge { position: static !important; }
+.project-card-preview.preview-product,
+.project-card-preview.preview-housing {
+  aspect-ratio: 16 / 9;
+  padding: 0 !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+.project-card-preview.preview-product { background-image: url("img/tree-platform.jpg") !important; }
+.project-card-preview.preview-housing { background-image: url("img/philly-housing.jpg") !important; }
+.project-card-preview.preview-product .preview-badge,
+.project-card-preview.preview-housing .preview-badge { display: none !important; }
+
+/* ── Small fixes ────────────────────────────────────────────── */
+.preview-stats { flex-wrap: wrap; gap: 1.25rem 2.5rem !important; }
+.pstat-l, .tm-l { font-size: 12px !important; letter-spacing: 0 !important; }
+.data-card-icon { display: none !important; }
+/* Numbered sections in long reports are h1s: size them as section headings. */
+main section.level1 > h1:not([class^="hp-"]) { font-size: 2rem; margin-top: 3.5rem; padding-bottom: 0.6rem; border-bottom: 2px solid var(--st-ink); }
+main .header-section-number { color: var(--st-muted); font-weight: 400; }
+
+/* ── Navbar: same items as the homepage header ──────────────── */
+.navbar .navbar-nav.me-auto .menu-text { display: inline !important; }
+.navbar .navbar-nav.me-auto .nav-link { display: flex; align-items: center; gap: 10px; font-size: 14px !important; }
+.navbar .navbar-nav.me-auto .nav-link::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--st-accent); }
+.navbar .bi-house-fill { display: none !important; }
+.navbar .navbar-nav.ms-auto { gap: 0 14px; align-items: center; }
+.navbar .navbar-nav.ms-auto .nav-link { font-size: 14px !important; letter-spacing: 0.02em !important; }
+.navbar .navbar-nav.ms-auto .nav-link .menu-text { text-transform: none; }
+.navbar .navbar-nav.ms-auto .nav-item:last-child .nav-link { border: 1.5px solid var(--st-ink); padding: 8px 16px !important; }
+.navbar .navbar-nav.ms-auto .nav-item:last-child .nav-link:hover { background: var(--st-ink); color: var(--st-ground) !important; }
+.navbar .navbar-nav .nav-link.active { text-decoration: none; color: var(--st-ink) !important; }
+
+/* ── Category pages: show the page title ────────────────────── */
+#title-block-header:has(> h1.category-page-title) { display: block !important; margin: 3rem 0 0.75rem !important; }
+#title-block-header > h1.category-page-title { font-size: clamp(2.6rem, 6vw, 4.25rem) !important; line-height: 1 !important; letter-spacing: -0.03em !important; margin: 0 !important; }
+
+.project-card { align-self: start; }

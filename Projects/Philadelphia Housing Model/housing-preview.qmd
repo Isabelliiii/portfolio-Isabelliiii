@@ -32,28 +32,24 @@ Data covers 2023–2024 single-family sales from the Office of Property Assessme
 ```{=html}
 <div class="data-grid">
   <div class="data-card">
-    <div class="data-card-icon">🏠</div>
     <div class="data-card-content">
       <p class="data-card-title">OPA Property Sales</p>
       <p class="data-card-desc">2023–2024 single-family transactions from Philadelphia's Office of Property Assessment, filtered to remove non-market transfers and outliers</p>
     </div>
   </div>
   <div class="data-card">
-    <div class="data-card-icon">📊</div>
     <div class="data-card-content">
       <p class="data-card-title">Census Demographics</p>
       <p class="data-card-desc">2023 ACS tract-level data: median income, education, unemployment, racial composition — spatially joined to each property</p>
     </div>
   </div>
   <div class="data-card">
-    <div class="data-card-icon">📍</div>
     <div class="data-card-content">
       <p class="data-card-title">Spatial Amenities</p>
       <p class="data-card-desc">Transit stops within 400 m, recreation facilities within 1.2 km, nearest hospital distance, and crime count per census boundary</p>
     </div>
   </div>
   <div class="data-card">
-    <div class="data-card-icon">🗺️</div>
     <div class="data-card-content">
       <p class="data-card-title">Location Features</p>
       <p class="data-card-desc">Center City boundary indicator, ward-level geography for residual diagnostics</p>
@@ -113,7 +109,7 @@ Four OLS models built iteratively, each adding a new group of predictors:
       <tr><td>1 · Structural only</td><td>0.45</td><td>106,328</td><td>153,662</td></tr>
       <tr><td>2 · + Census</td><td>0.60</td><td>82,093</td><td>130,385</td></tr>
       <tr><td>3 · + Spatial</td><td>0.61</td><td>81,709</td><td>129,308</td></tr>
-      <tr class="best-row"><td>4 · + Interactions ✓</td><td><strong>0.61</strong></td><td><strong>81,139</strong></td><td><strong>129,019</strong></td></tr>
+      <tr class="best-row"><td>4 · + Interactions</td><td><strong>0.61</strong></td><td><strong>81,139</strong></td><td><strong>129,019</strong></td></tr>
     </tbody>
   </table>
 </div>
