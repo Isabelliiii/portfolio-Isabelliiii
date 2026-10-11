@@ -31,7 +31,7 @@ website:
 format:
   html:
     theme: [cosmo, assets/theme.scss]
-    css: assets/override.css
+    css: [assets/override.css, assets/site.css]
     include-in-header:
       text: |
         <link rel="preconnect" href="https://fonts.googleapis.com">
