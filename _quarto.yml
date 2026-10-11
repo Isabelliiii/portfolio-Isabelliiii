@@ -13,20 +13,17 @@ website:
   navbar:
     background: primary
     left:
-      - icon: house-fill
+      - text: "Isabelle Li"
         href: index.qmd
-        aria-label: Home
     right:
-      - text: "DASHBOARD"
-        href: dashboard.qmd
-      - text: "VISUALIZATION"
-        href: visualization.qmd
-      - text: "PROJECTS"
-        href: projects.qmd
-      - text: "COMMUNITY"
-        href: community.qmd
-      - text: "RESEARCH"
-        href: research.qmd
+      - text: "Selected work"
+        href: index.qmd#work
+      - text: "More projects"
+        href: index.qmd#more
+      - text: "Contact"
+        href: index.qmd#contact
+      - text: "Résumé"
+        href: assets/Isabelle-Li-resume.pdf
 
 format:
   html:

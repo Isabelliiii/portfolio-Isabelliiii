@@ -273,3 +273,21 @@ main figcaption, .figure-caption { font-family: var(--st-mono); font-size: 12.5p
 /* Numbered sections in long reports are h1s: size them as section headings. */
 main section.level1 > h1:not([class^="hp-"]) { font-size: 2rem; margin-top: 3.5rem; padding-bottom: 0.6rem; border-bottom: 2px solid var(--st-ink); }
 main .header-section-number { color: var(--st-muted); font-weight: 400; }
+
+/* ── Navbar: same items as the homepage header ──────────────── */
+.navbar .navbar-nav.me-auto .menu-text { display: inline !important; }
+.navbar .navbar-nav.me-auto .nav-link { display: flex; align-items: center; gap: 10px; font-size: 14px !important; }
+.navbar .navbar-nav.me-auto .nav-link::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--st-accent); }
+.navbar .bi-house-fill { display: none !important; }
+.navbar .navbar-nav.ms-auto { gap: 0 14px; align-items: center; }
+.navbar .navbar-nav.ms-auto .nav-link { font-size: 14px !important; letter-spacing: 0.02em !important; }
+.navbar .navbar-nav.ms-auto .nav-link .menu-text { text-transform: none; }
+.navbar .navbar-nav.ms-auto .nav-item:last-child .nav-link { border: 1.5px solid var(--st-ink); padding: 8px 16px !important; }
+.navbar .navbar-nav.ms-auto .nav-item:last-child .nav-link:hover { background: var(--st-ink); color: var(--st-ground) !important; }
+.navbar .navbar-nav .nav-link.active { text-decoration: none; color: var(--st-ink) !important; }
+
+/* ── Category pages: show the page title ────────────────────── */
+#title-block-header:has(> h1.category-page-title) { display: block !important; margin: 3rem 0 0.75rem !important; }
+#title-block-header > h1.category-page-title { font-size: clamp(2.6rem, 6vw, 4.25rem) !important; line-height: 1 !important; letter-spacing: -0.03em !important; margin: 0 !important; }
+
+.project-card { align-self: start; }
